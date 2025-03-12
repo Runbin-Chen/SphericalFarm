@@ -120,4 +120,3 @@ static func subdivide_sphere(vertices: Array, indices: Array) -> Array:
 		new_indices.append(idx_c)
 		new_indices.append(new_vert_index + 2)
 	return new_indices
-

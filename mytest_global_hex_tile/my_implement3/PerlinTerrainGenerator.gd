@@ -35,7 +35,7 @@ static var perlin_noise: FastNoiseLite = FastNoiseLite.new()
 func after_tile_creation(new_tile: HexTile) -> void:
 	var height = floor(3 * ((max_height - min_height) * get_noise(new_tile.center.normalized().x, \
 		new_tile.center.normalized().y, new_tile.center.normalized().z) + min_height)) / 3.0
-	new_tile.height = height
+	new_tile.height = 10#height
 	for i in range(color_heights.size() - 1, -1, -1):
 		if height < (color_heights[i] as ColorHeight).max_height:
 			new_tile.color = (color_heights[i] as ColorHeight).color

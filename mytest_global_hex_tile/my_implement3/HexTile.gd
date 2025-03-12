@@ -39,32 +39,32 @@ func append_to_mesh(mesh_verts: Array, mesh_indices: Array, mesh_colors: Array) 
 		mesh_indices.append(base_index + j + 1)
 	
 	# 如果需要生成墙的话，生成
-	var neighbors = get_neighbors()
-	#print("neighbors: ", neighbors)
-	for j in range(neighbors.size()):
-		var this_height = height
-		var other_height = neighbors[j].height
-		if not other_height < this_height:
-			continue
-		base_index = mesh_verts.size()
-		# 添加栅栏
-		mesh_verts.append(transform_point(vertices[(j + 1) % vertices.size()], other_height))
-		mesh_verts.append(transform_point(vertices[j], other_height))
-		mesh_verts.append(transform_point(vertices[(j + 1) % vertices.size()], this_height))
-		mesh_verts.append(transform_point(vertices[j], this_height))
-		
-		mesh_colors.append(color)
-		mesh_colors.append(color)
-		mesh_colors.append(color)
-		mesh_colors.append(color)
-		
-		mesh_indices.append(base_index)
-		mesh_indices.append(base_index + 1)
-		mesh_indices.append(base_index + 2)
-		
-		mesh_indices.append(base_index + 2)
-		mesh_indices.append(base_index + 1)
-		mesh_indices.append(base_index + 3)
+	#var neighbors = get_neighbors()
+	##print("neighbors: ", neighbors)
+	#for j in range(neighbors.size()):
+		#var this_height = height
+		#var other_height = neighbors[j].height
+		#if not other_height < this_height:
+			#continue
+		#base_index = mesh_verts.size()
+		## 添加栅栏
+		#mesh_verts.append(transform_point(vertices[(j + 1) % vertices.size()], other_height))
+		#mesh_verts.append(transform_point(vertices[j], other_height))
+		#mesh_verts.append(transform_point(vertices[(j + 1) % vertices.size()], this_height))
+		#mesh_verts.append(transform_point(vertices[j], this_height))
+		#
+		#mesh_colors.append(color)
+		#mesh_colors.append(color)
+		#mesh_colors.append(color)
+		#mesh_colors.append(color)
+		#
+		#mesh_indices.append(base_index)
+		#mesh_indices.append(base_index + 1)
+		#mesh_indices.append(base_index + 2)
+		#
+		#mesh_indices.append(base_index + 2)
+		#mesh_indices.append(base_index + 1)
+		#mesh_indices.append(base_index + 3)
 
 
 func transform_point(input: Vector3, height: float) -> Vector3:
