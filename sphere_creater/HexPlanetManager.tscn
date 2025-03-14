@@ -1,34 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3j15o7pe8ey4"]
+[gd_scene load_steps=5 format=3 uid="uid://c3j15o7pe8ey4"]
 
 [ext_resource type="Script" path="res://sphere_creater/HexPlanetManager.gd" id="1_4tf2w"]
 [ext_resource type="Script" path="res://sphere_creater/HexPlanet.gd" id="2_7ygdx"]
 [ext_resource type="Script" path="res://sphere_creater/PerlinTerrainGenerator.gd" id="3_411gc"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ao6a7"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_v4wnq"]
-sky_material = SubResource("ProceduralSkyMaterial_ao6a7")
-
-[sub_resource type="Environment" id="Environment_r812b"]
-background_mode = 2
-sky = SubResource("Sky_v4wnq")
-tonemap_mode = 2
-glow_enabled = true
+[sub_resource type="Environment" id="Environment_qf4pi"]
+background_mode = 1
+background_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
 
 [node name="HexPlanetManager2" type="Node3D" groups=["HexPlanetManager"]]
 script = ExtResource("1_4tf2w")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_r812b")
+environment = SubResource("Environment_qf4pi")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 107.511, 0)
+visible = false
 shadow_enabled = true
 
 [node name="HexPlanet" type="Node3D" parent="."]
 script = ExtResource("2_7ygdx")
+subdivisions = 2
+chunk_subdivisions = 2
 
 [node name="PerlinTerrainGenerator" type="Node3D" parent="HexPlanet"]
 script = ExtResource("3_411gc")
@@ -36,9 +30,16 @@ script = ExtResource("3_411gc")
 [node name="Test" type="Node3D" parent="HexPlanet"]
 
 [node name="HexChunkRenders" type="Node3D" parent="."]
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 354.725)
 current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.859, 151.152, 235.566)
+light_energy = 1.305
+omni_range = 277.104
+omni_attenuation = 0.0
 
 [node name="TileAreas" type="Node3D" parent="."]

@@ -2,7 +2,10 @@ class_name MeshArea
 extends Area3D
 @export var thickness: float = 0.5
 
-var center = []
+var center = [] #中点
+var adjust_vertices = [] #调整后的点数组
+var tile_num:int
+
 
 func _ready() -> void:
 	collision_layer = 1
@@ -12,12 +15,12 @@ func _ready() -> void:
 func _on_click(cam, event, pos, normal, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("凸包碰撞体触发成功")
+		print(tile_num)
 		print(center)
 
 # 通过此方法动态设置碰撞形状
-func set_shape(mesh: Mesh) -> void:
-	
-	var adjust_vertices = []
+func set_shape(mesh: Mesh,num:int) -> void:
+	tile_num =num
 	var arr = mesh.surface_get_arrays(0)
 	var vertices = arr[ArrayMesh.ARRAY_VERTEX]
 	center=vertices[0]
@@ -34,17 +37,12 @@ func set_shape(mesh: Mesh) -> void:
 		adjust_vertices.append(vertices[6])
 		adjust_vertices.append(vertices[2])
 		adjust_vertices.append(vertices[1])
-		#adjust_vertices.append(vertices[1])
-		#adjust_vertices.append(vertices[2])
-		#adjust_vertices.append(vertices[6])
-		#adjust_vertices.append(vertices[5])
-		#adjust_vertices.append(vertices[4])
-		#adjust_vertices.append(vertices[3])
-	var new_mesh:ArrayMesh=generate_extruded_mesh(adjust_vertices,1)
+	var new_mesh:ArrayMesh=generate_extruded_mesh(adjust_vertices,2)
 	var mesh_instance = MeshInstance3D.new()
 	mesh_instance.name = "GeneratedMesh"  # 可选：给节点命名
 	add_child(mesh_instance)
 	mesh_instance.mesh = new_mesh
+	configure_material(mesh_instance)
 	
 	var collision_shape = CollisionShape3D.new()
 	collision_shape.shape = new_mesh.create_convex_shape()  # Godot 4.0+关键API
@@ -59,6 +57,7 @@ func generate_extruded_mesh(vertices: Array, height: float) -> ArrayMesh:
 	var top_vertices = vertices.duplicate()
 	for i in range(top_vertices.size()):
 		top_vertices[i] += normal * height
+		top_vertices[i] = center + (top_vertices[i] - center) * 0.8
 	
 	# 添加底面顶点
 	for v in vertices:
@@ -114,3 +113,19 @@ func compute_normal(vertices: Array) -> Vector3:
 	var vec1 = v1 - v0
 	var vec2 = v2 - v0
 	return vec1.cross(vec2).normalized()
+
+
+# 辅助函数：配置材质
+func configure_material(mesh: MeshInstance3D) -> void:
+	mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+	# 创建新材质或复制现有材质
+	var mat: StandardMaterial3D = StandardMaterial3D.new()
+	
+	# 设置材质属性
+	mat.albedo_color = Color("6a8b5d")  # 基础颜色（红色）
+	mat.metallic = 0                      # 金属度
+	mat.roughness = 0.8               # 粗糙度
+	
+	
+	# 应用材质到网格
+	mesh.material_override = mat
