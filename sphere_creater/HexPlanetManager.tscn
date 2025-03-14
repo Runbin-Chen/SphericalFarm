@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxl3tj1m6qyw8"]
+[gd_scene load_steps=7 format=3 uid="uid://c3j15o7pe8ey4"]
 
-[ext_resource type="Script" path="res://mytest_global_hex_tile/my_implement3/HexPlanetManager.gd" id="1_q47rl"]
-[ext_resource type="Script" path="res://mytest_global_hex_tile/my_implement3/HexPlanet.gd" id="2_sx6hr"]
-[ext_resource type="Script" path="res://mytest_global_hex_tile/my_implement3/PerlinTerrainGenerator.gd" id="3_fl5jk"]
+[ext_resource type="Script" path="res://sphere_creater/HexPlanetManager.gd" id="1_4tf2w"]
+[ext_resource type="Script" path="res://sphere_creater/HexPlanet.gd" id="2_7ygdx"]
+[ext_resource type="Script" path="res://sphere_creater/PerlinTerrainGenerator.gd" id="3_411gc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ao6a7"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -18,7 +18,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="HexPlanetManager2" type="Node3D" groups=["HexPlanetManager"]]
-script = ExtResource("1_q47rl")
+script = ExtResource("1_4tf2w")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_r812b")
@@ -28,12 +28,10 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="HexPlanet" type="Node3D" parent="."]
-script = ExtResource("2_sx6hr")
-subdivisions = 2
-chunk_subdivisions = 2
+script = ExtResource("2_7ygdx")
 
 [node name="PerlinTerrainGenerator" type="Node3D" parent="HexPlanet"]
-script = ExtResource("3_fl5jk")
+script = ExtResource("3_411gc")
 
 [node name="Test" type="Node3D" parent="HexPlanet"]
 
@@ -42,3 +40,5 @@ script = ExtResource("3_fl5jk")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 500)
 current = true
+
+[node name="TileAreas" type="Node3D" parent="."]
