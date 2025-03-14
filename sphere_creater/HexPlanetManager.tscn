@@ -38,7 +38,7 @@ script = ExtResource("3_411gc")
 [node name="HexChunkRenders" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 500)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 354.725)
 current = true
 
 [node name="TileAreas" type="Node3D" parent="."]

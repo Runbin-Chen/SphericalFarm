@@ -1,10 +1,22 @@
+class_name MeshArea
 extends Area3D
 @export var thickness: float = 0.5
 
+var center = []
+
+func _ready() -> void:
+	collision_layer = 1
+	monitoring = true
+	input_event.connect(_on_click)
+
+func _on_click(cam, event, pos, normal, shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		print("凸包碰撞体触发成功")
+		print(center)
 
 # 通过此方法动态设置碰撞形状
 func set_shape(mesh: Mesh) -> void:
-	var center = []
+	
 	var adjust_vertices = []
 	var arr = mesh.surface_get_arrays(0)
 	var vertices = arr[ArrayMesh.ARRAY_VERTEX]
@@ -15,13 +27,28 @@ func set_shape(mesh: Mesh) -> void:
 		adjust_vertices.append(vertices[5])
 		adjust_vertices.append(vertices[2])
 		adjust_vertices.append(vertices[1])
-		var new_mesh:ArrayMesh=generate_extruded_mesh(adjust_vertices,1)
-		var mesh_instance = MeshInstance3D.new()
-		mesh_instance.name = "GeneratedMesh"  # 可选：给节点命名
-		add_child(mesh_instance)
-		mesh_instance.mesh = new_mesh
 	else:
-		return
+		adjust_vertices.append(vertices[3])
+		adjust_vertices.append(vertices[4])
+		adjust_vertices.append(vertices[5])
+		adjust_vertices.append(vertices[6])
+		adjust_vertices.append(vertices[2])
+		adjust_vertices.append(vertices[1])
+		#adjust_vertices.append(vertices[1])
+		#adjust_vertices.append(vertices[2])
+		#adjust_vertices.append(vertices[6])
+		#adjust_vertices.append(vertices[5])
+		#adjust_vertices.append(vertices[4])
+		#adjust_vertices.append(vertices[3])
+	var new_mesh:ArrayMesh=generate_extruded_mesh(adjust_vertices,1)
+	var mesh_instance = MeshInstance3D.new()
+	mesh_instance.name = "GeneratedMesh"  # 可选：给节点命名
+	add_child(mesh_instance)
+	mesh_instance.mesh = new_mesh
+	
+	var collision_shape = CollisionShape3D.new()
+	collision_shape.shape = new_mesh.create_convex_shape()  # Godot 4.0+关键API
+	add_child(collision_shape)
 
 func generate_extruded_mesh(vertices: Array, height: float) -> ArrayMesh:
 	var st = SurfaceTool.new()
