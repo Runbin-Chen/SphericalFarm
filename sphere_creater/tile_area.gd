@@ -65,13 +65,14 @@ func generate_extruded_mesh(vertices: Array, height: float) -> ArrayMesh:
 		
 		# 第一个三角形：current -> next -> top_next
 		st.add_index(current)
-		st.add_index(next)
 		st.add_index(top_next)
+		st.add_index(next)
 		
 		# 第二个三角形：current -> top_next -> top_current
 		st.add_index(current)
-		st.add_index(top_next)
 		st.add_index(top_current)
+		st.add_index(top_next)
+		
 	
 	# 自动生成法线
 	st.generate_normals()
