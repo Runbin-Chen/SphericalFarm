@@ -2,10 +2,10 @@ class_name MeshArea
 extends Area3D
 @export var thickness: float = 0.5
 
-var center = [] #中点
-var adjust_vertices = [] #调整后的点数组
-var id:int
-var neighbors_id = []
+@export var center = [] #中点
+@export var adjust_vertices = [] #调整后的点数组
+@export var id:int
+@export var neighbors_id = []
 
 
 func _ready() -> void:

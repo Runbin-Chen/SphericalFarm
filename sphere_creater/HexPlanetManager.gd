@@ -10,12 +10,19 @@ var prev_hex_planet: HexPlanet
 @onready var hex_planet: HexPlanet = $HexPlanet
 @onready var hex_chunk_renders: Node3D = $HexChunkRenders
 @onready var tile_area_collection: Node3D = $TileAreaCollection
-
+const tile_path = "res://sphere_creater/saved_tile/tile_area_collection_saved.tscn"
 
 const TileArea = preload("res://sphere_creater/tile_area.tscn")
 
 func _ready() -> void:
-	update_render_objects()
+	var tile_area_collection_new = load_node_from_scene(tile_path)
+	if tile_area_collection_new!=null:
+		remove_child(tile_area_collection)
+		add_child(tile_area_collection_new)
+		tile_area_collection = tile_area_collection_new
+	else:
+		update_render_objects()
+		save_node_as_scene(tile_area_collection,tile_path)
 
 
 func _process(delta: float) -> void:
@@ -52,4 +59,28 @@ func update_render_objects() -> void:
 					tile_area_instance.neighbors_id.append(nbr.chunk_id)
 		
 		tile_area_collection.add_child(tile_area_instance)
-		
+		set_owner_recursive(tile_area_instance,tile_area_collection)
+		#tile_area_instance.owner = tile_area_collection
+
+# 递归设置所有子节点的 owner
+func set_owner_recursive(node: Node, owner: Node) -> void:
+	node.owner = owner
+	for child in node.get_children():
+		set_owner_recursive(child, owner)
+
+func save_node_as_scene(node: Node, path: String) -> void:
+	var packed_scene = PackedScene.new()
+	# 打包节点及其所有子节点
+	packed_scene.pack(node)
+	# 保存为场景文件（如 "user://saved_node.tscn"）
+	ResourceSaver.save(packed_scene, path)
+	
+func load_node_from_scene(path: String) -> Node:
+	if not FileAccess.file_exists(path):
+		print("场景文件不存在: " + path)
+		return null
+	# 加载打包场景
+	var packed_scene = load(path)
+	# 实例化节点（包括所有子节点）
+	var node = packed_scene.instantiate()
+	return node
