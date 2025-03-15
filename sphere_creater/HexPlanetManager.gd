@@ -41,15 +41,14 @@ func update_render_objects() -> void:
 		hex_chunk_renders.add_child(chunk_obj)
 		
 		var tile_area_instance : MeshArea = TileArea.instantiate()
-		tile_area_instance.set_shape(chunk_obj.mesh,i)
+		tile_area_instance.set_shape(chunk_obj.mesh,chunk_obj.chunk.id)
 		tile_area_instance.name = "TileArea" + str(i)
 		
 		#chunk_id映射到hextile上获得neighbor信息
 		for tile:HexTile in hex_planet.tiles:
 			if tile.chunk_id == chunk_obj.chunk.id:
 				for nbr:HexTile in tile.get_neighbors():
-					tile_area_instance.neighbors.append(nbr.chunk_id)
-				tile_area_instance.tile_id = chunk_obj.chunk.id
+					tile_area_instance.neighbors_id.append(nbr.chunk_id)
 		
 		tile_area_collection.add_child(tile_area_instance)
 		
