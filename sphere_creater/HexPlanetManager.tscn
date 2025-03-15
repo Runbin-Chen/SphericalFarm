@@ -1,13 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3j15o7pe8ey4"]
+[gd_scene load_steps=9 format=3 uid="uid://c3j15o7pe8ey4"]
 
 [ext_resource type="Script" path="res://sphere_creater/HexPlanetManager.gd" id="1_4tf2w"]
 [ext_resource type="Script" path="res://sphere_creater/HexPlanet.gd" id="2_7ygdx"]
 [ext_resource type="Script" path="res://sphere_creater/PerlinTerrainGenerator.gd" id="3_411gc"]
 [ext_resource type="PackedScene" uid="uid://cyyit1l1cq3bc" path="res://sphere_creater/tile_area_collection.tscn" id="4_qxxhn"]
+[ext_resource type="ArrayMesh" uid="uid://bidl0bdd0nthc" path="res://assets/import_model/mercury_planet/planet.res" id="5_wem5h"]
 
 [sub_resource type="Environment" id="Environment_qf4pi"]
 background_mode = 1
-background_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+background_color = Color(0.051971, 0.0519709, 0.051971, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_udyi8"]
+rough = true
+bounce = 0.39
+
+[sub_resource type="SphereMesh" id="SphereMesh_wd8pw"]
+radius = 100.0
+height = 200.0
 
 [node name="HexPlanetManager2" type="Node3D" groups=["HexPlanetManager"]]
 script = ExtResource("1_4tf2w")
@@ -34,8 +43,9 @@ script = ExtResource("3_411gc")
 visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 354.725)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 502.155)
 current = true
+fov = 50.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.859, 151.152, 235.566)
@@ -44,3 +54,23 @@ omni_range = 277.104
 omni_attenuation = 0.0
 
 [node name="TileAreaCollection" parent="." instance=ExtResource("4_qxxhn")]
+
+[node name="Testshape" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_udyi8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Testshape"]
+mesh = SubResource("SphereMesh_wd8pw")
+
+[node name="Moon" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 875.298, 439.797, -1416.21)
+
+[node name="Planet" type="MeshInstance3D" parent="Moon"]
+transform = Transform3D(40, 0, 0, 0, -1.74846e-06, -40, 0, 40, -1.74846e-06, 0, 132.3, 0)
+mesh = ExtResource("5_wem5h")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3DMoon" type="OmniLight3D" parent="Moon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 267.605, 217.722, 434.87)
+light_energy = 6.043
+omni_range = 678.431
+omni_attenuation = 0.2

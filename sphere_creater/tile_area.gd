@@ -128,7 +128,7 @@ func configure_material(mesh: MeshInstance3D) -> void:
 	var mat: StandardMaterial3D = StandardMaterial3D.new()
 	
 	# 设置材质属性
-	mat.albedo_color = Color("6a8b5d")  # 基础颜色（红色）
+	mat.albedo_color = Color("ffd5be")  # 基础颜色（红色）
 	mat.metallic = 0                      # 金属度
 	mat.roughness = 0.8               # 粗糙度
 	
