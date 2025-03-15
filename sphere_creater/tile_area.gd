@@ -4,7 +4,8 @@ extends Area3D
 
 var center = [] #中点
 var adjust_vertices = [] #调整后的点数组
-var tile_num:int
+var tile_id:int
+var neighbors = []
 
 
 func _ready() -> void:
@@ -15,12 +16,14 @@ func _ready() -> void:
 func _on_click(cam, event, pos, normal, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("凸包碰撞体触发成功")
-		print(tile_num)
-		print(center)
+		print(tile_id)
+		print(neighbors)
+		#print(center)
+		
 
 # 通过此方法动态设置碰撞形状
-func set_shape(mesh: Mesh,num:int) -> void:
-	tile_num =num
+func set_shape(mesh: Mesh,id:int) -> void:
+	tile_id =id
 	var arr = mesh.surface_get_arrays(0)
 	var vertices = arr[ArrayMesh.ARRAY_VERTEX]
 	center=vertices[0]
