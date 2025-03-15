@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://yncl4kj12pea"]
+
+[ext_resource type="Script" path="res://TerrainCreater/terrain_creater.gd" id="1_7fy1e"]
+[ext_resource type="PackedScene" uid="uid://b70otw0lsy7j2" path="res://sphere_creater/saved_tile/tile_area_collection_saved.tscn" id="2_ih31w"]
+
+[node name="TerrainCreater" type="Node3D"]
+script = ExtResource("1_7fy1e")
+
+[node name="TileAreaCollection" parent="." instance=ExtResource("2_ih31w")]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.889009, 0, 0.457889, 0, 1, 0, -0.457889, 0, 0.889009, 143.545, 85.0994, 215.659)
+fov = 17.1
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.452, 116.485, 219.434)
+light_energy = 3.286
+omni_range = 422.241
+omni_attenuation = 0.0

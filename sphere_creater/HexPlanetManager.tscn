@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3j15o7pe8ey4"]
+[gd_scene load_steps=8 format=3 uid="uid://c3j15o7pe8ey4"]
 
 [ext_resource type="Script" path="res://sphere_creater/HexPlanetManager.gd" id="1_4tf2w"]
 [ext_resource type="Script" path="res://sphere_creater/HexPlanet.gd" id="2_7ygdx"]
 [ext_resource type="Script" path="res://sphere_creater/PerlinTerrainGenerator.gd" id="3_411gc"]
-[ext_resource type="PackedScene" uid="uid://cyyit1l1cq3bc" path="res://sphere_creater/tile_area_collection.tscn" id="4_qxxhn"]
 [ext_resource type="ArrayMesh" uid="uid://bidl0bdd0nthc" path="res://assets/import_model/mercury_planet/planet.res" id="5_wem5h"]
 
 [sub_resource type="Environment" id="Environment_qf4pi"]
@@ -53,8 +52,6 @@ light_energy = 1.305
 omni_range = 277.104
 omni_attenuation = 0.0
 
-[node name="TileAreaCollection" parent="." instance=ExtResource("4_qxxhn")]
-
 [node name="Testshape" type="StaticBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_udyi8")
 
@@ -74,3 +71,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 267.605, 217.722, 434.87)
 light_energy = 6.043
 omni_range = 678.431
 omni_attenuation = 0.2
+
+[node name="TileAreaCollection" type="Node3D" parent="."]

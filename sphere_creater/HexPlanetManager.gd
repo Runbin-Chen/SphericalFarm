@@ -15,15 +15,19 @@ const tile_path = "res://sphere_creater/saved_tile/tile_area_collection_saved.ts
 const TileArea = preload("res://sphere_creater/tile_area.tscn")
 
 func _ready() -> void:
-	var tile_area_collection_new = load_node_from_scene(tile_path)
-	if tile_area_collection_new!=null:
-		remove_child(tile_area_collection)
-		add_child(tile_area_collection_new)
-		tile_area_collection = tile_area_collection_new
-	else:
-		update_render_objects()
-		save_node_as_scene(tile_area_collection,tile_path)
-
+	#保存和预加载
+	#var tile_area_collection_new = load_node_from_scene(tile_path)
+	#if tile_area_collection_new!=null:
+		#remove_child(tile_area_collection)
+		#add_child(tile_area_collection_new)
+		#tile_area_collection = tile_area_collection_new
+	#else:
+		#update_render_objects()
+		#save_node_as_scene(tile_area_collection,tile_path)
+	update_render_objects()
+	save_node_as_scene(tile_area_collection,tile_path)
+	#计算边长
+	#print(tile_area_collection.get_child(0).get_side_length()) 
 
 func _process(delta: float) -> void:
 	if regenerate:

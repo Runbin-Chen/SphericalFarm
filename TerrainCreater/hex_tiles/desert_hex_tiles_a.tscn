@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dafegkqs4r2an"]
+
+[ext_resource type="PackedScene" uid="uid://b6jo4lxhdwfo1" path="res://assets/import_model/kenney_space-kit/rocks_smallA.glb" id="1_w836i"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
+size = Vector2(1, 1)
+
+[node name="DesertHexTilesA" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_d8c7y")
+skeleton = NodePath("")
+
+[node name="rocks_smallA2" parent="." instance=ExtResource("1_w836i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.00915, 0, -1.50486)

@@ -18,7 +18,7 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		print("凸包碰撞体触发成功")
 		print(id)
 		print(neighbors_id)
-		#print(center)
+		print(center)
 		
 
 func init(chunk_id:int)->void:
@@ -120,6 +120,9 @@ func compute_normal(vertices: Array) -> Vector3:
 	var vec2 = v2 - v0
 	return vec1.cross(vec2).normalized()
 
+#辅助函数，测算边长
+func get_side_length()->int:
+	return int(adjust_vertices[0].distance_to(adjust_vertices[1]))
 
 # 辅助函数：配置材质
 func configure_material(mesh: MeshInstance3D) -> void:
