@@ -6,38 +6,42 @@ func _ready() -> void:
 	add_terrain(tile_area_collection.get_child(0))
 
 func add_terrain(tile_area:MeshArea)->void:
-	var mesh = tile_area.get_node("GeneratedMesh").mesh
+	#var mesh = tile_area.get_node("GeneratedMesh").mesh
 	var center = tile_area.center
 	var instance = DESERT_HEX_TILES_A.instantiate()
+	#instance.transform.origin += Vector3(0, 1, 0)
 	# 设置缩放
-	instance.scale = Vector3.ONE * 30  # 替换scale为你的缩放值
+	#instance.scale = Vector3.ONE * 30  # 替换scale为你的缩放值
 
 	# 获取mesh数组数据（假设mesh是ArrayMesh实例）
-	var mesh_array = mesh.surface_get_arrays(0)
-	var vertices = mesh_array[ArrayMesh.ARRAY_VERTEX]
-	var normals = mesh_array[ArrayMesh.ARRAY_NORMAL]
+	
+	var plane = Plane(tile_area.adjust_vertices[0], tile_area.adjust_vertices[1], tile_area.adjust_vertices[2])
 
-	# 计算第一个面的法线（假设每个顶点法线相同）
-	var face_normal = normals[0] if normals else Vector3.UP
-	# 或者取三个顶点法线的平均值（适用于平滑面）
-	# var face_normal = ((normals[0] + normals[1] + normals[2]) / 3).normalized()
-
+	# 获取归一化的法线向量
+	var target_normal = plane.normal
+	
 	# 设置实例位置为中心点
 	instance.transform.origin = center
+	
 
-	# 计算Y轴朝向法线方向的旋转
-	var target_y = face_normal.normalized()
-	var current_y = Vector3.UP
+	# 选择一个初始参考方向（例如全局右方向）
+	var reference_dir = Vector3.RIGHT
 
-	if target_y != current_y:
-		if target_y.is_equal_approx(-current_y):
-			# 处理反向情况，绕X轴旋转180度
-			instance.rotate_object_local(Vector3.RIGHT, PI)
-	else:
-				# 计算旋转四元数
-		var rotation_axis = current_y.cross(target_y).normalized()
-		var rotation_angle = current_y.angle_to(target_y)
-		instance.rotate(rotation_axis, rotation_angle)
+	# 如果参考方向与目标法线几乎平行，改用全局前方向作为参考
+	if abs(target_normal.dot(reference_dir)) > 0.9:
+		reference_dir = Vector3.FORWARD
 
+	# 计算新的 X 轴（参考方向在法线垂直平面上的投影）
+	var new_x = reference_dir - target_normal * target_normal.dot(reference_dir)
+	new_x = new_x.normalized()
+
+	# 计算新的 Z 轴（确保与 Y 轴和 X 轴正交）
+	var new_z = target_normal.cross(new_x).normalized()
+
+	# 构造新的基底并应用旋转
+	instance.transform.basis = Basis(new_x, target_normal, new_z)
+	instance.transform.origin += target_normal*-1
+	
+	instance.scale = Vector3.ONE * 30  # 替换scale为你的缩放值
 	# 添加实例到场景
 	add_child(instance)
