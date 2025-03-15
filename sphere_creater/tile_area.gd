@@ -21,9 +21,12 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		#print(center)
 		
 
-# 通过此方法动态设置碰撞形状
-func set_shape(mesh: Mesh,chunk_id:int) -> void:
+func init(chunk_id:int)->void:
 	id = chunk_id
+	self.name="TileArea" + str(id)
+
+# 通过此方法动态设置碰撞形状
+func set_shape(mesh: Mesh) -> void:
 	var arr = mesh.surface_get_arrays(0)
 	var vertices = arr[ArrayMesh.ARRAY_VERTEX]
 	center=vertices[0]
