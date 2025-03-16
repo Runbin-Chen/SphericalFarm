@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://duv2bxe5eo8ak"]
+
+[ext_resource type="PackedScene" uid="uid://b6jo4lxhdwfo1" path="res://assets/import_model/kenney_space-kit/rocks_smallA.glb" id="1_3cqe1"]
+[ext_resource type="PackedScene" uid="uid://papsfehj4jx3" path="res://assets/import_model/kenney_space-kit/rocks_smallB.glb" id="1_3yt1d"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
+size = Vector2(1, 1)
+
+[node name="DesertHexTilesB" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_d8c7y")
+skeleton = NodePath("")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="rocks_smallB2" parent="Model" instance=ExtResource("1_3yt1d")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.794211, 0, -0.982123)
+
+[node name="rocks_smallB4" parent="Model" instance=ExtResource("1_3yt1d")]
+transform = Transform3D(0.327865, 0, -0.377498, 0, 0.5, 0, 0.377498, 0, 0.327865, -0.33508, 0, -1.48998)
+
+[node name="rocks_smallB3" parent="Model" instance=ExtResource("1_3yt1d")]
+transform = Transform3D(0.459202, 0, -0.197821, 0, 0.5, 0, 0.197821, 0, 0.459202, -0.437743, 0, -0.875259)
+
+[node name="rocks_smallA2" parent="Model" instance=ExtResource("1_3cqe1")]
+transform = Transform3D(0.498157, 0, -0.0428911, 0, 0.5, 0, 0.0428911, 0, 0.498157, -1.15989, 0, -0.643305)

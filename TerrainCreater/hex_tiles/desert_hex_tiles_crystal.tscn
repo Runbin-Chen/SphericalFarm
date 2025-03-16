@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu6g0k7kmdt2h"]
+
+[ext_resource type="PackedScene" uid="uid://papsfehj4jx3" path="res://assets/import_model/kenney_space-kit/rocks_smallB.glb" id="1_8ttr0"]
+[ext_resource type="PackedScene" uid="uid://cgnhg8cjhsla3" path="res://assets/import_model/kenney_space-kit/rock_crystalsLargeA.glb" id="1_v1vdo"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
+size = Vector2(1, 1)
+
+[node name="DesertHexTilesCrystal" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_d8c7y")
+skeleton = NodePath("")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="rock_crystalsLargeA" parent="Model" instance=ExtResource("1_v1vdo")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -1.4851, 0.00581288, -1.10112)
+
+[node name="rocks_smallB2" parent="Model" instance=ExtResource("1_8ttr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11947, 0, -1.62569)

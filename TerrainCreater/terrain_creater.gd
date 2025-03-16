@@ -1,20 +1,21 @@
 extends Node3D
 @onready var tile_area_collection: Node3D = $TileAreaCollection
-const DESERT_HEX_TILES_A = preload("res://TerrainCreater/hex_tiles/desert_hex_tiles_a.tscn")
+const DESERT_HEX_TILES_A = preload("res://TerrainCreater/hex_tiles/desert_hex_tiles_crystal.tscn")
 
 func _ready() -> void:
-	add_terrain(tile_area_collection.get_child(0))
+	var tiles = tile_area_collection.get_children()
+	#add_terrain(tiles[27])
+	for tile in tiles:
+		if tile.id == 28 ||tile.id == 60:
+			add_terrain(tile)
+	
 
 func add_terrain(tile_area:MeshArea)->void:
 	#var mesh = tile_area.get_node("GeneratedMesh").mesh
 	var center = tile_area.center
 	var instance = DESERT_HEX_TILES_A.instantiate()
-	#instance.transform.origin += Vector3(0, 1, 0)
-	# 设置缩放
-	#instance.scale = Vector3.ONE * 30  # 替换scale为你的缩放值
 
-	# 获取mesh数组数据（假设mesh是ArrayMesh实例）
-	
+	#构建面
 	var plane = Plane(tile_area.adjust_vertices[0], tile_area.adjust_vertices[1], tile_area.adjust_vertices[2])
 
 	# 获取归一化的法线向量
@@ -23,7 +24,6 @@ func add_terrain(tile_area:MeshArea)->void:
 	# 设置实例位置为中心点
 	instance.transform.origin = center
 	
-
 	# 选择一个初始参考方向（例如全局右方向）
 	var reference_dir = Vector3.RIGHT
 
@@ -40,8 +40,8 @@ func add_terrain(tile_area:MeshArea)->void:
 
 	# 构造新的基底并应用旋转
 	instance.transform.basis = Basis(new_x, target_normal, new_z)
-	instance.transform.origin += target_normal*-1
+	instance.transform.origin += target_normal*-1.7
 	
-	instance.scale = Vector3.ONE * 30  # 替换scale为你的缩放值
+	instance.scale = Vector3.ONE * 23  # 替换scale为你的缩放值
 	# 添加实例到场景
 	add_child(instance)
