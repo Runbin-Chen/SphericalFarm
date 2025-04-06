@@ -5,13 +5,15 @@ const DESERT_HEX_TILES_A = preload("res://TerrainCreater/hex_tiles/desert_hex_ti
 func _ready() -> void:
 	var tiles = tile_area_collection.get_children()
 	#add_terrain(tiles[27])
-	for tile in tiles:
+	for tile:MeshArea in tiles:
 		if tile.id == 28 ||tile.id == 60:
+			#pass
 			add_terrain(tile)
 	
 
 func add_terrain(tile_area:MeshArea)->void:
 	#var mesh = tile_area.get_node("GeneratedMesh").mesh
+	#print(tile_area.center)
 	var center = tile_area.center
 	var instance = DESERT_HEX_TILES_A.instantiate()
 
@@ -22,7 +24,7 @@ func add_terrain(tile_area:MeshArea)->void:
 	var target_normal = plane.normal
 	
 	# 设置实例位置为中心点
-	instance.transform.origin = center
+	instance.transform.origin = Vector3(center[0],center[1],center[2])
 	
 	# 选择一个初始参考方向（例如全局右方向）
 	var reference_dir = Vector3.RIGHT

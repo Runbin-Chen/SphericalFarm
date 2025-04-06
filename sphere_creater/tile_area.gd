@@ -7,6 +7,7 @@ extends Area3D
 @export var id:int
 @export var neighbors_id = []
 
+var vector_center = Vector3(0,0,0)
 
 func _ready() -> void:
 	collision_layer = 1
@@ -29,7 +30,8 @@ func init(chunk_id:int)->void:
 func set_shape(mesh: Mesh) -> void:
 	var arr = mesh.surface_get_arrays(0)
 	var vertices = arr[ArrayMesh.ARRAY_VERTEX]
-	center=vertices[0]
+	vector_center = vertices[0]
+	center = [vector_center.x,vector_center.y,vector_center.z]
 	if vertices.size() == 6:
 		adjust_vertices.append(vertices[3])
 		adjust_vertices.append(vertices[4])
@@ -63,7 +65,7 @@ func generate_extruded_mesh(vertices: Array, height: float) -> ArrayMesh:
 	var top_vertices = vertices.duplicate()
 	for i in range(top_vertices.size()):
 		top_vertices[i] += normal * height
-		top_vertices[i] = center + (top_vertices[i] - center) * 0.8
+		top_vertices[i] = vector_center + (top_vertices[i] - vector_center) * 0.8
 	
 	# 添加底面顶点
 	for v in vertices:
