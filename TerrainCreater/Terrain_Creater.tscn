@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://yncl4kj12pea"]
 
-[ext_resource type="Script" path="res://TerrainCreater/terrain_creater.gd" id="1_7fy1e"]
-[ext_resource type="PackedScene" path="res://sphere_creater/saved_tile/tile_area_collection_saved.tscn" id="2_ih31w"]
+[ext_resource type="Script" uid="uid://cl26ieg4vyhnu" path="res://TerrainCreater/terrain_creater.gd" id="1_7fy1e"]
+[ext_resource type="PackedScene" uid="uid://dhkfiqrc1nl5i" path="res://sphere_creater/saved_tile/tile_area_collection_saved.tscn" id="2_ih31w"]
 
 [node name="TerrainCreater" type="Node3D"]
 script = ExtResource("1_7fy1e")

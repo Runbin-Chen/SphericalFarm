@@ -9,6 +9,7 @@ size = Vector2(1, 1)
 [node name="DesertHexTilesCrystal" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("PlaneMesh_d8c7y")
 skeleton = NodePath("")
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=489 format=4]
+[gd_scene load_steps=489 format=4 uid="uid://dhkfiqrc1nl5i"]
 
-[ext_resource type="PackedScene" path="res://sphere_creater/tile_area.tscn" id="1_0j7cs"]
-[ext_resource type="Script" path="res://sphere_creater/tile_area.gd" id="2_bpo4w"]
+[ext_resource type="PackedScene" uid="uid://bownpm4gsfkx7" path="res://sphere_creater/tile_area.tscn" id="1_0j7cs"]
+[ext_resource type="Script" uid="uid://bjkpvuwvucmeq" path="res://sphere_creater/tile_area.gd" id="2_bpo4w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pedbb"]
 albedo_color = Color(1, 0.835294, 0.745098, 1)
