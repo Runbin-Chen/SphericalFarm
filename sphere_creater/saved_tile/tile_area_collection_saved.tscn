@@ -1,6 +1,7 @@
-[gd_scene load_steps=488 format=4 uid="uid://c7cb2gaw4v6vd"]
+[gd_scene load_steps=489 format=4]
 
-[ext_resource type="PackedScene" uid="uid://bownpm4gsfkx7" path="res://sphere_creater/tile_area.tscn" id="1_nq6hn"]
+[ext_resource type="PackedScene" path="res://sphere_creater/tile_area.tscn" id="1_nq6hn"]
+[ext_resource type="Script" path="res://sphere_creater/tile_area.gd" id="2_julve"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhdei"]
 albedo_color = Color(1, 0.835294, 0.745098, 1)
@@ -3082,7 +3083,8 @@ points = PackedVector3Array(-32.8164, -69.3095, -76.6547, -31.0141, -82.6071, -6
 
 [node name="TileAreaCollection" type="Node3D"]
 
-[node name="TileArea66" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea66" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [46.2181, 72.7395, 62.6093]
 adjust_vertices = [Vector3(43.458, 86.5288, 48.792), Vector3(31.0141, 82.6066, 62.9), Vector3(32.8154, 69.3087, 76.6547), Vector3(48.478, 59.1623, 76.4498), Vector3(62.3811, 62.3811, 62.3811), Vector3(59.1623, 76.4498, 48.478)]
 id = 66
@@ -3095,7 +3097,8 @@ mesh = SubResource("ArrayMesh_1y01s")
 [node name="@CollisionShape3D@2" type="CollisionShape3D" parent="TileArea66"]
 shape = SubResource("ConvexPolygonShape3D_qxnpf")
 
-[node name="TileArea65" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea65" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.0781, 76.2108, 73.1157]
 adjust_vertices = [Vector3(15.4188, 88.5634, 60.6247), Vector3(-1.04904e-06, 82.6739, 70.154), Vector3(-1.04904e-06, 70.7602, 82.0678), Vector3(17.2201, 63.3518, 86.2931), Vector3(32.8154, 69.3087, 76.6547), Vector3(31.0141, 82.6066, 62.9)]
 id = 65
@@ -3108,7 +3111,8 @@ mesh = SubResource("ArrayMesh_bd4r6")
 [node name="@CollisionShape3D@3" type="CollisionShape3D" parent="TileArea65"]
 shape = SubResource("ConvexPolygonShape3D_txpaa")
 
-[node name="TileArea64" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea64" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [26.0149, 92.2888, 47.1008]
 adjust_vertices = [Vector3(19.1678, 101.774, 31.8859), Vector3(9.52937, 98.0928, 45.2058), Vector3(15.4188, 88.5634, 60.6247), Vector3(31.0141, 82.6066, 62.9), Vector3(43.458, 86.5288, 48.792), Vector3(37.5011, 96.1672, 33.1967)]
 id = 64
@@ -3121,7 +3125,8 @@ mesh = SubResource("ArrayMesh_kfami")
 [node name="@CollisionShape3D@4" type="CollisionShape3D" parent="TileArea64"]
 shape = SubResource("ConvexPolygonShape3D_il4wk")
 
-[node name="TileArea16" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea16" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [32.9649, 53.3384, 86.3034]
 adjust_vertices = [Vector3(32.8154, 69.3087, 76.6547), Vector3(17.2201, 63.3518, 86.2931), Vector3(17.2875, 47.2485, 95.7266), Vector3(33.1967, 37.5011, 96.1672), Vector3(48.792, 43.458, 86.5288), Vector3(48.478, 59.1623, 76.4498)]
 id = 16
@@ -3134,7 +3139,8 @@ mesh = SubResource("ArrayMesh_e3sb2")
 [node name="@CollisionShape3D@5" type="CollisionShape3D" parent="TileArea16"]
 shape = SubResource("ConvexPolygonShape3D_e63my")
 
-[node name="TileArea15" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea15" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [53.3384, 86.3034, 32.9649]
 adjust_vertices = [Vector3(37.5011, 96.1672, 33.1967), Vector3(43.458, 86.5288, 48.792), Vector3(59.1623, 76.4498, 48.478), Vector3(69.3087, 76.6547, 32.8154), Vector3(63.3518, 86.2931, 17.2201), Vector3(47.2485, 95.7266, 17.2875)]
 id = 15
@@ -3147,7 +3153,8 @@ mesh = SubResource("ArrayMesh_igsah")
 [node name="@CollisionShape3D@6" type="CollisionShape3D" parent="TileArea15"]
 shape = SubResource("ConvexPolygonShape3D_iagx1")
 
-[node name="TileArea61" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea61" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [62.6093, 46.2181, 72.7395]
 adjust_vertices = [Vector3(62.3811, 62.3811, 62.3811), Vector3(48.478, 59.1623, 76.4498), Vector3(48.792, 43.458, 86.5288), Vector3(62.9, 31.0141, 82.6066), Vector3(76.6547, 32.8154, 69.3087), Vector3(76.4498, 48.478, 59.1623)]
 id = 61
@@ -3160,7 +3167,8 @@ mesh = SubResource("ArrayMesh_gabh8")
 [node name="@CollisionShape3D@7" type="CollisionShape3D" parent="TileArea61"]
 shape = SubResource("ConvexPolygonShape3D_lqq6d")
 
-[node name="TileArea63" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea63" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [72.7395, 62.6092, 46.2181]
 adjust_vertices = [Vector3(59.1623, 76.4498, 48.478), Vector3(62.3811, 62.3811, 62.3811), Vector3(76.4498, 48.478, 59.1623), Vector3(86.5288, 48.792, 43.458), Vector3(82.6066, 62.9, 31.0141), Vector3(69.3087, 76.6547, 32.8154)]
 id = 63
@@ -3173,7 +3181,8 @@ mesh = SubResource("ArrayMesh_8w2l0")
 [node name="@CollisionShape3D@8" type="CollisionShape3D" parent="TileArea63"]
 shape = SubResource("ConvexPolygonShape3D_24lax")
 
-[node name="TileArea0" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea0" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [2.09808e-07, 91.1973, 56.363]
 adjust_vertices = [Vector3(-9.52937, 98.0928, 45.2058), Vector3(-15.4188, 88.5634, 60.6247), Vector3(0, 82.6739, 70.154), Vector3(15.4188, 88.5634, 60.6247), Vector3(9.52937, 98.0928, 45.2058)]
 neighbors_id = [64, 58, 50, 45, 65]
@@ -3185,7 +3194,8 @@ mesh = SubResource("ArrayMesh_018nn")
 [node name="@CollisionShape3D@9" type="CollisionShape3D" parent="TileArea0"]
 shape = SubResource("ConvexPolygonShape3D_f46yy")
 
-[node name="TileArea60" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea60" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [47.1009, 26.0149, 92.2888]
 adjust_vertices = [Vector3(48.792, 43.458, 86.5288), Vector3(33.1967, 37.5011, 96.1672), Vector3(31.8859, 19.1678, 101.774), Vector3(45.2058, 9.52937, 98.0928), Vector3(60.6247, 15.4188, 88.5634), Vector3(62.9, 31.0141, 82.6066)]
 id = 60
@@ -3198,7 +3208,8 @@ mesh = SubResource("ArrayMesh_o24wf")
 [node name="@CollisionShape3D@10" type="CollisionShape3D" parent="TileArea60"]
 shape = SubResource("ConvexPolygonShape3D_rfwos")
 
-[node name="TileArea62" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea62" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [76.2108, 73.1157, 16.0781]
 adjust_vertices = [Vector3(63.3518, 86.2931, 17.2201), Vector3(69.3087, 76.6547, 32.8154), Vector3(82.6066, 62.9, 31.0141), Vector3(88.5634, 60.6247, 15.4188), Vector3(82.6739, 70.154, -5.24521e-07), Vector3(70.7602, 82.0678, -5.24521e-07)]
 id = 62
@@ -3211,7 +3222,8 @@ mesh = SubResource("ArrayMesh_tsj1m")
 [node name="@CollisionShape3D@11" type="CollisionShape3D" parent="TileArea62"]
 shape = SubResource("ConvexPolygonShape3D_nxide")
 
-[node name="TileArea43" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea43" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [1.7484e-07, 55.0858, 91.1736]
 adjust_vertices = [Vector3(0, 70.7602, 82.0678), Vector3(-17.2201, 63.3518, 86.2931), Vector3(-17.2875, 47.2485, 95.7266), Vector3(0, 38.5536, 100.935), Vector3(17.2875, 47.2485, 95.7266), Vector3(17.2201, 63.3518, 86.2931)]
 id = 43
@@ -3224,7 +3236,8 @@ mesh = SubResource("ArrayMesh_lprti")
 [node name="@CollisionShape3D@12" type="CollisionShape3D" parent="TileArea43"]
 shape = SubResource("ConvexPolygonShape3D_la4qd")
 
-[node name="TileArea59" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea59" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [28.5644, 101.304, 16.3911]
 adjust_vertices = [Vector3(9.6384, 106.81, 15.9766), Vector3(19.1678, 101.774, 31.8859), Vector3(37.5011, 96.1672, 33.1967), Vector3(47.2485, 95.7266, 17.2875), Vector3(38.5536, 100.935, -5.24521e-07), Vector3(19.2768, 106.411, -5.24521e-07)]
 id = 59
@@ -3237,7 +3250,8 @@ mesh = SubResource("ArrayMesh_00ckq")
 [node name="@CollisionShape3D@13" type="CollisionShape3D" parent="TileArea59"]
 shape = SubResource("ConvexPolygonShape3D_cov32")
 
-[node name="TileArea17" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea17" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [86.3034, 32.9649, 53.3384]
 adjust_vertices = [Vector3(76.4498, 48.478, 59.1623), Vector3(76.6547, 32.8154, 69.3087), Vector3(86.2931, 17.2201, 63.3518), Vector3(95.7266, 17.2875, 47.2485), Vector3(96.1672, 33.1967, 37.5011), Vector3(86.5288, 48.792, 43.458)]
 id = 17
@@ -3250,7 +3264,8 @@ mesh = SubResource("ArrayMesh_w4gy7")
 [node name="@CollisionShape3D@14" type="CollisionShape3D" parent="TileArea17"]
 shape = SubResource("ConvexPolygonShape3D_d0e01")
 
-[node name="TileArea70" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea70" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [92.2888, 47.1008, 26.0149]
 adjust_vertices = [Vector3(88.5634, 60.6247, 15.4188), Vector3(82.6066, 62.9, 31.0141), Vector3(86.5288, 48.792, 43.458), Vector3(96.1672, 33.1967, 37.5011), Vector3(101.774, 31.8859, 19.1678), Vector3(98.0928, 45.2058, 9.52937)]
 id = 70
@@ -3263,7 +3278,8 @@ mesh = SubResource("ArrayMesh_xees4")
 [node name="@CollisionShape3D@15" type="CollisionShape3D" parent="TileArea70"]
 shape = SubResource("ConvexPolygonShape3D_npgkt")
 
-[node name="TileArea67" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea67" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [73.1157, 16.0781, 76.2108]
 adjust_vertices = [Vector3(76.6547, 32.8154, 69.3087), Vector3(62.9, 31.0141, 82.6066), Vector3(60.6247, 15.4188, 88.5634), Vector3(70.154, -1.04904e-06, 82.6739), Vector3(82.0678, -1.04904e-06, 70.7602), Vector3(86.2931, 17.2201, 63.3518)]
 id = 67
@@ -3276,7 +3292,8 @@ mesh = SubResource("ArrayMesh_ogobj")
 [node name="@CollisionShape3D@16" type="CollisionShape3D" parent="TileArea67"]
 shape = SubResource("ConvexPolygonShape3D_pdhlo")
 
-[node name="TileArea45" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea45" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.0781, 76.2108, 73.1157]
 adjust_vertices = [Vector3(-15.4188, 88.5634, 60.6247), Vector3(-31.0141, 82.6066, 62.9), Vector3(-32.8154, 69.3087, 76.6547), Vector3(-17.2201, 63.3518, 86.2931), Vector3(1.04904e-06, 70.7602, 82.0678), Vector3(1.04904e-06, 82.6739, 70.154)]
 id = 45
@@ -3289,7 +3306,8 @@ mesh = SubResource("ArrayMesh_aadpn")
 [node name="@CollisionShape3D@17" type="CollisionShape3D" parent="TileArea45"]
 shape = SubResource("ConvexPolygonShape3D_8v5e7")
 
-[node name="TileArea58" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea58" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, 102.226, 31.0228]
 adjust_vertices = [Vector3(9.6384, 106.81, 15.9766), Vector3(-9.6384, 106.81, 15.9766), Vector3(-19.1678, 101.774, 31.8859), Vector3(-9.52937, 98.0928, 45.2058), Vector3(9.52937, 98.0928, 45.2058), Vector3(19.1678, 101.774, 31.8859)]
 id = 58
@@ -3302,7 +3320,8 @@ mesh = SubResource("ArrayMesh_wktat")
 [node name="@CollisionShape3D@18" type="CollisionShape3D" parent="TileArea58"]
 shape = SubResource("ConvexPolygonShape3D_yay2s")
 
-[node name="TileArea42" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea42" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.3911, 28.5644, 101.304]
 adjust_vertices = [Vector3(17.2875, 47.2485, 95.7266), Vector3(-5.24521e-07, 38.5536, 100.935), Vector3(-5.24521e-07, 19.2768, 106.411), Vector3(15.9766, 9.6384, 106.81), Vector3(31.8859, 19.1678, 101.774), Vector3(33.1967, 37.5011, 96.1672)]
 id = 42
@@ -3315,7 +3334,8 @@ mesh = SubResource("ArrayMesh_n5gsg")
 [node name="@CollisionShape3D@19" type="CollisionShape3D" parent="TileArea42"]
 shape = SubResource("ConvexPolygonShape3D_ji8cw")
 
-[node name="TileArea55" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea55" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [55.0858, 91.1736, 0.0]
 adjust_vertices = [Vector3(38.5536, 100.935, 0), Vector3(47.2485, 95.7266, 17.2875), Vector3(63.3518, 86.2931, 17.2201), Vector3(70.7602, 82.0678, 0), Vector3(63.3518, 86.2931, -17.2201), Vector3(47.2485, 95.7266, -17.2875)]
 id = 55
@@ -3328,7 +3348,8 @@ mesh = SubResource("ArrayMesh_33mvp")
 [node name="@CollisionShape3D@20" type="CollisionShape3D" parent="TileArea55"]
 shape = SubResource("ConvexPolygonShape3D_crx5g")
 
-[node name="TileArea50" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea50" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-26.0149, 92.2888, 47.1008]
 adjust_vertices = [Vector3(-9.52937, 98.0928, 45.2058), Vector3(-19.1678, 101.774, 31.8859), Vector3(-37.5011, 96.1672, 33.1967), Vector3(-43.458, 86.5288, 48.792), Vector3(-31.0141, 82.6066, 62.9), Vector3(-15.4188, 88.5634, 60.6247)]
 id = 50
@@ -3341,7 +3362,8 @@ mesh = SubResource("ArrayMesh_5s041")
 [node name="@CollisionShape3D@21" type="CollisionShape3D" parent="TileArea50"]
 shape = SubResource("ConvexPolygonShape3D_q71kp")
 
-[node name="TileArea4" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea4" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [56.363, 2.09808e-07, 91.1973]
 adjust_vertices = [Vector3(45.2058, 9.52937, 98.0928), Vector3(45.2058, -9.52937, 98.0928), Vector3(60.6247, -15.4188, 88.5634), Vector3(70.154, 0, 82.6739), Vector3(60.6247, 15.4188, 88.5634)]
 id = 4
@@ -3354,7 +3376,8 @@ mesh = SubResource("ArrayMesh_i5l12")
 [node name="@CollisionShape3D@22" type="CollisionShape3D" parent="TileArea4"]
 shape = SubResource("ConvexPolygonShape3D_deaxm")
 
-[node name="TileArea1" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea1" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [91.1973, 56.363, 0.0]
 adjust_vertices = [Vector3(88.5634, 60.6247, 15.4188), Vector3(98.0928, 45.2058, 9.52937), Vector3(98.0928, 45.2058, -9.52937), Vector3(88.5634, 60.6247, -15.4188), Vector3(82.6739, 70.154, 0)]
 id = 1
@@ -3367,7 +3390,8 @@ mesh = SubResource("ArrayMesh_b1a7w")
 [node name="@CollisionShape3D@23" type="CollisionShape3D" parent="TileArea1"]
 shape = SubResource("ConvexPolygonShape3D_ujn3i")
 
-[node name="TileArea118" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea118" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [31.0228, 0.0, 102.226]
 adjust_vertices = [Vector3(31.8859, 19.1678, 101.774), Vector3(15.9766, 9.6384, 106.81), Vector3(15.9766, -9.6384, 106.81), Vector3(31.8859, -19.1678, 101.774), Vector3(45.2058, -9.52937, 98.0928), Vector3(45.2058, 9.52937, 98.0928)]
 id = 118
@@ -3380,7 +3404,8 @@ mesh = SubResource("ArrayMesh_dnjfj")
 [node name="@CollisionShape3D@24" type="CollisionShape3D" parent="TileArea118"]
 shape = SubResource("ConvexPolygonShape3D_nqvga")
 
-[node name="TileArea77" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea77" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [76.2108, 73.1157, -16.0781]
 adjust_vertices = [Vector3(63.3518, 86.2931, -17.2201), Vector3(70.7602, 82.0678, 5.24521e-07), Vector3(82.6739, 70.154, 5.24521e-07), Vector3(88.5634, 60.6247, -15.4188), Vector3(82.6066, 62.9, -31.0141), Vector3(69.3087, 76.6547, -32.8154)]
 id = 77
@@ -3393,7 +3418,8 @@ mesh = SubResource("ArrayMesh_qi50x")
 [node name="@CollisionShape3D@25" type="CollisionShape3D" parent="TileArea77"]
 shape = SubResource("ConvexPolygonShape3D_1npql")
 
-[node name="TileArea12" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea12" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-32.9649, 53.3384, 86.3034]
 adjust_vertices = [Vector3(-32.8154, 69.3087, 76.6547), Vector3(-48.478, 59.1623, 76.4498), Vector3(-48.792, 43.458, 86.5288), Vector3(-33.1967, 37.5011, 96.1672), Vector3(-17.2875, 47.2485, 95.7266), Vector3(-17.2201, 63.3518, 86.2931)]
 id = 12
@@ -3406,7 +3432,8 @@ mesh = SubResource("ArrayMesh_as5xi")
 [node name="@CollisionShape3D@26" type="CollisionShape3D" parent="TileArea12"]
 shape = SubResource("ConvexPolygonShape3D_2pl4y")
 
-[node name="TileArea14" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea14" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, 106.677, 0.0]
 adjust_vertices = [Vector3(9.6384, 106.81, 15.9766), Vector3(19.2768, 106.411, 0), Vector3(9.6384, 106.81, -15.9766), Vector3(-9.6384, 106.81, -15.9766), Vector3(-19.2768, 106.411, 0), Vector3(-9.6384, 106.81, 15.9766)]
 id = 14
@@ -3419,7 +3446,8 @@ mesh = SubResource("ArrayMesh_dwfqw")
 [node name="@CollisionShape3D@27" type="CollisionShape3D" parent="TileArea14"]
 shape = SubResource("ConvexPolygonShape3D_5rthf")
 
-[node name="TileArea68" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea68" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [91.1736, 1.7484e-07, 55.0858]
 adjust_vertices = [Vector3(86.2931, 17.2201, 63.3518), Vector3(82.0678, 0, 70.7602), Vector3(86.2931, -17.2201, 63.3518), Vector3(95.7266, -17.2875, 47.2485), Vector3(100.935, 0, 38.5536), Vector3(95.7266, 17.2875, 47.2485)]
 id = 68
@@ -3432,7 +3460,8 @@ mesh = SubResource("ArrayMesh_uyh4o")
 [node name="@CollisionShape3D@28" type="CollisionShape3D" parent="TileArea68"]
 shape = SubResource("ConvexPolygonShape3D_qeasq")
 
-[node name="TileArea71" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea71" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [101.304, 16.3911, 28.5644]
 adjust_vertices = [Vector3(96.1672, 33.1967, 37.5011), Vector3(95.7266, 17.2875, 47.2485), Vector3(100.935, -5.24521e-07, 38.5536), Vector3(106.411, -5.24521e-07, 19.2768), Vector3(106.81, 15.9766, 9.6384), Vector3(101.774, 31.8859, 19.1678)]
 id = 71
@@ -3445,7 +3474,8 @@ mesh = SubResource("ArrayMesh_3y6dj")
 [node name="@CollisionShape3D@29" type="CollisionShape3D" parent="TileArea71"]
 shape = SubResource("ConvexPolygonShape3D_ltt3r")
 
-[node name="TileArea44" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea44" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.3911, 28.5644, 101.304]
 adjust_vertices = [Vector3(-17.2875, 47.2485, 95.7266), Vector3(-33.1967, 37.5011, 96.1672), Vector3(-31.8859, 19.1678, 101.774), Vector3(-15.9766, 9.6384, 106.81), Vector3(5.24521e-07, 19.2768, 106.411), Vector3(5.24521e-07, 38.5536, 100.935)]
 id = 44
@@ -3458,7 +3488,8 @@ mesh = SubResource("ArrayMesh_ab2bd")
 [node name="@CollisionShape3D@30" type="CollisionShape3D" parent="TileArea44"]
 shape = SubResource("ConvexPolygonShape3D_1o825")
 
-[node name="TileArea57" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea57" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [28.5644, 101.304, -16.3911]
 adjust_vertices = [Vector3(19.2768, 106.411, 5.24521e-07), Vector3(38.5536, 100.935, 5.24521e-07), Vector3(47.2485, 95.7266, -17.2875), Vector3(37.5011, 96.1672, -33.1967), Vector3(19.1678, 101.774, -31.8859), Vector3(9.6384, 106.81, -15.9766)]
 id = 57
@@ -3471,7 +3502,8 @@ mesh = SubResource("ArrayMesh_5sycj")
 [node name="@CollisionShape3D@31" type="CollisionShape3D" parent="TileArea57"]
 shape = SubResource("ConvexPolygonShape3D_vyjhy")
 
-[node name="TileArea46" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea46" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-46.2181, 72.7395, 62.6092]
 adjust_vertices = [Vector3(-43.458, 86.5288, 48.792), Vector3(-59.1623, 76.4498, 48.478), Vector3(-62.3811, 62.3811, 62.3811), Vector3(-48.478, 59.1623, 76.4498), Vector3(-32.8154, 69.3087, 76.6547), Vector3(-31.0141, 82.6066, 62.9)]
 id = 46
@@ -3484,7 +3516,8 @@ mesh = SubResource("ArrayMesh_5hk5r")
 [node name="@CollisionShape3D@32" type="CollisionShape3D" parent="TileArea46"]
 shape = SubResource("ConvexPolygonShape3D_1nym1")
 
-[node name="TileArea51" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea51" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-28.5644, 101.304, 16.3911]
 adjust_vertices = [Vector3(-9.6384, 106.81, 15.9766), Vector3(-19.2768, 106.411, -5.24521e-07), Vector3(-38.5536, 100.935, -5.24521e-07), Vector3(-47.2485, 95.7266, 17.2875), Vector3(-37.5011, 96.1672, 33.1967), Vector3(-19.1678, 101.774, 31.8859)]
 id = 51
@@ -3497,7 +3530,8 @@ mesh = SubResource("ArrayMesh_wc4v2")
 [node name="@CollisionShape3D@33" type="CollisionShape3D" parent="TileArea51"]
 shape = SubResource("ConvexPolygonShape3D_v6x61")
 
-[node name="TileArea126" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea126" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [73.1157, -16.0781, 76.2108]
 adjust_vertices = [Vector3(70.154, 1.04904e-06, 82.6739), Vector3(60.6247, -15.4188, 88.5634), Vector3(62.9, -31.0141, 82.6066), Vector3(76.6547, -32.8154, 69.3087), Vector3(86.2931, -17.2201, 63.3518), Vector3(82.0678, 1.04904e-06, 70.7602)]
 id = 126
@@ -3510,7 +3544,8 @@ mesh = SubResource("ArrayMesh_ov80v")
 [node name="@CollisionShape3D@34" type="CollisionShape3D" parent="TileArea126"]
 shape = SubResource("ConvexPolygonShape3D_2ovjk")
 
-[node name="TileArea75" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea75" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [102.226, 31.0228, 0.0]
 adjust_vertices = [Vector3(98.0928, 45.2058, 9.52937), Vector3(101.774, 31.8859, 19.1678), Vector3(106.81, 15.9766, 9.6384), Vector3(106.81, 15.9766, -9.6384), Vector3(101.774, 31.8859, -19.1678), Vector3(98.0928, 45.2058, -9.52937)]
 id = 75
@@ -3523,7 +3558,8 @@ mesh = SubResource("ArrayMesh_gtmxh")
 [node name="@CollisionShape3D@35" type="CollisionShape3D" parent="TileArea75"]
 shape = SubResource("ConvexPolygonShape3D_ortag")
 
-[node name="TileArea28" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea28" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, 0.0, 106.677]
 adjust_vertices = [Vector3(0, 19.2768, 106.411), Vector3(-15.9766, 9.6384, 106.81), Vector3(-15.9766, -9.6384, 106.81), Vector3(0, -19.2768, 106.411), Vector3(15.9766, -9.6384, 106.81), Vector3(15.9766, 9.6384, 106.81)]
 id = 28
@@ -3536,7 +3572,8 @@ mesh = SubResource("ArrayMesh_ppvot")
 [node name="@CollisionShape3D@36" type="CollisionShape3D" parent="TileArea28"]
 shape = SubResource("ConvexPolygonShape3D_ffmcp")
 
-[node name="TileArea20" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea20" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [53.3384, 86.3034, -32.9649]
 adjust_vertices = [Vector3(47.2485, 95.7266, -17.2875), Vector3(63.3518, 86.2931, -17.2201), Vector3(69.3087, 76.6547, -32.8154), Vector3(59.1623, 76.4498, -48.478), Vector3(43.458, 86.5288, -48.792), Vector3(37.5011, 96.1672, -33.1967)]
 id = 20
@@ -3549,7 +3586,8 @@ mesh = SubResource("ArrayMesh_8t38o")
 [node name="@CollisionShape3D@37" type="CollisionShape3D" parent="TileArea20"]
 shape = SubResource("ConvexPolygonShape3D_f3fac")
 
-[node name="TileArea127" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea127" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [47.1008, -26.0149, 92.2888]
 adjust_vertices = [Vector3(45.2058, -9.52937, 98.0928), Vector3(31.8859, -19.1678, 101.774), Vector3(33.1967, -37.5011, 96.1672), Vector3(48.792, -43.458, 86.5288), Vector3(62.9, -31.0141, 82.6066), Vector3(60.6247, -15.4188, 88.5634)]
 id = 127
@@ -3562,7 +3600,8 @@ mesh = SubResource("ArrayMesh_nku0h")
 [node name="@CollisionShape3D@38" type="CollisionShape3D" parent="TileArea127"]
 shape = SubResource("ConvexPolygonShape3D_yig75")
 
-[node name="TileArea78" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea78" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [92.2888, 47.1008, -26.0149]
 adjust_vertices = [Vector3(88.5634, 60.6247, -15.4188), Vector3(98.0928, 45.2058, -9.52937), Vector3(101.774, 31.8859, -19.1678), Vector3(96.1672, 33.1967, -37.5011), Vector3(86.5288, 48.792, -43.458), Vector3(82.6066, 62.9, -31.0141)]
 id = 78
@@ -3575,7 +3614,8 @@ mesh = SubResource("ArrayMesh_7yd8p")
 [node name="@CollisionShape3D@39" type="CollisionShape3D" parent="TileArea78"]
 shape = SubResource("ConvexPolygonShape3D_dgivs")
 
-[node name="TileArea13" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea13" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-53.3384, 86.3034, 32.9649]
 adjust_vertices = [Vector3(-37.5011, 96.1672, 33.1967), Vector3(-47.2485, 95.7266, 17.2875), Vector3(-63.3518, 86.2931, 17.2201), Vector3(-69.3087, 76.6547, 32.8154), Vector3(-59.1623, 76.4498, 48.478), Vector3(-43.458, 86.5288, 48.792)]
 id = 13
@@ -3588,7 +3628,8 @@ mesh = SubResource("ArrayMesh_ymvnc")
 [node name="@CollisionShape3D@40" type="CollisionShape3D" parent="TileArea13"]
 shape = SubResource("ConvexPolygonShape3D_38icd")
 
-[node name="TileArea48" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea48" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-47.1009, 26.0149, 92.2888]
 adjust_vertices = [Vector3(-48.792, 43.458, 86.5288), Vector3(-62.9, 31.0141, 82.6066), Vector3(-60.6247, 15.4188, 88.5634), Vector3(-45.2058, 9.52937, 98.0928), Vector3(-31.8859, 19.1678, 101.774), Vector3(-33.1967, 37.5011, 96.1672)]
 id = 48
@@ -3601,7 +3642,8 @@ mesh = SubResource("ArrayMesh_peaw0")
 [node name="@CollisionShape3D@41" type="CollisionShape3D" parent="TileArea48"]
 shape = SubResource("ConvexPolygonShape3D_xce5r")
 
-[node name="TileArea56" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea56" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, 102.226, -31.0228]
 adjust_vertices = [Vector3(9.6384, 106.81, -15.9766), Vector3(19.1678, 101.774, -31.8859), Vector3(9.52937, 98.0928, -45.2058), Vector3(-9.52937, 98.0928, -45.2058), Vector3(-19.1678, 101.774, -31.8859), Vector3(-9.6384, 106.81, -15.9766)]
 id = 56
@@ -3614,7 +3656,8 @@ mesh = SubResource("ArrayMesh_iq7g5")
 [node name="@CollisionShape3D@42" type="CollisionShape3D" parent="TileArea56"]
 shape = SubResource("ConvexPolygonShape3D_cd2hs")
 
-[node name="TileArea69" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea69" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [101.304, -16.3911, 28.5644]
 adjust_vertices = [Vector3(100.935, 5.24521e-07, 38.5536), Vector3(95.7266, -17.2875, 47.2485), Vector3(96.1672, -33.1967, 37.5011), Vector3(101.774, -31.8859, 19.1678), Vector3(106.81, -15.9766, 9.6384), Vector3(106.411, 5.24521e-07, 19.2768)]
 id = 69
@@ -3627,7 +3670,8 @@ mesh = SubResource("ArrayMesh_n2u42")
 [node name="@CollisionShape3D@43" type="CollisionShape3D" parent="TileArea69"]
 shape = SubResource("ConvexPolygonShape3D_pun6o")
 
-[node name="TileArea79" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea79" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [72.7395, 62.6092, -46.2181]
 adjust_vertices = [Vector3(69.3087, 76.6547, -32.8154), Vector3(82.6066, 62.9, -31.0141), Vector3(86.5288, 48.792, -43.458), Vector3(76.4498, 48.478, -59.1623), Vector3(62.3811, 62.3811, -62.3811), Vector3(59.1623, 76.4498, -48.478)]
 id = 79
@@ -3640,7 +3684,8 @@ mesh = SubResource("ArrayMesh_fjuqe")
 [node name="@CollisionShape3D@44" type="CollisionShape3D" parent="TileArea79"]
 shape = SubResource("ConvexPolygonShape3D_8du25")
 
-[node name="TileArea119" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea119" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.3911, -28.5644, 101.304]
 adjust_vertices = [Vector3(15.9766, -9.6384, 106.81), Vector3(-5.24521e-07, -19.2768, 106.411), Vector3(-5.24521e-07, -38.5536, 100.935), Vector3(17.2875, -47.2485, 95.7266), Vector3(33.1967, -37.5011, 96.1672), Vector3(31.8859, -19.1678, 101.774)]
 id = 119
@@ -3653,7 +3698,8 @@ mesh = SubResource("ArrayMesh_n27la")
 [node name="@CollisionShape3D@45" type="CollisionShape3D" parent="TileArea119"]
 shape = SubResource("ConvexPolygonShape3D_0xl1r")
 
-[node name="TileArea120" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea120" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-31.0228, 0.0, 102.226]
 adjust_vertices = [Vector3(-31.8859, 19.1678, 101.774), Vector3(-45.2058, 9.52937, 98.0928), Vector3(-45.2058, -9.52937, 98.0928), Vector3(-31.8859, -19.1678, 101.774), Vector3(-15.9766, -9.6384, 106.81), Vector3(-15.9766, 9.6384, 106.81)]
 id = 120
@@ -3666,7 +3712,8 @@ mesh = SubResource("ArrayMesh_y20ew")
 [node name="@CollisionShape3D@46" type="CollisionShape3D" parent="TileArea120"]
 shape = SubResource("ConvexPolygonShape3D_ta6oc")
 
-[node name="TileArea82" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea82" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [26.0149, 92.2888, -47.1009]
 adjust_vertices = [Vector3(19.1678, 101.774, -31.8859), Vector3(37.5011, 96.1672, -33.1967), Vector3(43.458, 86.5288, -48.792), Vector3(31.0141, 82.6066, -62.9), Vector3(15.4188, 88.5634, -60.6247), Vector3(9.52937, 98.0928, -45.2058)]
 id = 82
@@ -3679,7 +3726,8 @@ mesh = SubResource("ArrayMesh_6e3ur")
 [node name="@CollisionShape3D@47" type="CollisionShape3D" parent="TileArea82"]
 shape = SubResource("ConvexPolygonShape3D_4t6u0")
 
-[node name="TileArea52" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea52" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-28.5644, 101.304, -16.3911]
 adjust_vertices = [Vector3(-19.2768, 106.411, 5.24521e-07), Vector3(-9.6384, 106.81, -15.9766), Vector3(-19.1678, 101.774, -31.8859), Vector3(-37.5011, 96.1672, -33.1967), Vector3(-47.2485, 95.7266, -17.2875), Vector3(-38.5536, 100.935, 5.24521e-07)]
 id = 52
@@ -3692,7 +3740,8 @@ mesh = SubResource("ArrayMesh_ufxjm")
 [node name="@CollisionShape3D@48" type="CollisionShape3D" parent="TileArea52"]
 shape = SubResource("ConvexPolygonShape3D_bh0qa")
 
-[node name="TileArea49" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea49" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-62.6092, 46.2181, 72.7395]
 adjust_vertices = [Vector3(-62.3811, 62.3811, 62.3811), Vector3(-76.4498, 48.478, 59.1623), Vector3(-76.6547, 32.8154, 69.3087), Vector3(-62.9, 31.0141, 82.6066), Vector3(-48.792, 43.458, 86.5288), Vector3(-48.478, 59.1623, 76.4498)]
 id = 49
@@ -3705,7 +3754,8 @@ mesh = SubResource("ArrayMesh_p0h10")
 [node name="@CollisionShape3D@49" type="CollisionShape3D" parent="TileArea49"]
 shape = SubResource("ConvexPolygonShape3D_q22bq")
 
-[node name="TileArea30" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea30" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [86.3034, -32.9649, 53.3384]
 adjust_vertices = [Vector3(86.2931, -17.2201, 63.3518), Vector3(76.6547, -32.8154, 69.3087), Vector3(76.4498, -48.478, 59.1623), Vector3(86.5288, -48.792, 43.458), Vector3(96.1672, -33.1967, 37.5011), Vector3(95.7266, -17.2875, 47.2485)]
 id = 30
@@ -3718,7 +3768,8 @@ mesh = SubResource("ArrayMesh_iekne")
 [node name="@CollisionShape3D@50" type="CollisionShape3D" parent="TileArea30"]
 shape = SubResource("ConvexPolygonShape3D_f5wlp")
 
-[node name="TileArea18" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea18" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [106.677, 0.0, 0.0]
 adjust_vertices = [Vector3(106.81, 15.9766, 9.6384), Vector3(106.411, 0, 19.2768), Vector3(106.81, -15.9766, 9.6384), Vector3(106.81, -15.9766, -9.6384), Vector3(106.411, 0, -19.2768), Vector3(106.81, 15.9766, -9.6384)]
 id = 18
@@ -3731,7 +3782,8 @@ mesh = SubResource("ArrayMesh_icswc")
 [node name="@CollisionShape3D@51" type="CollisionShape3D" parent="TileArea18"]
 shape = SubResource("ConvexPolygonShape3D_tp3d8")
 
-[node name="TileArea128" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea128" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [62.6092, -46.2181, 72.7395]
 adjust_vertices = [Vector3(62.9, -31.0141, 82.6066), Vector3(48.792, -43.458, 86.5288), Vector3(48.478, -59.1623, 76.4498), Vector3(62.3811, -62.3811, 62.3811), Vector3(76.4498, -48.478, 59.1623), Vector3(76.6547, -32.8154, 69.3087)]
 id = 128
@@ -3744,7 +3796,8 @@ mesh = SubResource("ArrayMesh_dy8g6")
 [node name="@CollisionShape3D@52" type="CollisionShape3D" parent="TileArea128"]
 shape = SubResource("ConvexPolygonShape3D_0ln8s")
 
-[node name="TileArea76" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea76" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [101.304, 16.3911, -28.5644]
 adjust_vertices = [Vector3(101.774, 31.8859, -19.1678), Vector3(106.81, 15.9766, -9.6384), Vector3(106.411, -5.24521e-07, -19.2768), Vector3(100.935, -5.24521e-07, -38.5536), Vector3(95.7266, 17.2875, -47.2485), Vector3(96.1672, 33.1967, -37.5011)]
 id = 76
@@ -3757,7 +3810,8 @@ mesh = SubResource("ArrayMesh_48j78")
 [node name="@CollisionShape3D@53" type="CollisionShape3D" parent="TileArea76"]
 shape = SubResource("ConvexPolygonShape3D_lk5xn")
 
-[node name="TileArea54" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea54" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-55.0858, 91.1736, 0.0]
 adjust_vertices = [Vector3(-38.5536, 100.935, 0), Vector3(-47.2485, 95.7266, -17.2875), Vector3(-63.3518, 86.2931, -17.2201), Vector3(-70.7602, 82.0678, 0), Vector3(-63.3518, 86.2931, 17.2201), Vector3(-47.2485, 95.7266, 17.2875)]
 id = 54
@@ -3770,7 +3824,8 @@ mesh = SubResource("ArrayMesh_4yqun")
 [node name="@CollisionShape3D@54" type="CollisionShape3D" parent="TileArea54"]
 shape = SubResource("ConvexPolygonShape3D_6k7ee")
 
-[node name="TileArea47" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea47" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-72.7395, 62.6092, 46.2181]
 adjust_vertices = [Vector3(-59.1623, 76.4498, 48.478), Vector3(-69.3087, 76.6547, 32.8154), Vector3(-82.6066, 62.9, 31.0141), Vector3(-86.5288, 48.792, 43.458), Vector3(-76.4498, 48.478, 59.1623), Vector3(-62.3811, 62.3811, 62.3811)]
 id = 47
@@ -3783,7 +3838,8 @@ mesh = SubResource("ArrayMesh_ko81b")
 [node name="@CollisionShape3D@55" type="CollisionShape3D" parent="TileArea47"]
 shape = SubResource("ConvexPolygonShape3D_ihxni")
 
-[node name="TileArea122" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea122" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.3911, -28.5644, 101.304]
 adjust_vertices = [Vector3(-15.9766, -9.6384, 106.81), Vector3(-31.8859, -19.1678, 101.774), Vector3(-33.1967, -37.5011, 96.1672), Vector3(-17.2875, -47.2485, 95.7266), Vector3(5.24521e-07, -38.5536, 100.935), Vector3(5.24521e-07, -19.2768, 106.411)]
 id = 122
@@ -3796,7 +3852,8 @@ mesh = SubResource("ArrayMesh_4wr1p")
 [node name="@CollisionShape3D@56" type="CollisionShape3D" parent="TileArea122"]
 shape = SubResource("ConvexPolygonShape3D_saalp")
 
-[node name="TileArea83" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea83" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [46.2181, 72.7395, -62.6092]
 adjust_vertices = [Vector3(43.458, 86.5288, -48.792), Vector3(59.1623, 76.4498, -48.478), Vector3(62.3811, 62.3811, -62.3811), Vector3(48.478, 59.1623, -76.4498), Vector3(32.8154, 69.3087, -76.6547), Vector3(31.0141, 82.6066, -62.9)]
 id = 83
@@ -3809,7 +3866,8 @@ mesh = SubResource("ArrayMesh_l1t4c")
 [node name="@CollisionShape3D@57" type="CollisionShape3D" parent="TileArea83"]
 shape = SubResource("ConvexPolygonShape3D_5jj6e")
 
-[node name="TileArea6" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea6" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-56.363, 0.0, 91.1973]
 adjust_vertices = [Vector3(-60.6247, 15.4188, 88.5634), Vector3(-70.154, 0, 82.6739), Vector3(-60.6247, -15.4188, 88.5634), Vector3(-45.2058, -9.52937, 98.0928), Vector3(-45.2058, 9.52937, 98.0928)]
 id = 6
@@ -3822,7 +3880,8 @@ mesh = SubResource("ArrayMesh_rejrc")
 [node name="@CollisionShape3D@58" type="CollisionShape3D" parent="TileArea6"]
 shape = SubResource("ConvexPolygonShape3D_kh2up")
 
-[node name="TileArea7" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea7" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-2.09808e-07, 91.1973, -56.363]
 adjust_vertices = [Vector3(9.52937, 98.0928, -45.2058), Vector3(15.4188, 88.5634, -60.6247), Vector3(0, 82.6739, -70.154), Vector3(-15.4188, 88.5634, -60.6247), Vector3(-9.52937, 98.0928, -45.2058)]
 id = 7
@@ -3835,7 +3894,8 @@ mesh = SubResource("ArrayMesh_0ktye")
 [node name="@CollisionShape3D@59" type="CollisionShape3D" parent="TileArea7"]
 shape = SubResource("ConvexPolygonShape3D_4cydj")
 
-[node name="TileArea31" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea31" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [32.9649, -53.3384, 86.3034]
 adjust_vertices = [Vector3(33.1967, -37.5011, 96.1672), Vector3(17.2875, -47.2485, 95.7266), Vector3(17.2201, -63.3518, 86.2931), Vector3(32.8154, -69.3087, 76.6547), Vector3(48.478, -59.1623, 76.4498), Vector3(48.792, -43.458, 86.5288)]
 id = 31
@@ -3848,7 +3908,8 @@ mesh = SubResource("ArrayMesh_j3co0")
 [node name="@CollisionShape3D@60" type="CollisionShape3D" parent="TileArea31"]
 shape = SubResource("ConvexPolygonShape3D_8pwub")
 
-[node name="TileArea19" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea19" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [86.3034, 32.9649, -53.3384]
 adjust_vertices = [Vector3(86.5288, 48.792, -43.458), Vector3(96.1672, 33.1967, -37.5011), Vector3(95.7266, 17.2875, -47.2485), Vector3(86.2931, 17.2201, -63.3518), Vector3(76.6547, 32.8154, -69.3087), Vector3(76.4498, 48.478, -59.1623)]
 id = 19
@@ -3861,7 +3922,8 @@ mesh = SubResource("ArrayMesh_xmr18")
 [node name="@CollisionShape3D@61" type="CollisionShape3D" parent="TileArea19"]
 shape = SubResource("ConvexPolygonShape3D_2kaa7")
 
-[node name="TileArea53" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea53" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-76.2108, 73.1157, 16.0781]
 adjust_vertices = [Vector3(-63.3518, 86.2931, 17.2201), Vector3(-70.7602, 82.0678, -5.24521e-07), Vector3(-82.6739, 70.154, -5.24521e-07), Vector3(-88.5634, 60.6247, 15.4188), Vector3(-82.6066, 62.9, 31.0141), Vector3(-69.3087, 76.6547, 32.8154)]
 id = 53
@@ -3874,7 +3936,8 @@ mesh = SubResource("ArrayMesh_0j2x0")
 [node name="@CollisionShape3D@62" type="CollisionShape3D" parent="TileArea53"]
 shape = SubResource("ConvexPolygonShape3D_46a2y")
 
-[node name="TileArea124" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea124" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [92.2888, -47.1009, 26.0149]
 adjust_vertices = [Vector3(101.774, -31.8859, 19.1678), Vector3(96.1672, -33.1967, 37.5011), Vector3(86.5288, -48.792, 43.458), Vector3(82.6066, -62.9, 31.0141), Vector3(88.5634, -60.6247, 15.4188), Vector3(98.0928, -45.2058, 9.52937)]
 id = 124
@@ -3887,7 +3950,8 @@ mesh = SubResource("ArrayMesh_dwo64")
 [node name="@CollisionShape3D@63" type="CollisionShape3D" parent="TileArea124"]
 shape = SubResource("ConvexPolygonShape3D_002ei")
 
-[node name="TileArea72" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea72" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [102.226, -31.0228, 0.0]
 adjust_vertices = [Vector3(106.81, -15.9766, 9.6384), Vector3(101.774, -31.8859, 19.1678), Vector3(98.0928, -45.2058, 9.52937), Vector3(98.0928, -45.2058, -9.52937), Vector3(101.774, -31.8859, -19.1678), Vector3(106.81, -15.9766, -9.6384)]
 id = 72
@@ -3900,7 +3964,8 @@ mesh = SubResource("ArrayMesh_d104t")
 [node name="@CollisionShape3D@64" type="CollisionShape3D" parent="TileArea72"]
 shape = SubResource("ConvexPolygonShape3D_8hwrl")
 
-[node name="TileArea135" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea135" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-73.1157, 16.0781, 76.2108]
 adjust_vertices = [Vector3(-62.9, 31.0141, 82.6066), Vector3(-76.6547, 32.8154, 69.3087), Vector3(-86.2931, 17.2201, 63.3518), Vector3(-82.0678, -1.04904e-06, 70.7602), Vector3(-70.154, -1.04904e-06, 82.6739), Vector3(-60.6247, 15.4188, 88.5634)]
 id = 135
@@ -3913,7 +3978,8 @@ mesh = SubResource("ArrayMesh_unl3n")
 [node name="@CollisionShape3D@65" type="CollisionShape3D" parent="TileArea135"]
 shape = SubResource("ConvexPolygonShape3D_7pfin")
 
-[node name="TileArea144" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea144" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-26.0149, 92.2888, -47.1008]
 adjust_vertices = [Vector3(-19.1678, 101.774, -31.8859), Vector3(-9.52937, 98.0928, -45.2058), Vector3(-15.4188, 88.5634, -60.6247), Vector3(-31.0141, 82.6066, -62.9), Vector3(-43.458, 86.5288, -48.792), Vector3(-37.5011, 96.1672, -33.1967)]
 id = 144
@@ -3926,7 +3992,8 @@ mesh = SubResource("ArrayMesh_3w2se")
 [node name="@CollisionShape3D@66" type="CollisionShape3D" parent="TileArea144"]
 shape = SubResource("ConvexPolygonShape3D_pkugn")
 
-[node name="TileArea38" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea38" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-53.3384, 86.3034, -32.9649]
 adjust_vertices = [Vector3(-47.2485, 95.7266, -17.2875), Vector3(-37.5011, 96.1672, -33.1967), Vector3(-43.458, 86.5288, -48.792), Vector3(-59.1623, 76.4498, -48.478), Vector3(-69.3087, 76.6547, -32.8154), Vector3(-63.3518, 86.2931, -17.2201)]
 id = 38
@@ -3939,7 +4006,8 @@ mesh = SubResource("ArrayMesh_gxaua")
 [node name="@CollisionShape3D@67" type="CollisionShape3D" parent="TileArea38"]
 shape = SubResource("ConvexPolygonShape3D_1snlc")
 
-[node name="TileArea34" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea34" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-86.3034, 32.9649, 53.3384]
 adjust_vertices = [Vector3(-76.4498, 48.478, 59.1623), Vector3(-86.5288, 48.792, 43.458), Vector3(-96.1672, 33.1967, 37.5011), Vector3(-95.7266, 17.2875, 47.2485), Vector3(-86.2931, 17.2201, 63.3518), Vector3(-76.6547, 32.8154, 69.3087)]
 id = 34
@@ -3952,7 +4020,8 @@ mesh = SubResource("ArrayMesh_ju31n")
 [node name="@CollisionShape3D@68" type="CollisionShape3D" parent="TileArea34"]
 shape = SubResource("ConvexPolygonShape3D_wed6y")
 
-[node name="TileArea73" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea73" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [101.304, -16.3911, -28.5644]
 adjust_vertices = [Vector3(106.411, 5.24521e-07, -19.2768), Vector3(106.81, -15.9766, -9.6384), Vector3(101.774, -31.8859, -19.1678), Vector3(96.1672, -33.1967, -37.5011), Vector3(95.7266, -17.2875, -47.2485), Vector3(100.935, 5.24521e-07, -38.5536)]
 id = 73
@@ -3965,7 +4034,8 @@ mesh = SubResource("ArrayMesh_kb2h8")
 [node name="@CollisionShape3D@69" type="CollisionShape3D" parent="TileArea73"]
 shape = SubResource("ConvexPolygonShape3D_g7ad6")
 
-[node name="TileArea125" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea125" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [72.7395, -62.6092, 46.2181]
 adjust_vertices = [Vector3(76.4498, -48.478, 59.1623), Vector3(62.3811, -62.3811, 62.3811), Vector3(59.1623, -76.4498, 48.478), Vector3(69.3087, -76.6547, 32.8154), Vector3(82.6066, -62.9, 31.0141), Vector3(86.5288, -48.792, 43.458)]
 id = 125
@@ -3978,7 +4048,8 @@ mesh = SubResource("ArrayMesh_dtups")
 [node name="@CollisionShape3D@70" type="CollisionShape3D" parent="TileArea125"]
 shape = SubResource("ConvexPolygonShape3D_uelii")
 
-[node name="TileArea121" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea121" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-47.1008, -26.0149, 92.2888]
 adjust_vertices = [Vector3(-45.2058, -9.52937, 98.0928), Vector3(-60.6247, -15.4188, 88.5634), Vector3(-62.9, -31.0141, 82.6066), Vector3(-48.792, -43.458, 86.5288), Vector3(-33.1967, -37.5011, 96.1672), Vector3(-31.8859, -19.1678, 101.774)]
 id = 121
@@ -3991,7 +4062,8 @@ mesh = SubResource("ArrayMesh_iamtv")
 [node name="@CollisionShape3D@71" type="CollisionShape3D" parent="TileArea121"]
 shape = SubResource("ConvexPolygonShape3D_7bn46")
 
-[node name="TileArea87" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea87" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.0781, 76.2108, -73.1157]
 adjust_vertices = [Vector3(15.4188, 88.5634, -60.6247), Vector3(31.0141, 82.6066, -62.9), Vector3(32.8154, 69.3087, -76.6547), Vector3(17.2201, 63.3518, -86.2931), Vector3(-1.04904e-06, 70.7602, -82.0678), Vector3(-1.04904e-06, 82.6739, -70.154)]
 id = 87
@@ -4004,7 +4076,8 @@ mesh = SubResource("ArrayMesh_og1vf")
 [node name="@CollisionShape3D@72" type="CollisionShape3D" parent="TileArea87"]
 shape = SubResource("ConvexPolygonShape3D_t3v86")
 
-[node name="TileArea117" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea117" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [1.7484e-07, -55.0858, 91.1736]
 adjust_vertices = [Vector3(0, -38.5536, 100.935), Vector3(-17.2875, -47.2485, 95.7266), Vector3(-17.2201, -63.3518, 86.2931), Vector3(0, -70.7602, 82.0678), Vector3(17.2201, -63.3518, 86.2931), Vector3(17.2875, -47.2485, 95.7266)]
 id = 117
@@ -4017,7 +4090,8 @@ mesh = SubResource("ArrayMesh_kgf84")
 [node name="@CollisionShape3D@73" type="CollisionShape3D" parent="TileArea117"]
 shape = SubResource("ConvexPolygonShape3D_w5s6u")
 
-[node name="TileArea81" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea81" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [62.6092, 46.2181, -72.7395]
 adjust_vertices = [Vector3(62.3811, 62.3811, -62.3811), Vector3(76.4498, 48.478, -59.1623), Vector3(76.6547, 32.8154, -69.3087), Vector3(62.9, 31.0141, -82.6066), Vector3(48.792, 43.458, -86.5288), Vector3(48.478, 59.1623, -76.4498)]
 id = 81
@@ -4030,7 +4104,8 @@ mesh = SubResource("ArrayMesh_and5f")
 [node name="@CollisionShape3D@74" type="CollisionShape3D" parent="TileArea81"]
 shape = SubResource("ConvexPolygonShape3D_xusgi")
 
-[node name="TileArea137" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea137" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-92.2888, 47.1008, 26.0149]
 adjust_vertices = [Vector3(-82.6066, 62.9, 31.0141), Vector3(-88.5634, 60.6247, 15.4188), Vector3(-98.0928, 45.2058, 9.52937), Vector3(-101.774, 31.8859, 19.1678), Vector3(-96.1672, 33.1967, 37.5011), Vector3(-86.5288, 48.792, 43.458)]
 id = 137
@@ -4043,7 +4118,8 @@ mesh = SubResource("ArrayMesh_xue6w")
 [node name="@CollisionShape3D@75" type="CollisionShape3D" parent="TileArea137"]
 shape = SubResource("ConvexPolygonShape3D_4qa0w")
 
-[node name="TileArea151" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea151" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-76.2108, 73.1157, -16.0781]
 adjust_vertices = [Vector3(-63.3518, 86.2931, -17.2201), Vector3(-69.3087, 76.6547, -32.8154), Vector3(-82.6066, 62.9, -31.0141), Vector3(-88.5634, 60.6247, -15.4188), Vector3(-82.6739, 70.154, 5.24521e-07), Vector3(-70.7602, 82.0678, 5.24521e-07)]
 id = 151
@@ -4056,7 +4132,8 @@ mesh = SubResource("ArrayMesh_8pvs6")
 [node name="@CollisionShape3D@76" type="CollisionShape3D" parent="TileArea151"]
 shape = SubResource("ConvexPolygonShape3D_anob1")
 
-[node name="TileArea131" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea131" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [46.2181, -72.7395, 62.6092]
 adjust_vertices = [Vector3(48.478, -59.1623, 76.4498), Vector3(32.8154, -69.3087, 76.6547), Vector3(31.0141, -82.6066, 62.9), Vector3(43.458, -86.5288, 48.792), Vector3(59.1623, -76.4498, 48.478), Vector3(62.3811, -62.3811, 62.3811)]
 id = 131
@@ -4069,7 +4146,8 @@ mesh = SubResource("ArrayMesh_qxjo8")
 [node name="@CollisionShape3D@77" type="CollisionShape3D" parent="TileArea131"]
 shape = SubResource("ConvexPolygonShape3D_qq7cb")
 
-[node name="TileArea74" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea74" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [91.1736, 1.7484e-07, -55.0858]
 adjust_vertices = [Vector3(95.7266, 17.2875, -47.2485), Vector3(100.935, 0, -38.5536), Vector3(95.7266, -17.2875, -47.2485), Vector3(86.2931, -17.2201, -63.3518), Vector3(82.0678, 0, -70.7602), Vector3(86.2931, 17.2201, -63.3518)]
 id = 74
@@ -4082,7 +4160,8 @@ mesh = SubResource("ArrayMesh_5wpvo")
 [node name="@CollisionShape3D@78" type="CollisionShape3D" parent="TileArea74"]
 shape = SubResource("ConvexPolygonShape3D_3sf5a")
 
-[node name="TileArea3" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea3" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [91.1973, -56.363, 0.0]
 adjust_vertices = [Vector3(98.0928, -45.2058, 9.52937), Vector3(88.5634, -60.6247, 15.4188), Vector3(82.6739, -70.154, 0), Vector3(88.5634, -60.6247, -15.4188), Vector3(98.0928, -45.2058, -9.52937)]
 id = 3
@@ -4095,7 +4174,8 @@ mesh = SubResource("ArrayMesh_ah6su")
 [node name="@CollisionShape3D@79" type="CollisionShape3D" parent="TileArea3"]
 shape = SubResource("ConvexPolygonShape3D_3ntxm")
 
-[node name="TileArea134" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea134" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-73.1157, -16.0781, 76.2108]
 adjust_vertices = [Vector3(-70.154, 1.04904e-06, 82.6739), Vector3(-82.0678, 1.04904e-06, 70.7602), Vector3(-86.2931, -17.2201, 63.3518), Vector3(-76.6547, -32.8154, 69.3087), Vector3(-62.9, -31.0141, 82.6066), Vector3(-60.6247, -15.4188, 88.5634)]
 id = 134
@@ -4108,7 +4188,8 @@ mesh = SubResource("ArrayMesh_cpoea")
 [node name="@CollisionShape3D@80" type="CollisionShape3D" parent="TileArea134"]
 shape = SubResource("ConvexPolygonShape3D_kpmpo")
 
-[node name="TileArea145" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea145" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.0781, 76.2108, -73.1157]
 adjust_vertices = [Vector3(-15.4188, 88.5634, -60.6247), Vector3(1.04904e-06, 82.6739, -70.154), Vector3(1.04904e-06, 70.7602, -82.0678), Vector3(-17.2201, 63.3518, -86.2931), Vector3(-32.8154, 69.3087, -76.6547), Vector3(-31.0141, 82.6066, -62.9)]
 id = 145
@@ -4121,7 +4202,8 @@ mesh = SubResource("ArrayMesh_rgioc")
 [node name="@CollisionShape3D@81" type="CollisionShape3D" parent="TileArea145"]
 shape = SubResource("ConvexPolygonShape3D_cvlmn")
 
-[node name="TileArea29" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea29" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-32.9649, -53.3384, 86.3034]
 adjust_vertices = [Vector3(-33.1967, -37.5011, 96.1672), Vector3(-48.792, -43.458, 86.5288), Vector3(-48.478, -59.1623, 76.4498), Vector3(-32.8154, -69.3087, 76.6547), Vector3(-17.2201, -63.3518, 86.2931), Vector3(-17.2875, -47.2485, 95.7266)]
 id = 29
@@ -4134,7 +4216,8 @@ mesh = SubResource("ArrayMesh_ji5kw")
 [node name="@CollisionShape3D@82" type="CollisionShape3D" parent="TileArea29"]
 shape = SubResource("ConvexPolygonShape3D_skdl8")
 
-[node name="TileArea21" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea21" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [32.9649, 53.3384, -86.3034]
 adjust_vertices = [Vector3(32.8154, 69.3087, -76.6547), Vector3(48.478, 59.1623, -76.4498), Vector3(48.792, 43.458, -86.5288), Vector3(33.1967, 37.5011, -96.1672), Vector3(17.2875, 47.2485, -95.7266), Vector3(17.2201, 63.3518, -86.2931)]
 id = 21
@@ -4147,7 +4230,8 @@ mesh = SubResource("ArrayMesh_wgvp4")
 [node name="@CollisionShape3D@83" type="CollisionShape3D" parent="TileArea21"]
 shape = SubResource("ConvexPolygonShape3D_d2t28")
 
-[node name="TileArea129" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea129" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.0781, -76.2108, 73.1157]
 adjust_vertices = [Vector3(17.2201, -63.3518, 86.2931), Vector3(-1.04904e-06, -70.7602, 82.0678), Vector3(-1.04904e-06, -82.6739, 70.154), Vector3(15.4188, -88.5634, 60.6247), Vector3(31.0141, -82.6066, 62.9), Vector3(32.8154, -69.3087, 76.6547)]
 id = 129
@@ -4160,7 +4244,8 @@ mesh = SubResource("ArrayMesh_ecxpq")
 [node name="@CollisionShape3D@84" type="CollisionShape3D" parent="TileArea129"]
 shape = SubResource("ConvexPolygonShape3D_bb5eq")
 
-[node name="TileArea80" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea80" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [73.1157, 16.0781, -76.2108]
 adjust_vertices = [Vector3(76.6547, 32.8154, -69.3087), Vector3(86.2931, 17.2201, -63.3518), Vector3(82.0678, -1.04904e-06, -70.7602), Vector3(70.154, -1.04904e-06, -82.6739), Vector3(60.6247, 15.4188, -88.5634), Vector3(62.9, 31.0141, -82.6066)]
 id = 80
@@ -4173,7 +4258,8 @@ mesh = SubResource("ArrayMesh_6j37j")
 [node name="@CollisionShape3D@85" type="CollisionShape3D" parent="TileArea80"]
 shape = SubResource("ConvexPolygonShape3D_odaro")
 
-[node name="TileArea8" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea8" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-91.1973, 56.363, 0.0]
 adjust_vertices = [Vector3(-82.6739, 70.154, 0), Vector3(-88.5634, 60.6247, -15.4188), Vector3(-98.0928, 45.2058, -9.52937), Vector3(-98.0928, 45.2058, 9.52937), Vector3(-88.5634, 60.6247, 15.4188)]
 id = 8
@@ -4186,7 +4272,8 @@ mesh = SubResource("ArrayMesh_6q637")
 [node name="@CollisionShape3D@86" type="CollisionShape3D" parent="TileArea8"]
 shape = SubResource("ConvexPolygonShape3D_156rl")
 
-[node name="TileArea136" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea136" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-91.1736, 0.0, 55.0858]
 adjust_vertices = [Vector3(-86.2931, 17.2201, 63.3518), Vector3(-95.7266, 17.2875, 47.2485), Vector3(-100.935, 0, 38.5536), Vector3(-95.7266, -17.2875, 47.2485), Vector3(-86.2931, -17.2201, 63.3518), Vector3(-82.0678, 0, 70.7602)]
 id = 136
@@ -4199,7 +4286,8 @@ mesh = SubResource("ArrayMesh_u5dhx")
 [node name="@CollisionShape3D@87" type="CollisionShape3D" parent="TileArea136"]
 shape = SubResource("ConvexPolygonShape3D_gly3s")
 
-[node name="TileArea146" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea146" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-46.2181, 72.7395, -62.6093]
 adjust_vertices = [Vector3(-43.458, 86.5288, -48.792), Vector3(-31.0141, 82.6066, -62.9), Vector3(-32.8154, 69.3087, -76.6547), Vector3(-48.478, 59.1623, -76.4498), Vector3(-62.3811, 62.3811, -62.3811), Vector3(-59.1623, 76.4498, -48.478)]
 id = 146
@@ -4212,7 +4300,8 @@ mesh = SubResource("ArrayMesh_3l7sh")
 [node name="@CollisionShape3D@88" type="CollisionShape3D" parent="TileArea146"]
 shape = SubResource("ConvexPolygonShape3D_nrq8x")
 
-[node name="TileArea97" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea97" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [92.2888, -47.1008, -26.0149]
 adjust_vertices = [Vector3(101.774, -31.8859, -19.1678), Vector3(98.0928, -45.2058, -9.52937), Vector3(88.5634, -60.6247, -15.4188), Vector3(82.6066, -62.9, -31.0141), Vector3(86.5288, -48.792, -43.458), Vector3(96.1672, -33.1967, -37.5011)]
 id = 97
@@ -4225,7 +4314,8 @@ mesh = SubResource("ArrayMesh_i1tor")
 [node name="@CollisionShape3D@89" type="CollisionShape3D" parent="TileArea97"]
 shape = SubResource("ConvexPolygonShape3D_cfq3d")
 
-[node name="TileArea123" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea123" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [76.2108, -73.1157, 16.0781]
 adjust_vertices = [Vector3(88.5634, -60.6247, 15.4188), Vector3(82.6066, -62.9, 31.0141), Vector3(69.3087, -76.6547, 32.8154), Vector3(63.3518, -86.2931, 17.2201), Vector3(70.7602, -82.0678, -5.24521e-07), Vector3(82.6739, -70.154, -5.24521e-07)]
 id = 123
@@ -4238,7 +4328,8 @@ mesh = SubResource("ArrayMesh_agk5v")
 [node name="@CollisionShape3D@90" type="CollisionShape3D" parent="TileArea123"]
 shape = SubResource("ConvexPolygonShape3D_d4cii")
 
-[node name="TileArea113" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea113" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-62.6093, -46.2181, 72.7395]
 adjust_vertices = [Vector3(-62.9, -31.0141, 82.6066), Vector3(-76.6547, -32.8154, 69.3087), Vector3(-76.4498, -48.478, 59.1623), Vector3(-62.3811, -62.3811, 62.3811), Vector3(-48.478, -59.1623, 76.4498), Vector3(-48.792, -43.458, 86.5288)]
 id = 113
@@ -4251,7 +4342,8 @@ mesh = SubResource("ArrayMesh_xxpu0")
 [node name="@CollisionShape3D@91" type="CollisionShape3D" parent="TileArea113"]
 shape = SubResource("ConvexPolygonShape3D_i4rg5")
 
-[node name="TileArea88" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea88" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-1.7484e-07, 55.0858, -91.1736]
 adjust_vertices = [Vector3(0, 70.7602, -82.0678), Vector3(17.2201, 63.3518, -86.2931), Vector3(17.2875, 47.2485, -95.7266), Vector3(0, 38.5536, -100.935), Vector3(-17.2875, 47.2485, -95.7266), Vector3(-17.2201, 63.3518, -86.2931)]
 id = 88
@@ -4264,7 +4356,8 @@ mesh = SubResource("ArrayMesh_8bkvl")
 [node name="@CollisionShape3D@92" type="CollisionShape3D" parent="TileArea88"]
 shape = SubResource("ConvexPolygonShape3D_a5yit")
 
-[node name="TileArea116" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea116" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.0781, -76.2108, 73.1157]
 adjust_vertices = [Vector3(-17.2201, -63.3518, 86.2931), Vector3(-32.8154, -69.3087, 76.6547), Vector3(-31.0141, -82.6066, 62.9), Vector3(-15.4188, -88.5634, 60.6247), Vector3(1.04904e-06, -82.6739, 70.154), Vector3(1.04904e-06, -70.7602, 82.0678)]
 id = 116
@@ -4277,7 +4370,8 @@ mesh = SubResource("ArrayMesh_d7ec7")
 [node name="@CollisionShape3D@93" type="CollisionShape3D" parent="TileArea116"]
 shape = SubResource("ConvexPolygonShape3D_qhr8x")
 
-[node name="TileArea84" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea84" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [47.1009, 26.0149, -92.2888]
 adjust_vertices = [Vector3(48.792, 43.458, -86.5288), Vector3(62.9, 31.0141, -82.6066), Vector3(60.6247, 15.4188, -88.5634), Vector3(45.2058, 9.52937, -98.0928), Vector3(31.8859, 19.1678, -101.774), Vector3(33.1967, 37.5011, -96.1672)]
 id = 84
@@ -4290,7 +4384,8 @@ mesh = SubResource("ArrayMesh_53jo4")
 [node name="@CollisionShape3D@94" type="CollisionShape3D" parent="TileArea84"]
 shape = SubResource("ConvexPolygonShape3D_kh2go")
 
-[node name="TileArea152" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea152" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-72.7395, 62.6092, -46.2181]
 adjust_vertices = [Vector3(-69.3087, 76.6547, -32.8154), Vector3(-59.1623, 76.4498, -48.478), Vector3(-62.3811, 62.3811, -62.3811), Vector3(-76.4498, 48.478, -59.1623), Vector3(-86.5288, 48.792, -43.458), Vector3(-82.6066, 62.9, -31.0141)]
 id = 152
@@ -4303,7 +4398,8 @@ mesh = SubResource("ArrayMesh_hjfqc")
 [node name="@CollisionShape3D@95" type="CollisionShape3D" parent="TileArea152"]
 shape = SubResource("ConvexPolygonShape3D_av27e")
 
-[node name="TileArea138" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea138" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-101.304, 16.3911, 28.5644]
 adjust_vertices = [Vector3(-96.1672, 33.1967, 37.5011), Vector3(-101.774, 31.8859, 19.1678), Vector3(-106.81, 15.9766, 9.6384), Vector3(-106.411, -5.24521e-07, 19.2768), Vector3(-100.935, -5.24521e-07, 38.5536), Vector3(-95.7266, 17.2875, 47.2485)]
 id = 138
@@ -4316,7 +4412,8 @@ mesh = SubResource("ArrayMesh_83a0p")
 [node name="@CollisionShape3D@96" type="CollisionShape3D" parent="TileArea138"]
 shape = SubResource("ConvexPolygonShape3D_6w2tb")
 
-[node name="TileArea32" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea32" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [53.3384, -86.3034, 32.9649]
 adjust_vertices = [Vector3(59.1623, -76.4498, 48.478), Vector3(43.458, -86.5288, 48.792), Vector3(37.5011, -96.1672, 33.1967), Vector3(47.2485, -95.7266, 17.2875), Vector3(63.3518, -86.2931, 17.2201), Vector3(69.3087, -76.6547, 32.8154)]
 id = 32
@@ -4329,7 +4426,8 @@ mesh = SubResource("ArrayMesh_xyp8m")
 [node name="@CollisionShape3D@97" type="CollisionShape3D" parent="TileArea32"]
 shape = SubResource("ConvexPolygonShape3D_ifext")
 
-[node name="TileArea23" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea23" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [86.3034, -32.9649, -53.3384]
 adjust_vertices = [Vector3(95.7266, -17.2875, -47.2485), Vector3(96.1672, -33.1967, -37.5011), Vector3(86.5288, -48.792, -43.458), Vector3(76.4498, -48.478, -59.1623), Vector3(76.6547, -32.8154, -69.3087), Vector3(86.2931, -17.2201, -63.3518)]
 id = 23
@@ -4342,7 +4440,8 @@ mesh = SubResource("ArrayMesh_34r1s")
 [node name="@CollisionShape3D@98" type="CollisionShape3D" parent="TileArea23"]
 shape = SubResource("ConvexPolygonShape3D_8xnj8")
 
-[node name="TileArea130" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea130" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [26.0149, -92.2888, 47.1008]
 adjust_vertices = [Vector3(31.0141, -82.6066, 62.9), Vector3(15.4188, -88.5634, 60.6247), Vector3(9.52937, -98.0928, 45.2058), Vector3(19.1678, -101.774, 31.8859), Vector3(37.5011, -96.1672, 33.1967), Vector3(43.458, -86.5288, 48.792)]
 id = 130
@@ -4355,7 +4454,8 @@ mesh = SubResource("ArrayMesh_663oy")
 [node name="@CollisionShape3D@99" type="CollisionShape3D" parent="TileArea130"]
 shape = SubResource("ConvexPolygonShape3D_getxi")
 
-[node name="TileArea95" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea95" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [73.1157, -16.0781, -76.2108]
 adjust_vertices = [Vector3(70.154, 1.04904e-06, -82.6739), Vector3(82.0678, 1.04904e-06, -70.7602), Vector3(86.2931, -17.2201, -63.3518), Vector3(76.6547, -32.8154, -69.3087), Vector3(62.9, -31.0141, -82.6066), Vector3(60.6247, -15.4188, -88.5634)]
 id = 95
@@ -4368,7 +4468,8 @@ mesh = SubResource("ArrayMesh_5hq7l")
 [node name="@CollisionShape3D@100" type="CollisionShape3D" parent="TileArea95"]
 shape = SubResource("ConvexPolygonShape3D_02u12")
 
-[node name="TileArea142" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea142" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-102.226, 31.0228, 0.0]
 adjust_vertices = [Vector3(-98.0928, 45.2058, 9.52937), Vector3(-98.0928, 45.2058, -9.52937), Vector3(-101.774, 31.8859, -19.1678), Vector3(-106.81, 15.9766, -9.6384), Vector3(-106.81, 15.9766, 9.6384), Vector3(-101.774, 31.8859, 19.1678)]
 id = 142
@@ -4381,7 +4482,8 @@ mesh = SubResource("ArrayMesh_4q4oo")
 [node name="@CollisionShape3D@101" type="CollisionShape3D" parent="TileArea142"]
 shape = SubResource("ConvexPolygonShape3D_yvgqc")
 
-[node name="TileArea150" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea150" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-92.2888, 47.1008, -26.0149]
 adjust_vertices = [Vector3(-88.5634, 60.6247, -15.4188), Vector3(-82.6066, 62.9, -31.0141), Vector3(-86.5288, 48.792, -43.458), Vector3(-96.1672, 33.1967, -37.5011), Vector3(-101.774, 31.8859, -19.1678), Vector3(-98.0928, 45.2058, -9.52937)]
 id = 150
@@ -4394,7 +4496,8 @@ mesh = SubResource("ArrayMesh_0qekh")
 [node name="@CollisionShape3D@102" type="CollisionShape3D" parent="TileArea150"]
 shape = SubResource("ConvexPolygonShape3D_0mqkl")
 
-[node name="TileArea101" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea101" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [76.2108, -73.1157, -16.0781]
 adjust_vertices = [Vector3(88.5634, -60.6247, -15.4188), Vector3(82.6739, -70.154, 5.24521e-07), Vector3(70.7602, -82.0678, 5.24521e-07), Vector3(63.3518, -86.2931, -17.2201), Vector3(69.3087, -76.6547, -32.8154), Vector3(82.6066, -62.9, -31.0141)]
 id = 101
@@ -4407,7 +4510,8 @@ mesh = SubResource("ArrayMesh_krqf2")
 [node name="@CollisionShape3D@103" type="CollisionShape3D" parent="TileArea101"]
 shape = SubResource("ConvexPolygonShape3D_q2p3d")
 
-[node name="TileArea33" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea33" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-86.3034, -32.9649, 53.3384]
 adjust_vertices = [Vector3(-86.2931, -17.2201, 63.3518), Vector3(-95.7266, -17.2875, 47.2485), Vector3(-96.1672, -33.1967, 37.5011), Vector3(-86.5288, -48.792, 43.458), Vector3(-76.4498, -48.478, 59.1623), Vector3(-76.6547, -32.8154, 69.3087)]
 id = 33
@@ -4420,7 +4524,8 @@ mesh = SubResource("ArrayMesh_k17kh")
 [node name="@CollisionShape3D@104" type="CollisionShape3D" parent="TileArea33"]
 shape = SubResource("ConvexPolygonShape3D_jb1ev")
 
-[node name="TileArea36" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea36" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-32.9649, 53.3384, -86.3034]
 adjust_vertices = [Vector3(-32.8154, 69.3087, -76.6547), Vector3(-17.2201, 63.3518, -86.2931), Vector3(-17.2875, 47.2485, -95.7266), Vector3(-33.1967, 37.5011, -96.1672), Vector3(-48.792, 43.458, -86.5288), Vector3(-48.478, 59.1623, -76.4498)]
 id = 36
@@ -4433,7 +4538,8 @@ mesh = SubResource("ArrayMesh_2p4p1")
 [node name="@CollisionShape3D@105" type="CollisionShape3D" parent="TileArea36"]
 shape = SubResource("ConvexPolygonShape3D_ukg7u")
 
-[node name="TileArea5" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea5" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [2.09808e-07, -91.1973, 56.363]
 adjust_vertices = [Vector3(0, -82.6739, 70.154), Vector3(-15.4188, -88.5634, 60.6247), Vector3(-9.52937, -98.0928, 45.2058), Vector3(9.52937, -98.0928, 45.2058), Vector3(15.4188, -88.5634, 60.6247)]
 id = 5
@@ -4446,7 +4552,8 @@ mesh = SubResource("ArrayMesh_njsav")
 [node name="@CollisionShape3D@106" type="CollisionShape3D" parent="TileArea5"]
 shape = SubResource("ConvexPolygonShape3D_ydoli")
 
-[node name="TileArea2" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea2" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [56.363, 0.0, -91.1973]
 adjust_vertices = [Vector3(60.6247, 15.4188, -88.5634), Vector3(70.154, 0, -82.6739), Vector3(60.6247, -15.4188, -88.5634), Vector3(45.2058, -9.52937, -98.0928), Vector3(45.2058, 9.52937, -98.0928)]
 id = 2
@@ -4459,7 +4566,8 @@ mesh = SubResource("ArrayMesh_p7dn2")
 [node name="@CollisionShape3D@107" type="CollisionShape3D" parent="TileArea2"]
 shape = SubResource("ConvexPolygonShape3D_gc8uk")
 
-[node name="TileArea112" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea112" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-46.2181, -72.7395, 62.6092]
 adjust_vertices = [Vector3(-48.478, -59.1623, 76.4498), Vector3(-62.3811, -62.3811, 62.3811), Vector3(-59.1623, -76.4498, 48.478), Vector3(-43.458, -86.5288, 48.792), Vector3(-31.0141, -82.6066, 62.9), Vector3(-32.8154, -69.3087, 76.6547)]
 id = 112
@@ -4472,7 +4580,8 @@ mesh = SubResource("ArrayMesh_bmdnq")
 [node name="@CollisionShape3D@108" type="CollisionShape3D" parent="TileArea112"]
 shape = SubResource("ConvexPolygonShape3D_ql4cr")
 
-[node name="TileArea85" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea85" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.3911, 28.5644, -101.304]
 adjust_vertices = [Vector3(17.2875, 47.2485, -95.7266), Vector3(33.1967, 37.5011, -96.1672), Vector3(31.8859, 19.1678, -101.774), Vector3(15.9766, 9.6384, -106.81), Vector3(-5.24521e-07, 19.2768, -106.411), Vector3(-5.24521e-07, 38.5536, -100.935)]
 id = 85
@@ -4485,7 +4594,8 @@ mesh = SubResource("ArrayMesh_lobok")
 [node name="@CollisionShape3D@109" type="CollisionShape3D" parent="TileArea85"]
 shape = SubResource("ConvexPolygonShape3D_k3vyp")
 
-[node name="TileArea98" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea98" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [72.7395, -62.6092, -46.2181]
 adjust_vertices = [Vector3(86.5288, -48.792, -43.458), Vector3(82.6066, -62.9, -31.0141), Vector3(69.3087, -76.6547, -32.8154), Vector3(59.1623, -76.4498, -48.478), Vector3(62.3811, -62.3811, -62.3811), Vector3(76.4498, -48.478, -59.1623)]
 id = 98
@@ -4498,7 +4608,8 @@ mesh = SubResource("ArrayMesh_muwsh")
 [node name="@CollisionShape3D@110" type="CollisionShape3D" parent="TileArea98"]
 shape = SubResource("ConvexPolygonShape3D_x53ge")
 
-[node name="TileArea102" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea102" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [55.0858, -91.1736, 0.0]
 adjust_vertices = [Vector3(70.7602, -82.0678, 0), Vector3(63.3518, -86.2931, 17.2201), Vector3(47.2485, -95.7266, 17.2875), Vector3(38.5536, -100.935, 0), Vector3(47.2485, -95.7266, -17.2875), Vector3(63.3518, -86.2931, -17.2201)]
 id = 102
@@ -4511,7 +4622,8 @@ mesh = SubResource("ArrayMesh_m0llf")
 [node name="@CollisionShape3D@111" type="CollisionShape3D" parent="TileArea102"]
 shape = SubResource("ConvexPolygonShape3D_f2wn4")
 
-[node name="TileArea149" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea149" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-62.6093, 46.2181, -72.7395]
 adjust_vertices = [Vector3(-62.3811, 62.3811, -62.3811), Vector3(-48.478, 59.1623, -76.4498), Vector3(-48.792, 43.458, -86.5288), Vector3(-62.9, 31.0141, -82.6066), Vector3(-76.6547, 32.8154, -69.3087), Vector3(-76.4498, 48.478, -59.1623)]
 id = 149
@@ -4524,7 +4636,8 @@ mesh = SubResource("ArrayMesh_qqw4o")
 [node name="@CollisionShape3D@112" type="CollisionShape3D" parent="TileArea149"]
 shape = SubResource("ConvexPolygonShape3D_pjsp4")
 
-[node name="TileArea133" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea133" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-101.304, -16.3911, 28.5644]
 adjust_vertices = [Vector3(-100.935, 5.24521e-07, 38.5536), Vector3(-106.411, 5.24521e-07, 19.2768), Vector3(-106.81, -15.9766, 9.6384), Vector3(-101.774, -31.8859, 19.1678), Vector3(-96.1672, -33.1967, 37.5011), Vector3(-95.7266, -17.2875, 47.2485)]
 id = 133
@@ -4537,7 +4650,8 @@ mesh = SubResource("ArrayMesh_u1155")
 [node name="@CollisionShape3D@113" type="CollisionShape3D" parent="TileArea133"]
 shape = SubResource("ConvexPolygonShape3D_5rxpf")
 
-[node name="TileArea35" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea35" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-106.677, 0.0, 0.0]
 adjust_vertices = [Vector3(-106.81, 15.9766, 9.6384), Vector3(-106.81, 15.9766, -9.6384), Vector3(-106.411, 0, -19.2768), Vector3(-106.81, -15.9766, -9.6384), Vector3(-106.81, -15.9766, 9.6384), Vector3(-106.411, 0, 19.2768)]
 id = 35
@@ -4550,7 +4664,8 @@ mesh = SubResource("ArrayMesh_8ln27")
 [node name="@CollisionShape3D@114" type="CollisionShape3D" parent="TileArea35"]
 shape = SubResource("ConvexPolygonShape3D_6jlxe")
 
-[node name="TileArea37" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea37" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-86.3034, 32.9649, -53.3384]
 adjust_vertices = [Vector3(-86.5288, 48.792, -43.458), Vector3(-76.4498, 48.478, -59.1623), Vector3(-76.6547, 32.8154, -69.3087), Vector3(-86.2931, 17.2201, -63.3518), Vector3(-95.7266, 17.2875, -47.2485), Vector3(-96.1672, 33.1967, -37.5011)]
 id = 37
@@ -4563,7 +4678,8 @@ mesh = SubResource("ArrayMesh_ckuyl")
 [node name="@CollisionShape3D@115" type="CollisionShape3D" parent="TileArea37"]
 shape = SubResource("ConvexPolygonShape3D_ry0w7")
 
-[node name="TileArea103" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea103" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [28.5644, -101.304, 16.3911]
 adjust_vertices = [Vector3(37.5011, -96.1672, 33.1967), Vector3(19.1678, -101.774, 31.8859), Vector3(9.6384, -106.81, 15.9766), Vector3(19.2768, -106.411, -5.24521e-07), Vector3(38.5536, -100.935, -5.24521e-07), Vector3(47.2485, -95.7266, 17.2875)]
 id = 103
@@ -4576,7 +4692,8 @@ mesh = SubResource("ArrayMesh_k2gqu")
 [node name="@CollisionShape3D@116" type="CollisionShape3D" parent="TileArea103"]
 shape = SubResource("ConvexPolygonShape3D_3he07")
 
-[node name="TileArea96" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea96" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [62.6093, -46.2181, -72.7395]
 adjust_vertices = [Vector3(62.9, -31.0141, -82.6066), Vector3(76.6547, -32.8154, -69.3087), Vector3(76.4498, -48.478, -59.1623), Vector3(62.3811, -62.3811, -62.3811), Vector3(48.478, -59.1623, -76.4498), Vector3(48.792, -43.458, -86.5288)]
 id = 96
@@ -4589,7 +4706,8 @@ mesh = SubResource("ArrayMesh_g3dxu")
 [node name="@CollisionShape3D@117" type="CollisionShape3D" parent="TileArea96"]
 shape = SubResource("ConvexPolygonShape3D_8pijy")
 
-[node name="TileArea111" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea111" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-26.0149, -92.2888, 47.1008]
 adjust_vertices = [Vector3(-31.0141, -82.6066, 62.9), Vector3(-43.458, -86.5288, 48.792), Vector3(-37.5011, -96.1672, 33.1967), Vector3(-19.1678, -101.774, 31.8859), Vector3(-9.52937, -98.0928, 45.2058), Vector3(-15.4188, -88.5634, 60.6247)]
 id = 111
@@ -4602,7 +4720,8 @@ mesh = SubResource("ArrayMesh_x3yfb")
 [node name="@CollisionShape3D@118" type="CollisionShape3D" parent="TileArea111"]
 shape = SubResource("ConvexPolygonShape3D_yjcmb")
 
-[node name="TileArea89" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea89" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [31.0228, 0.0, -102.226]
 adjust_vertices = [Vector3(31.8859, 19.1678, -101.774), Vector3(45.2058, 9.52937, -98.0928), Vector3(45.2058, -9.52937, -98.0928), Vector3(31.8859, -19.1678, -101.774), Vector3(15.9766, -9.6384, -106.81), Vector3(15.9766, 9.6384, -106.81)]
 id = 89
@@ -4615,7 +4734,8 @@ mesh = SubResource("ArrayMesh_j5pak")
 [node name="@CollisionShape3D@119" type="CollisionShape3D" parent="TileArea89"]
 shape = SubResource("ConvexPolygonShape3D_02tdi")
 
-[node name="TileArea115" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea115" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-72.7395, -62.6093, 46.2181]
 adjust_vertices = [Vector3(-76.4498, -48.478, 59.1623), Vector3(-86.5288, -48.792, 43.458), Vector3(-82.6066, -62.9, 31.0141), Vector3(-69.3087, -76.6547, 32.8154), Vector3(-59.1623, -76.4498, 48.478), Vector3(-62.3811, -62.3811, 62.3811)]
 id = 115
@@ -4628,7 +4748,8 @@ mesh = SubResource("ArrayMesh_x86y8")
 [node name="@CollisionShape3D@120" type="CollisionShape3D" parent="TileArea115"]
 shape = SubResource("ConvexPolygonShape3D_ojtwy")
 
-[node name="TileArea86" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea86" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.3911, 28.5644, -101.304]
 adjust_vertices = [Vector3(-17.2875, 47.2485, -95.7266), Vector3(5.24521e-07, 38.5536, -100.935), Vector3(5.24521e-07, 19.2768, -106.411), Vector3(-15.9766, 9.6384, -106.81), Vector3(-31.8859, 19.1678, -101.774), Vector3(-33.1967, 37.5011, -96.1672)]
 id = 86
@@ -4641,7 +4762,8 @@ mesh = SubResource("ArrayMesh_5nn41")
 [node name="@CollisionShape3D@121" type="CollisionShape3D" parent="TileArea86"]
 shape = SubResource("ConvexPolygonShape3D_v1to0")
 
-[node name="TileArea143" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea143" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-101.304, 16.3911, -28.5644]
 adjust_vertices = [Vector3(-101.774, 31.8859, -19.1678), Vector3(-96.1672, 33.1967, -37.5011), Vector3(-95.7266, 17.2875, -47.2485), Vector3(-100.935, -5.24521e-07, -38.5536), Vector3(-106.411, -5.24521e-07, -19.2768), Vector3(-106.81, 15.9766, -9.6384)]
 id = 143
@@ -4654,7 +4776,8 @@ mesh = SubResource("ArrayMesh_kocng")
 [node name="@CollisionShape3D@122" type="CollisionShape3D" parent="TileArea143"]
 shape = SubResource("ConvexPolygonShape3D_ufkw0")
 
-[node name="TileArea94" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea94" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [47.1008, -26.0149, -92.2888]
 adjust_vertices = [Vector3(45.2058, -9.52937, -98.0928), Vector3(60.6247, -15.4188, -88.5634), Vector3(62.9, -31.0141, -82.6066), Vector3(48.792, -43.458, -86.5288), Vector3(33.1967, -37.5011, -96.1672), Vector3(31.8859, -19.1678, -101.774)]
 id = 94
@@ -4667,7 +4790,8 @@ mesh = SubResource("ArrayMesh_nwwl8")
 [node name="@CollisionShape3D@123" type="CollisionShape3D" parent="TileArea94"]
 shape = SubResource("ConvexPolygonShape3D_raykb")
 
-[node name="TileArea106" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea106" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, -102.226, 31.0228]
 adjust_vertices = [Vector3(9.52937, -98.0928, 45.2058), Vector3(-9.52937, -98.0928, 45.2058), Vector3(-19.1678, -101.774, 31.8859), Vector3(-9.6384, -106.81, 15.9766), Vector3(9.6384, -106.81, 15.9766), Vector3(19.1678, -101.774, 31.8859)]
 id = 106
@@ -4680,7 +4804,8 @@ mesh = SubResource("ArrayMesh_5yuex")
 [node name="@CollisionShape3D@124" type="CollisionShape3D" parent="TileArea106"]
 shape = SubResource("ConvexPolygonShape3D_24a7m")
 
-[node name="TileArea25" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea25" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [53.3384, -86.3034, -32.9649]
 adjust_vertices = [Vector3(69.3087, -76.6547, -32.8154), Vector3(63.3518, -86.2931, -17.2201), Vector3(47.2485, -95.7266, -17.2875), Vector3(37.5011, -96.1672, -33.1967), Vector3(43.458, -86.5288, -48.792), Vector3(59.1623, -76.4498, -48.478)]
 id = 25
@@ -4693,7 +4818,8 @@ mesh = SubResource("ArrayMesh_uttc1")
 [node name="@CollisionShape3D@125" type="CollisionShape3D" parent="TileArea25"]
 shape = SubResource("ConvexPolygonShape3D_bttp0")
 
-[node name="TileArea132" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea132" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-92.2888, -47.1008, 26.0149]
 adjust_vertices = [Vector3(-101.774, -31.8859, 19.1678), Vector3(-98.0928, -45.2058, 9.52937), Vector3(-88.5634, -60.6247, 15.4188), Vector3(-82.6066, -62.9, 31.0141), Vector3(-86.5288, -48.792, 43.458), Vector3(-96.1672, -33.1967, 37.5011)]
 id = 132
@@ -4706,7 +4832,8 @@ mesh = SubResource("ArrayMesh_gotbk")
 [node name="@CollisionShape3D@126" type="CollisionShape3D" parent="TileArea132"]
 shape = SubResource("ConvexPolygonShape3D_s2xbn")
 
-[node name="TileArea147" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea147" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-47.1009, 26.0149, -92.2888]
 adjust_vertices = [Vector3(-48.792, 43.458, -86.5288), Vector3(-33.1967, 37.5011, -96.1672), Vector3(-31.8859, 19.1678, -101.774), Vector3(-45.2058, 9.52937, -98.0928), Vector3(-60.6247, 15.4188, -88.5634), Vector3(-62.9, 31.0141, -82.6066)]
 id = 147
@@ -4719,7 +4846,8 @@ mesh = SubResource("ArrayMesh_o8jyn")
 [node name="@CollisionShape3D@127" type="CollisionShape3D" parent="TileArea147"]
 shape = SubResource("ConvexPolygonShape3D_xogbv")
 
-[node name="TileArea27" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea27" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-53.3384, -86.3034, 32.9649]
 adjust_vertices = [Vector3(-59.1623, -76.4498, 48.478), Vector3(-69.3087, -76.6547, 32.8154), Vector3(-63.3518, -86.2931, 17.2201), Vector3(-47.2485, -95.7266, 17.2875), Vector3(-37.5011, -96.1672, 33.1967), Vector3(-43.458, -86.5288, 48.792)]
 id = 27
@@ -4732,7 +4860,8 @@ mesh = SubResource("ArrayMesh_hbihm")
 [node name="@CollisionShape3D@128" type="CollisionShape3D" parent="TileArea27"]
 shape = SubResource("ConvexPolygonShape3D_mf63m")
 
-[node name="TileArea22" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea22" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, 0.0, -106.677]
 adjust_vertices = [Vector3(0, 19.2768, -106.411), Vector3(15.9766, 9.6384, -106.81), Vector3(15.9766, -9.6384, -106.81), Vector3(0, -19.2768, -106.411), Vector3(-15.9766, -9.6384, -106.81), Vector3(-15.9766, 9.6384, -106.81)]
 id = 22
@@ -4745,7 +4874,8 @@ mesh = SubResource("ArrayMesh_gwbj8")
 [node name="@CollisionShape3D@129" type="CollisionShape3D" parent="TileArea22"]
 shape = SubResource("ConvexPolygonShape3D_few0g")
 
-[node name="TileArea140" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea140" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-102.226, -31.0228, 0.0]
 adjust_vertices = [Vector3(-106.81, -15.9766, 9.6384), Vector3(-106.81, -15.9766, -9.6384), Vector3(-101.774, -31.8859, -19.1678), Vector3(-98.0928, -45.2058, -9.52937), Vector3(-98.0928, -45.2058, 9.52937), Vector3(-101.774, -31.8859, 19.1678)]
 id = 140
@@ -4758,7 +4888,8 @@ mesh = SubResource("ArrayMesh_71sge")
 [node name="@CollisionShape3D@130" type="CollisionShape3D" parent="TileArea140"]
 shape = SubResource("ConvexPolygonShape3D_8p0po")
 
-[node name="TileArea148" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea148" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-73.1157, 16.0781, -76.2108]
 adjust_vertices = [Vector3(-62.9, 31.0141, -82.6066), Vector3(-60.6247, 15.4188, -88.5634), Vector3(-70.154, -1.04904e-06, -82.6739), Vector3(-82.0678, -1.04904e-06, -70.7602), Vector3(-86.2931, 17.2201, -63.3518), Vector3(-76.6547, 32.8154, -69.3087)]
 id = 148
@@ -4771,7 +4902,8 @@ mesh = SubResource("ArrayMesh_1pl2g")
 [node name="@CollisionShape3D@131" type="CollisionShape3D" parent="TileArea148"]
 shape = SubResource("ConvexPolygonShape3D_tsdov")
 
-[node name="TileArea100" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea100" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [46.2181, -72.7395, -62.6093]
 adjust_vertices = [Vector3(62.3811, -62.3811, -62.3811), Vector3(59.1623, -76.4498, -48.478), Vector3(43.458, -86.5288, -48.792), Vector3(31.0141, -82.6066, -62.9), Vector3(32.8154, -69.3087, -76.6547), Vector3(48.478, -59.1623, -76.4498)]
 id = 100
@@ -4784,7 +4916,8 @@ mesh = SubResource("ArrayMesh_e6hsr")
 [node name="@CollisionShape3D@132" type="CollisionShape3D" parent="TileArea100"]
 shape = SubResource("ConvexPolygonShape3D_nrdtx")
 
-[node name="TileArea105" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea105" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [28.5644, -101.304, -16.3911]
 adjust_vertices = [Vector3(47.2485, -95.7266, -17.2875), Vector3(38.5536, -100.935, 5.24521e-07), Vector3(19.2768, -106.411, 5.24521e-07), Vector3(9.6384, -106.81, -15.9766), Vector3(19.1678, -101.774, -31.8859), Vector3(37.5011, -96.1672, -33.1967)]
 id = 105
@@ -4797,7 +4930,8 @@ mesh = SubResource("ArrayMesh_egukv")
 [node name="@CollisionShape3D@133" type="CollisionShape3D" parent="TileArea105"]
 shape = SubResource("ConvexPolygonShape3D_7sds2")
 
-[node name="TileArea107" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea107" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-28.5644, -101.304, 16.3911]
 adjust_vertices = [Vector3(-37.5011, -96.1672, 33.1967), Vector3(-47.2485, -95.7266, 17.2875), Vector3(-38.5536, -100.935, -5.24521e-07), Vector3(-19.2768, -106.411, -5.24521e-07), Vector3(-9.6384, -106.81, 15.9766), Vector3(-19.1678, -101.774, 31.8859)]
 id = 107
@@ -4810,7 +4944,8 @@ mesh = SubResource("ArrayMesh_chg5g")
 [node name="@CollisionShape3D@134" type="CollisionShape3D" parent="TileArea107"]
 shape = SubResource("ConvexPolygonShape3D_qypld")
 
-[node name="TileArea90" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea90" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.3911, -28.5644, -101.304]
 adjust_vertices = [Vector3(15.9766, -9.6384, -106.81), Vector3(31.8859, -19.1678, -101.774), Vector3(33.1967, -37.5011, -96.1672), Vector3(17.2875, -47.2485, -95.7266), Vector3(-5.24521e-07, -38.5536, -100.935), Vector3(-5.24521e-07, -19.2768, -106.411)]
 id = 90
@@ -4823,7 +4958,8 @@ mesh = SubResource("ArrayMesh_kd841")
 [node name="@CollisionShape3D@135" type="CollisionShape3D" parent="TileArea90"]
 shape = SubResource("ConvexPolygonShape3D_o0hqc")
 
-[node name="TileArea139" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea139" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-91.1736, 0.0, -55.0858]
 adjust_vertices = [Vector3(-95.7266, 17.2875, -47.2485), Vector3(-86.2931, 17.2201, -63.3518), Vector3(-82.0678, 0, -70.7602), Vector3(-86.2931, -17.2201, -63.3518), Vector3(-95.7266, -17.2875, -47.2485), Vector3(-100.935, 0, -38.5536)]
 id = 139
@@ -4836,7 +4972,8 @@ mesh = SubResource("ArrayMesh_4hkpu")
 [node name="@CollisionShape3D@136" type="CollisionShape3D" parent="TileArea139"]
 shape = SubResource("ConvexPolygonShape3D_88ysk")
 
-[node name="TileArea141" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea141" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-101.304, -16.3911, -28.5644]
 adjust_vertices = [Vector3(-100.935, 5.24521e-07, -38.5536), Vector3(-95.7266, -17.2875, -47.2485), Vector3(-96.1672, -33.1967, -37.5011), Vector3(-101.774, -31.8859, -19.1678), Vector3(-106.81, -15.9766, -9.6384), Vector3(-106.411, 5.24521e-07, -19.2768)]
 id = 141
@@ -4849,7 +4986,8 @@ mesh = SubResource("ArrayMesh_53nie")
 [node name="@CollisionShape3D@137" type="CollisionShape3D" parent="TileArea141"]
 shape = SubResource("ConvexPolygonShape3D_bxgm3")
 
-[node name="TileArea26" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea26" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, -106.677, 0.0]
 adjust_vertices = [Vector3(9.6384, -106.81, 15.9766), Vector3(-9.6384, -106.81, 15.9766), Vector3(-19.2768, -106.411, 0), Vector3(-9.6384, -106.81, -15.9766), Vector3(9.6384, -106.81, -15.9766), Vector3(19.2768, -106.411, 0)]
 id = 26
@@ -4862,7 +5000,8 @@ mesh = SubResource("ArrayMesh_sni0x")
 [node name="@CollisionShape3D@138" type="CollisionShape3D" parent="TileArea26"]
 shape = SubResource("ConvexPolygonShape3D_gff7m")
 
-[node name="TileArea24" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea24" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [32.9649, -53.3384, -86.3034]
 adjust_vertices = [Vector3(33.1967, -37.5011, -96.1672), Vector3(48.792, -43.458, -86.5288), Vector3(48.478, -59.1623, -76.4498), Vector3(32.8154, -69.3087, -76.6547), Vector3(17.2201, -63.3518, -86.2931), Vector3(17.2875, -47.2485, -95.7266)]
 id = 24
@@ -4875,7 +5014,8 @@ mesh = SubResource("ArrayMesh_1c5f0")
 [node name="@CollisionShape3D@139" type="CollisionShape3D" parent="TileArea24"]
 shape = SubResource("ConvexPolygonShape3D_k02yy")
 
-[node name="TileArea92" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea92" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-31.0228, 0.0, -102.226]
 adjust_vertices = [Vector3(-31.8859, 19.1678, -101.774), Vector3(-15.9766, 9.6384, -106.81), Vector3(-15.9766, -9.6384, -106.81), Vector3(-31.8859, -19.1678, -101.774), Vector3(-45.2058, -9.52937, -98.0928), Vector3(-45.2058, 9.52937, -98.0928)]
 id = 92
@@ -4888,7 +5028,8 @@ mesh = SubResource("ArrayMesh_lhfnh")
 [node name="@CollisionShape3D@140" type="CollisionShape3D" parent="TileArea92"]
 shape = SubResource("ConvexPolygonShape3D_lsxj3")
 
-[node name="TileArea114" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea114" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-76.2108, -73.1157, 16.0781]
 adjust_vertices = [Vector3(-88.5634, -60.6247, 15.4188), Vector3(-82.6739, -70.154, -5.24521e-07), Vector3(-70.7602, -82.0678, -5.24521e-07), Vector3(-63.3518, -86.2931, 17.2201), Vector3(-69.3087, -76.6547, 32.8154), Vector3(-82.6066, -62.9, 31.0141)]
 id = 114
@@ -4901,7 +5042,8 @@ mesh = SubResource("ArrayMesh_a4ju2")
 [node name="@CollisionShape3D@141" type="CollisionShape3D" parent="TileArea114"]
 shape = SubResource("ConvexPolygonShape3D_4b2w2")
 
-[node name="TileArea10" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea10" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-56.363, 2.09808e-07, -91.1973]
 adjust_vertices = [Vector3(-45.2058, 9.52937, -98.0928), Vector3(-45.2058, -9.52937, -98.0928), Vector3(-60.6247, -15.4188, -88.5634), Vector3(-70.154, 0, -82.6739), Vector3(-60.6247, 15.4188, -88.5634)]
 id = 10
@@ -4914,7 +5056,8 @@ mesh = SubResource("ArrayMesh_d5lno")
 [node name="@CollisionShape3D@142" type="CollisionShape3D" parent="TileArea10"]
 shape = SubResource("ConvexPolygonShape3D_2rgw8")
 
-[node name="TileArea9" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea9" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-91.1973, -56.363, 0.0]
 adjust_vertices = [Vector3(-98.0928, -45.2058, -9.52937), Vector3(-88.5634, -60.6247, -15.4188), Vector3(-82.6739, -70.154, 0), Vector3(-88.5634, -60.6247, 15.4188), Vector3(-98.0928, -45.2058, 9.52937)]
 id = 9
@@ -4927,7 +5070,8 @@ mesh = SubResource("ArrayMesh_kvwjo")
 [node name="@CollisionShape3D@143" type="CollisionShape3D" parent="TileArea9"]
 shape = SubResource("ConvexPolygonShape3D_pr07l")
 
-[node name="TileArea104" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea104" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [26.0149, -92.2888, -47.1008]
 adjust_vertices = [Vector3(31.0141, -82.6066, -62.9), Vector3(43.458, -86.5288, -48.792), Vector3(37.5011, -96.1672, -33.1967), Vector3(19.1678, -101.774, -31.8859), Vector3(9.52937, -98.0928, -45.2058), Vector3(15.4188, -88.5634, -60.6247)]
 id = 104
@@ -4940,7 +5084,8 @@ mesh = SubResource("ArrayMesh_lbh8p")
 [node name="@CollisionShape3D@144" type="CollisionShape3D" parent="TileArea104"]
 shape = SubResource("ConvexPolygonShape3D_7p22i")
 
-[node name="TileArea108" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea108" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-55.0858, -91.1736, 0.0]
 adjust_vertices = [Vector3(-70.7602, -82.0678, 0), Vector3(-63.3518, -86.2931, -17.2201), Vector3(-47.2485, -95.7266, -17.2875), Vector3(-38.5536, -100.935, 0), Vector3(-47.2485, -95.7266, 17.2875), Vector3(-63.3518, -86.2931, 17.2201)]
 id = 108
@@ -4953,7 +5098,8 @@ mesh = SubResource("ArrayMesh_esckb")
 [node name="@CollisionShape3D@145" type="CollisionShape3D" parent="TileArea108"]
 shape = SubResource("ConvexPolygonShape3D_psjwn")
 
-[node name="TileArea93" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea93" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.3911, -28.5644, -101.304]
 adjust_vertices = [Vector3(-15.9766, -9.6384, -106.81), Vector3(5.24521e-07, -19.2768, -106.411), Vector3(5.24521e-07, -38.5536, -100.935), Vector3(-17.2875, -47.2485, -95.7266), Vector3(-33.1967, -37.5011, -96.1672), Vector3(-31.8859, -19.1678, -101.774)]
 id = 93
@@ -4966,7 +5112,8 @@ mesh = SubResource("ArrayMesh_nuv3r")
 [node name="@CollisionShape3D@146" type="CollisionShape3D" parent="TileArea93"]
 shape = SubResource("ConvexPolygonShape3D_uhikq")
 
-[node name="TileArea109" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea109" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, -102.226, -31.0228]
 adjust_vertices = [Vector3(9.52937, -98.0928, -45.2058), Vector3(19.1678, -101.774, -31.8859), Vector3(9.6384, -106.81, -15.9766), Vector3(-9.6384, -106.81, -15.9766), Vector3(-19.1678, -101.774, -31.8859), Vector3(-9.52937, -98.0928, -45.2058)]
 id = 109
@@ -4979,7 +5126,8 @@ mesh = SubResource("ArrayMesh_0l802")
 [node name="@CollisionShape3D@147" type="CollisionShape3D" parent="TileArea109"]
 shape = SubResource("ConvexPolygonShape3D_7547x")
 
-[node name="TileArea99" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea99" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [16.0781, -76.2108, -73.1157]
 adjust_vertices = [Vector3(17.2201, -63.3518, -86.2931), Vector3(32.8154, -69.3087, -76.6547), Vector3(31.0141, -82.6066, -62.9), Vector3(15.4188, -88.5634, -60.6247), Vector3(-1.04904e-06, -82.6739, -70.154), Vector3(-1.04904e-06, -70.7602, -82.0678)]
 id = 99
@@ -4992,7 +5140,8 @@ mesh = SubResource("ArrayMesh_s0bvt")
 [node name="@CollisionShape3D@148" type="CollisionShape3D" parent="TileArea99"]
 shape = SubResource("ConvexPolygonShape3D_u7440")
 
-[node name="TileArea156" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea156" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-73.1157, -16.0781, -76.2108]
 adjust_vertices = [Vector3(-70.154, 1.04904e-06, -82.6739), Vector3(-60.6247, -15.4188, -88.5634), Vector3(-62.9, -31.0141, -82.6066), Vector3(-76.6547, -32.8154, -69.3087), Vector3(-86.2931, -17.2201, -63.3518), Vector3(-82.0678, 1.04904e-06, -70.7602)]
 id = 156
@@ -5005,7 +5154,8 @@ mesh = SubResource("ArrayMesh_hiqbe")
 [node name="@CollisionShape3D@149" type="CollisionShape3D" parent="TileArea156"]
 shape = SubResource("ConvexPolygonShape3D_1ulli")
 
-[node name="TileArea154" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea154" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-92.2888, -47.1009, -26.0149]
 adjust_vertices = [Vector3(-101.774, -31.8859, -19.1678), Vector3(-96.1672, -33.1967, -37.5011), Vector3(-86.5288, -48.792, -43.458), Vector3(-82.6066, -62.9, -31.0141), Vector3(-88.5634, -60.6247, -15.4188), Vector3(-98.0928, -45.2058, -9.52937)]
 id = 154
@@ -5018,7 +5168,8 @@ mesh = SubResource("ArrayMesh_dd5qk")
 [node name="@CollisionShape3D@150" type="CollisionShape3D" parent="TileArea154"]
 shape = SubResource("ConvexPolygonShape3D_7ldjk")
 
-[node name="TileArea39" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea39" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-86.3034, -32.9649, -53.3384]
 adjust_vertices = [Vector3(-95.7266, -17.2875, -47.2485), Vector3(-86.2931, -17.2201, -63.3518), Vector3(-76.6547, -32.8154, -69.3087), Vector3(-76.4498, -48.478, -59.1623), Vector3(-86.5288, -48.792, -43.458), Vector3(-96.1672, -33.1967, -37.5011)]
 id = 39
@@ -5031,7 +5182,8 @@ mesh = SubResource("ArrayMesh_sq4n2")
 [node name="@CollisionShape3D@151" type="CollisionShape3D" parent="TileArea39"]
 shape = SubResource("ConvexPolygonShape3D_35m33")
 
-[node name="TileArea110" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea110" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-28.5644, -101.304, -16.3911]
 adjust_vertices = [Vector3(-47.2485, -95.7266, -17.2875), Vector3(-37.5011, -96.1672, -33.1967), Vector3(-19.1678, -101.774, -31.8859), Vector3(-9.6384, -106.81, -15.9766), Vector3(-19.2768, -106.411, 5.24521e-07), Vector3(-38.5536, -100.935, 5.24521e-07)]
 id = 110
@@ -5044,7 +5196,8 @@ mesh = SubResource("ArrayMesh_ecmyn")
 [node name="@CollisionShape3D@152" type="CollisionShape3D" parent="TileArea110"]
 shape = SubResource("ConvexPolygonShape3D_7idef")
 
-[node name="TileArea91" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea91" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-1.7484e-07, -55.0858, -91.1736]
 adjust_vertices = [Vector3(0, -38.5536, -100.935), Vector3(17.2875, -47.2485, -95.7266), Vector3(17.2201, -63.3518, -86.2931), Vector3(0, -70.7602, -82.0678), Vector3(-17.2201, -63.3518, -86.2931), Vector3(-17.2875, -47.2485, -95.7266)]
 id = 91
@@ -5057,7 +5210,8 @@ mesh = SubResource("ArrayMesh_4u26x")
 [node name="@CollisionShape3D@153" type="CollisionShape3D" parent="TileArea91"]
 shape = SubResource("ConvexPolygonShape3D_ic3qe")
 
-[node name="TileArea157" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea157" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-47.1008, -26.0149, -92.2888]
 adjust_vertices = [Vector3(-45.2058, -9.52937, -98.0928), Vector3(-31.8859, -19.1678, -101.774), Vector3(-33.1967, -37.5011, -96.1672), Vector3(-48.792, -43.458, -86.5288), Vector3(-62.9, -31.0141, -82.6066), Vector3(-60.6247, -15.4188, -88.5634)]
 id = 157
@@ -5070,7 +5224,8 @@ mesh = SubResource("ArrayMesh_02ksj")
 [node name="@CollisionShape3D@154" type="CollisionShape3D" parent="TileArea157"]
 shape = SubResource("ConvexPolygonShape3D_ycque")
 
-[node name="TileArea153" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea153" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-76.2108, -73.1157, -16.0781]
 adjust_vertices = [Vector3(-88.5634, -60.6247, -15.4188), Vector3(-82.6066, -62.9, -31.0141), Vector3(-69.3087, -76.6547, -32.8154), Vector3(-63.3518, -86.2931, -17.2201), Vector3(-70.7602, -82.0678, 5.24521e-07), Vector3(-82.6739, -70.154, 5.24521e-07)]
 id = 153
@@ -5083,7 +5238,8 @@ mesh = SubResource("ArrayMesh_q2d23")
 [node name="@CollisionShape3D@155" type="CollisionShape3D" parent="TileArea153"]
 shape = SubResource("ConvexPolygonShape3D_jawa2")
 
-[node name="TileArea11" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea11" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [0.0, -91.1973, -56.363]
 adjust_vertices = [Vector3(15.4188, -88.5634, -60.6247), Vector3(9.52937, -98.0928, -45.2058), Vector3(-9.52937, -98.0928, -45.2058), Vector3(-15.4188, -88.5634, -60.6247), Vector3(0, -82.6739, -70.154)]
 id = 11
@@ -5096,7 +5252,8 @@ mesh = SubResource("ArrayMesh_752dl")
 [node name="@CollisionShape3D@156" type="CollisionShape3D" parent="TileArea11"]
 shape = SubResource("ConvexPolygonShape3D_lxagp")
 
-[node name="TileArea158" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea158" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-62.6092, -46.2181, -72.7395]
 adjust_vertices = [Vector3(-62.9, -31.0141, -82.6066), Vector3(-48.792, -43.458, -86.5288), Vector3(-48.478, -59.1623, -76.4498), Vector3(-62.3811, -62.3811, -62.3811), Vector3(-76.4498, -48.478, -59.1623), Vector3(-76.6547, -32.8154, -69.3087)]
 id = 158
@@ -5109,7 +5266,8 @@ mesh = SubResource("ArrayMesh_c5qvp")
 [node name="@CollisionShape3D@157" type="CollisionShape3D" parent="TileArea158"]
 shape = SubResource("ConvexPolygonShape3D_tydlt")
 
-[node name="TileArea155" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea155" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-72.7395, -62.6092, -46.2181]
 adjust_vertices = [Vector3(-86.5288, -48.792, -43.458), Vector3(-76.4498, -48.478, -59.1623), Vector3(-62.3811, -62.3811, -62.3811), Vector3(-59.1623, -76.4498, -48.478), Vector3(-69.3087, -76.6547, -32.8154), Vector3(-82.6066, -62.9, -31.0141)]
 id = 155
@@ -5122,7 +5280,8 @@ mesh = SubResource("ArrayMesh_n0x0b")
 [node name="@CollisionShape3D@158" type="CollisionShape3D" parent="TileArea155"]
 shape = SubResource("ConvexPolygonShape3D_4q6c2")
 
-[node name="TileArea41" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea41" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-53.3384, -86.3034, -32.9649]
 adjust_vertices = [Vector3(-69.3087, -76.6547, -32.8154), Vector3(-59.1623, -76.4498, -48.478), Vector3(-43.458, -86.5288, -48.792), Vector3(-37.5011, -96.1672, -33.1967), Vector3(-47.2485, -95.7266, -17.2875), Vector3(-63.3518, -86.2931, -17.2201)]
 id = 41
@@ -5135,7 +5294,8 @@ mesh = SubResource("ArrayMesh_s1esj")
 [node name="@CollisionShape3D@159" type="CollisionShape3D" parent="TileArea41"]
 shape = SubResource("ConvexPolygonShape3D_qdyp3")
 
-[node name="TileArea40" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea40" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-32.9649, -53.3384, -86.3034]
 adjust_vertices = [Vector3(-33.1967, -37.5011, -96.1672), Vector3(-17.2875, -47.2485, -95.7266), Vector3(-17.2201, -63.3518, -86.2931), Vector3(-32.8154, -69.3087, -76.6547), Vector3(-48.478, -59.1623, -76.4498), Vector3(-48.792, -43.458, -86.5288)]
 id = 40
@@ -5148,7 +5308,8 @@ mesh = SubResource("ArrayMesh_gxvu4")
 [node name="@CollisionShape3D@160" type="CollisionShape3D" parent="TileArea40"]
 shape = SubResource("ConvexPolygonShape3D_7ssw5")
 
-[node name="TileArea160" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea160" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-26.0149, -92.2888, -47.1008]
 adjust_vertices = [Vector3(-31.0141, -82.6066, -62.9), Vector3(-15.4188, -88.5634, -60.6247), Vector3(-9.52937, -98.0928, -45.2058), Vector3(-19.1678, -101.774, -31.8859), Vector3(-37.5011, -96.1672, -33.1967), Vector3(-43.458, -86.5288, -48.792)]
 id = 160
@@ -5161,7 +5322,8 @@ mesh = SubResource("ArrayMesh_23tgt")
 [node name="@CollisionShape3D@161" type="CollisionShape3D" parent="TileArea160"]
 shape = SubResource("ConvexPolygonShape3D_ubkcf")
 
-[node name="TileArea159" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea159" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-16.0781, -76.2108, -73.1157]
 adjust_vertices = [Vector3(-17.2201, -63.3518, -86.2931), Vector3(1.04904e-06, -70.7602, -82.0678), Vector3(1.04904e-06, -82.6739, -70.154), Vector3(-15.4188, -88.5634, -60.6247), Vector3(-31.0141, -82.6066, -62.9), Vector3(-32.8154, -69.3087, -76.6547)]
 id = 159
@@ -5174,7 +5336,8 @@ mesh = SubResource("ArrayMesh_ns51h")
 [node name="@CollisionShape3D@162" type="CollisionShape3D" parent="TileArea159"]
 shape = SubResource("ConvexPolygonShape3D_pobwg")
 
-[node name="TileArea161" parent="." instance=ExtResource("1_nq6hn")]
+[node name="TileArea161" type="Area3D" parent="." instance=ExtResource("1_nq6hn")]
+script = ExtResource("2_julve")
 center = [-46.2181, -72.7395, -62.6092]
 adjust_vertices = [Vector3(-48.478, -59.1623, -76.4498), Vector3(-32.8154, -69.3087, -76.6547), Vector3(-31.0141, -82.6066, -62.9), Vector3(-43.458, -86.5288, -48.792), Vector3(-59.1623, -76.4498, -48.478), Vector3(-62.3811, -62.3811, -62.3811)]
 id = 161

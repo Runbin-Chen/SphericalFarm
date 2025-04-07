@@ -20,6 +20,9 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		print(id)
 		print(neighbors_id)
 		print(center)
+		var camera = get_node("../../Player_Camera")
+		# 触发Camera定义的信号，并传递自身坐标
+		camera.emit_signal("position_camera", Vector3(center[0],center[1],center[2]))
 		
 
 func init(chunk_id:int)->void:

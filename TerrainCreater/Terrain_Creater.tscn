@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://yncl4kj12pea"]
+[gd_scene load_steps=5 format=3 uid="uid://yncl4kj12pea"]
 
 [ext_resource type="Script" uid="uid://cl26ieg4vyhnu" path="res://TerrainCreater/terrain_creater.gd" id="1_7fy1e"]
 [ext_resource type="Script" uid="uid://cder4xclnyjsu" path="res://TerrainCreater/rotate_camera_3d.gd" id="2_aatpe"]
-[ext_resource type="PackedScene" uid="uid://c7cb2gaw4v6vd" path="res://sphere_creater/saved_tile/tile_area_collection_saved.tscn" id="2_ih31w"]
+[ext_resource type="PackedScene" path="res://sphere_creater/saved_tile/tile_area_collection_saved.tscn" id="2_ih31w"]
+[ext_resource type="Script" uid="uid://pxosuh4rglrv" path="res://TerrainCreater/player_camera.gd" id="4_b0lnd"]
 
 [node name="TerrainCreater" type="Node3D"]
 script = ExtResource("1_7fy1e")
@@ -15,8 +16,13 @@ shadow_bias = 10.0
 omni_range = 422.241
 omni_attenuation = 0.0
 
+[node name="Player_Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
+script = ExtResource("4_b0lnd")
+
 [node name="Rotate_Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 224.117)
+visible = false
 script = ExtResource("2_aatpe")
 
 [node name="TileAreaCollection" parent="." instance=ExtResource("2_ih31w")]
