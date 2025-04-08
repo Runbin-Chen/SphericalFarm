@@ -10,10 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Test spherical"
+config/name="Spherical Farm"
 run/main_scene="uid://yncl4kj12pea"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "green",
+"res://scenes/": "orange"
+}
 
 [rendering]
 

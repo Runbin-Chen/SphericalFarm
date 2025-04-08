@@ -1,6 +1,6 @@
 extends Node3D
 @onready var tile_area_collection: Node3D = $TileAreaCollection
-const DESERT_HEX_TILES_A = preload("res://TerrainCreater/hex_tiles/desert_hex_tiles_crystal.tscn")
+const DESERT_HEX_TILES_A = preload("res://scenes/TerrainCreater/hex_tiles/desert_hex_tiles_crystal.tscn")
 
 
 func _ready() -> void:

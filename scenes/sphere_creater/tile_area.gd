@@ -16,10 +16,10 @@ func _ready() -> void:
 
 func _on_click(cam, event, pos, normal, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-		print("凸包碰撞体触发成功")
-		print(id)
-		print(neighbors_id)
-		print(center)
+		#print("凸包碰撞体触发成功")
+		#print(id)
+		#print(neighbors_id)
+		#print(center)
 		var camera = get_node("../../../Player_Camera")
 		# 触发Camera定义的信号，并传递自身坐标
 		camera.emit_signal("position_camera", Vector3(center[0],center[1],center[2]))

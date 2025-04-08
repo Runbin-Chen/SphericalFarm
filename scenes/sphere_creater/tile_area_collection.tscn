@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cyyit1l1cq3bc"]
 
-[ext_resource type="Script" uid="uid://boke3ulh3rrub" path="res://sphere_creater/tile_area_collection.gd" id="1_tvxw5"]
+[ext_resource type="Script" uid="uid://boke3ulh3rrub" path="res://scenes/sphere_creater/tile_area_collection.gd" id="1_tvxw5"]
 
 [node name="TileAreaCollection" type="Node3D"]
 script = ExtResource("1_tvxw5")

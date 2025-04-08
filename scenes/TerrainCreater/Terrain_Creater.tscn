@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://yncl4kj12pea"]
 
-[ext_resource type="Script" uid="uid://cl26ieg4vyhnu" path="res://TerrainCreater/terrain_creater.gd" id="1_7fy1e"]
-[ext_resource type="Script" uid="uid://cder4xclnyjsu" path="res://TerrainCreater/rotate_camera_3d.gd" id="2_aatpe"]
-[ext_resource type="PackedScene" path="res://sphere_creater/saved_tile/tile_area_collection_saved.tscn" id="2_ih31w"]
+[ext_resource type="Script" uid="uid://cl26ieg4vyhnu" path="res://scenes/TerrainCreater/terrain_creater.gd" id="1_7fy1e"]
+[ext_resource type="Script" uid="uid://cder4xclnyjsu" path="res://scenes/TerrainCreater/rotate_camera_3d.gd" id="2_aatpe"]
+[ext_resource type="PackedScene" path="res://scenes/sphere_creater/saved_tile/tile_area_collection_saved.tscn" id="2_ih31w"]
 
 [node name="TerrainCreater" type="Node3D"]
 script = ExtResource("1_7fy1e")
