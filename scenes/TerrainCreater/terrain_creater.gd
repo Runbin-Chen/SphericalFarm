@@ -10,7 +10,8 @@ func _ready() -> void:
 		if tile.id == 28 ||tile.id == 60:
 			#pass
 			add_terrain(tile)
-	
+	init_tile_res_manage(tiles)
+	#print(tiles.size())
 
 func add_terrain(tile_area:MeshArea)->void:
 	#var mesh = tile_area.get_node("GeneratedMesh").mesh
@@ -48,3 +49,9 @@ func add_terrain(tile_area:MeshArea)->void:
 	instance.scale = Vector3.ONE * 23  # 替换scale为你的缩放值
 	# 添加实例到场景
 	add_child(instance)
+
+func init_tile_res_manage(tiles:Array)->void:
+	TileResManage.init_tile_manage(tiles.size())
+	for tile:MeshArea in tiles:
+		TileResManage.set_nebr(tile.id,tile.neighbors_id)
+	pass

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://hxyfm4lv20pe"]
 
-[ext_resource type="Script" uid="uid://pxosuh4rglrv" path="res://scenes/main_scence/player_camera.gd" id="1_m0nk5"]
+[ext_resource type="Script" uid="uid://pxosuh4rglrv" path="res://scenes/main_scene/player_camera.gd" id="1_m0nk5"]
 [ext_resource type="PackedScene" uid="uid://yncl4kj12pea" path="res://scenes/TerrainCreater/Terrain_Creater.tscn" id="2_jdsnt"]
 
 [node name="MainSurface" type="Node3D"]

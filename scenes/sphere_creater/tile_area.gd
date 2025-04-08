@@ -23,7 +23,8 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		var camera = get_node("../../../Player_Camera")
 		# 触发Camera定义的信号，并传递自身坐标
 		camera.emit_signal("position_camera", Vector3(center[0],center[1],center[2]))
-		
+		#print(TileResManage.tile_data[id].nebr_id)
+		#print(neighbors_id)
 
 func init(chunk_id:int)->void:
 	id = chunk_id

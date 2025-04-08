@@ -10,9 +10,9 @@ var prev_hex_planet: HexPlanet
 @onready var hex_planet: HexPlanet = $HexPlanet
 @onready var hex_chunk_renders: Node3D = $HexChunkRenders
 @onready var tile_area_collection: Node3D = $TileAreaCollection
-const tile_path = "res://sphere_creater/saved_tile/tile_area_collection_saved.tscn"
+const tile_path = "res://scenes/sphere_creater/saved_tile/tile_area_collection_saved.tscn"
 
-const TileArea = preload("res://sphere_creater/tile_area.tscn")
+const TileArea = preload("res://scenes/sphere_creater/tile_area.tscn")
 
 func _ready() -> void:
 	#保存和预加载
