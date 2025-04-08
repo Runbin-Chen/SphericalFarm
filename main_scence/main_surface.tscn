@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://hxyfm4lv20pe"]
+
+[ext_resource type="Script" uid="uid://pxosuh4rglrv" path="res://main_scence/player_camera.gd" id="1_m0nk5"]
+[ext_resource type="PackedScene" uid="uid://yncl4kj12pea" path="res://TerrainCreater/Terrain_Creater.tscn" id="2_jdsnt"]
+
+[node name="MainSurface" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.452, 116.485, 219.434)
+light_energy = 1.831
+shadow_enabled = true
+shadow_bias = 10.0
+omni_range = 422.241
+omni_attenuation = 0.0
+
+[node name="Player_Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
+script = ExtResource("1_m0nk5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Player_Camera"]
+light_energy = 1.5
+omni_range = 200.0
+
+[node name="TerrainCreater" parent="." instance=ExtResource("2_jdsnt")]
