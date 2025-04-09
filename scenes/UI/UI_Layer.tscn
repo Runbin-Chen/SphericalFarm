@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpnivc6wtu6hv"]
+
+[ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://assets/themes/src/addons/Themey/themes/spacey/spacey.tres" id="1_qwudb"]
+[ext_resource type="Texture2D" uid="uid://d040604pwh8w5" path="res://assets/themes/src/addons/Themey/themes/clashy/graphics/coin.svg" id="4_8i8ur"]
+[ext_resource type="Texture2D" uid="uid://d388p8y56v4ip" path="res://assets/themes/src/addons/Themey/themes/clashy/graphics/gem.svg" id="5_xpr55"]
+[ext_resource type="PackedScene" uid="uid://c2nckyocxegus" path="res://assets/themes/src/ExampleScene/ThemeyButton.tscn" id="6_xpr55"]
+[ext_resource type="Texture2D" uid="uid://so6mj5jkyyxe" path="res://assets/themes/src/ExampleScene/MaterialIcons/24px/replay-24.svg" id="7_f63d3"]
+[ext_resource type="Texture2D" uid="uid://cnb67ko05ii3c" path="res://assets/themes/src/ExampleScene/MaterialIcons/24px/home-24.svg" id="8_7y1c4"]
+
+[node name="UiLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_qwudb")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Control" type="Control" parent="Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CenteredContent" type="Control" parent="Control/MarginContainer/Control"]
+custom_minimum_size = Vector2(1120, 616)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -308.0
+offset_right = 560.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopLeftResource" type="PanelContainer" parent="Control/MarginContainer/Control/CenteredContent"]
+offset_right = 267.0
+offset_bottom = 135.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"PanelEmbedded"
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 2
+text = "Score: 9,000"
+horizontal_alignment = 1
+
+[node name="Panel4" type="PanelContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"PanelEmbedded"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
+layout_mode = 2
+text = "Your Reward"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_8i8ur")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "500"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_xpr55")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "500"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="ThemeyButton" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_xpr55")]
+layout_mode = 2
+text = ""
+icon = ExtResource("7_f63d3")
+
+[node name="ThemeyButton2" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_xpr55")]
+layout_mode = 2
+text = "Next Level"
+
+[node name="ThemeyButton3" parent="Control/MarginContainer/Control/CenteredContent/TopLeftResource/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_xpr55")]
+layout_mode = 2
+text = ""
+icon = ExtResource("8_7y1c4")

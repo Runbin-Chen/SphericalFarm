@@ -6,6 +6,7 @@ extends Area3D
 @export var adjust_vertices = [] #调整后的点数组
 @export var id:int
 @export var neighbors_id = []
+@export var mesh_instance:MeshInstance3D 
 
 var vector_center = Vector3(0,0,0)
 
@@ -23,7 +24,8 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		var camera = get_node("../../../Player_Camera")
 		# 触发Camera定义的信号，并传递自身坐标
 		camera.emit_signal("position_camera", Vector3(center[0],center[1],center[2]))
-		#print(TileResManage.tile_data[id].nebr_id)
+		change_material(mesh_instance,DataTypes.Ground_Type.Sea)
+		#print(TileResManage.tile_data[id].mesh_instance)
 		#print(neighbors_id)
 
 func init(chunk_id:int)->void:
@@ -50,7 +52,8 @@ func set_shape(mesh: Mesh) -> void:
 		adjust_vertices.append(vertices[2])
 		adjust_vertices.append(vertices[1])
 	var new_mesh:ArrayMesh=generate_extruded_mesh(adjust_vertices,2)
-	var mesh_instance = MeshInstance3D.new()
+	#var mesh_instance = MeshInstance3D.new()
+	mesh_instance = MeshInstance3D.new()
 	mesh_instance.name = "GeneratedMesh"  # 可选：给节点命名
 	add_child(mesh_instance)
 	mesh_instance.mesh = new_mesh
@@ -138,6 +141,19 @@ func configure_material(mesh: MeshInstance3D) -> void:
 	
 	# 设置材质属性
 	mat.albedo_color = Color("ffd5be")  # 基础颜色（红色）
+	mat.metallic = 0                      # 金属度
+	mat.roughness = 0.8               # 粗糙度
+	
+	
+	# 应用材质到网格
+	mesh.material_override = mat
+
+func change_material(mesh: MeshInstance3D,ground_type:DataTypes.Ground_Type) -> void:
+	var mat: StandardMaterial3D = StandardMaterial3D.new()
+	
+	# 设置材质属性
+	mat.albedo_color = DataTypes.GROUND_COLORS.get(ground_type, Color.WHITE)
+	#mat.albedo_color = Color("FFFFFF")  # 基础颜色（红色）
 	mat.metallic = 0                      # 金属度
 	mat.roughness = 0.8               # 粗糙度
 	

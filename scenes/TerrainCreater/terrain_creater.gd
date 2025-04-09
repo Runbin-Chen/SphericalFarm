@@ -11,6 +11,8 @@ func _ready() -> void:
 			#pass
 			add_terrain(tile)
 	init_tile_res_manage(tiles)
+	TileResManage.connect("change_terrain",_on_change_terrain)
+	
 	#print(tiles.size())
 
 func add_terrain(tile_area:MeshArea)->void:
@@ -48,10 +50,21 @@ func add_terrain(tile_area:MeshArea)->void:
 	
 	instance.scale = Vector3.ONE * 23  # 替换scale为你的缩放值
 	# 添加实例到场景
-	add_child(instance)
+	instance.name="Terrain"
+	tile_area.add_child(instance)
+
+func _on_change_terrain(tile_area:MeshArea)->void:
+	#print("_on_change_terrain")
+	var nodes = tile_area.get_children()
+	for node in nodes:
+		if node.name == "Terrain":
+			#print("found")
+			node.queue_free()
+	add_terrain(tile_area)
 
 func init_tile_res_manage(tiles:Array)->void:
 	TileResManage.init_tile_manage(tiles.size())
-	for tile:MeshArea in tiles:
-		TileResManage.set_nebr(tile.id,tile.neighbors_id)
+	TileResManage.set_tile(tiles)
+	#for tile:MeshArea in tiles:
+	#	TileResManage.set_nebr(tile.id,tile.neighbors_id)
 	pass
