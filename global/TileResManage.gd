@@ -8,7 +8,8 @@ var current_id = 0
 class TileDataDetail:
 	var nebr_id: Array = []
 	var tile:MeshArea
-	
+	var tile_terrain:DataTypes.Terrain_Type
+	var tile_ground:DataTypes.Ground_Type
 
 var tilenum:int = 0
 var tile_data = []
@@ -28,6 +29,20 @@ func set_tile(tiles:Array)->void:
 	for tile:MeshArea in tiles:
 		tile_data[tile.id].tile=tile
 	pass
+
+func set_tile_terrain(id:int,Terrain:DataTypes.Terrain_Type)->void:
+	tile_data[id].tile_terrain = Terrain
+
+func get_tile_terrain(id:int)->DataTypes.Terrain_Type:
+	return tile_data[id].tile_terrain
+
+func set_tile_ground(id:int,Ground:DataTypes.Ground_Type)->void:
+	tile_data[id].tile_ground = Ground
+	tile_data[id].tile.change_material(DataTypes.Ground_Type.Sea)
+
+func get_tile_ground(id:int)->DataTypes.Ground_Type:
+	return tile_data[id].tile_ground
+
 
 func get_current_tile_id()->int:
 	return current_id

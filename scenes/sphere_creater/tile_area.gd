@@ -24,7 +24,8 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		var camera = get_node("../../../Player_Camera")
 		# 触发Camera定义的信号，并传递自身坐标
 		camera.emit_signal("position_camera", Vector3(center[0],center[1],center[2]))
-		change_material(mesh_instance,DataTypes.Ground_Type.Sea)
+		#change_material(DataTypes.Ground_Type.Sea)
+		TileResManage.set_tile_ground(id,DataTypes.Ground_Type.Sea)
 		#print(TileResManage.tile_data[id].mesh_instance)
 		#print(neighbors_id)
 
@@ -148,7 +149,7 @@ func configure_material(mesh: MeshInstance3D) -> void:
 	# 应用材质到网格
 	mesh.material_override = mat
 
-func change_material(mesh: MeshInstance3D,ground_type:DataTypes.Ground_Type) -> void:
+func change_material(ground_type:DataTypes.Ground_Type) -> void:
 	var mat: StandardMaterial3D = StandardMaterial3D.new()
 	
 	# 设置材质属性
@@ -159,4 +160,4 @@ func change_material(mesh: MeshInstance3D,ground_type:DataTypes.Ground_Type) -> 
 	
 	
 	# 应用材质到网格
-	mesh.material_override = mat
+	mesh_instance.material_override = mat
