@@ -1,7 +1,7 @@
 extends Node3D
 @onready var tile_area_collection: Node3D = $TileAreaCollection
-const DESERT_HEX_TILES_A = preload("res://scenes/TerrainCreater/hex_tiles/desert_hex_tiles_crystal.tscn")
-
+#const DESERT_HEX_TILES_A = preload("res://scenes/TerrainCreater/hex_tiles/desert_hex_tiles_crystal.tscn")
+#const corridor_hex_tile = preload("res://scenes/TerrainCreater/hex_tiles/corridor_hex_tile.tscn")
 
 func _ready() -> void:
 	var tiles = tile_area_collection.get_children()
@@ -9,17 +9,26 @@ func _ready() -> void:
 	for tile:MeshArea in tiles:
 		if tile.id == 28 ||tile.id == 60:
 			#pass
-			add_terrain(tile)
+			add_terrain(tile,DataTypes.Terrain_Type.RockCrystal)
+		if tile.id == 42 || tile.id == 17:
+			add_terrain(tile,DataTypes.Terrain_Type.Corridor)
 	init_tile_res_manage(tiles)
 	TileResManage.connect("change_terrain",_on_change_terrain)
 	
 	#print(tiles.size())
 
-func add_terrain(tile_area:MeshArea)->void:
+func add_terrain(tile_area:MeshArea,Terrain_type:DataTypes.Terrain_Type)->void:
 	#var mesh = tile_area.get_node("GeneratedMesh").mesh
 	#print(tile_area.center)
+	var instance
+	
+	if (Terrain_type != DataTypes.Terrain_Type.None):
+		instance = DataTypes.Terrain_Scenes.get(Terrain_type).instantiate()
+	else :
+		return
+	
 	var center = tile_area.center
-	var instance = DESERT_HEX_TILES_A.instantiate()
+	
 
 	#构建面
 	var plane = Plane(tile_area.adjust_vertices[0], tile_area.adjust_vertices[1], tile_area.adjust_vertices[2])
@@ -60,7 +69,7 @@ func _on_change_terrain(tile_area:MeshArea)->void:
 		if node.name == "Terrain":
 			#print("found")
 			node.queue_free()
-	add_terrain(tile_area)
+	add_terrain(tile_area,DataTypes.Terrain_Type.None)
 
 func init_tile_res_manage(tiles:Array)->void:
 	TileResManage.init_tile_manage(tiles.size())

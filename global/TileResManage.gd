@@ -3,7 +3,7 @@
 extends Node
 
 signal change_terrain(tile_area:MeshArea)
-
+var current_id = 0
 
 class TileDataDetail:
 	var nebr_id: Array = []
@@ -28,7 +28,13 @@ func set_tile(tiles:Array)->void:
 	for tile:MeshArea in tiles:
 		tile_data[tile.id].tile=tile
 	pass
-	
+
+func get_current_tile_id()->int:
+	return current_id
+func set_current_tile_id(new_id:int)->void:
+	current_id = new_id
+
+
 func change_terrain_test(tile_area:MeshArea)->void: #test use
 	emit_signal("change_terrain",tile_area)
 	

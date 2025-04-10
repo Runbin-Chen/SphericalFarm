@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://1c1xg8t5m335"]
+
+[ext_resource type="PackedScene" uid="uid://ddtpksoi6w5a5" path="res://assets/import_model/kenney_space-kit/corridor.glb" id="1_cl6ln"]
+[ext_resource type="PackedScene" uid="uid://nutrbw4sbdso" path="res://assets/import_model/kenney_space-kit/corridor_end.glb" id="2_sadt5"]
+[ext_resource type="PackedScene" uid="uid://3da70aa3u25k" path="res://assets/import_model/kenney_space-kit/corridor_windowClosed.glb" id="3_sw1g2"]
+[ext_resource type="PackedScene" uid="uid://c16un8s76pgd0" path="res://assets/import_model/kenney_space-kit/rock.glb" id="4_hucnl"]
+[ext_resource type="PackedScene" uid="uid://6x0j01gsnnp8" path="res://assets/import_model/kenney_space-kit/satelliteDish_large.glb" id="5_j5onj"]
+[ext_resource type="PackedScene" uid="uid://b5ftjf7lqgr83" path="res://assets/import_model/kenney_space-kit/rover.glb" id="6_awhvy"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bm3hg"]
+size = Vector2(1, 1)
+
+[node name="CorridorHexTile" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_bm3hg")
+skeleton = NodePath("")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(0.841511, 0, -0.54024, 0, 1, 0, 0.54024, 0, 0.841511, -0.0542831, 0, 0)
+
+[node name="corridor2" parent="Node3D" instance=ExtResource("1_cl6ln")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.3085, 0, -0.0991332)
+
+[node name="corridor_end2" parent="Node3D" instance=ExtResource("2_sadt5")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.308085, 2.98023e-08, 0.00128379)
+
+[node name="corridor_windowClosed2" parent="Node3D" instance=ExtResource("3_sw1g2")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.309425, 0, -0.297624)
+
+[node name="corridor_end3" parent="Node3D" instance=ExtResource("2_sadt5")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.30764, 0, -0.494254)
+
+[node name="rock2" parent="Node3D" instance=ExtResource("4_hucnl")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.07645, 0, -0.784499)
+
+[node name="satelliteDish_large2" parent="Node3D" instance=ExtResource("5_j5onj")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.574204, 0.120283, -0.393866)
+
+[node name="rover2" parent="Node3D" instance=ExtResource("6_awhvy")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.451875, -2.98023e-08, -0.934082)
