@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://tm5ywjoj04q4"]
+[gd_scene load_steps=6 format=3 uid="uid://tm5ywjoj04q4"]
 
 [ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://assets/themes/src/addons/Themey/themes/spacey/spacey.tres" id="1_4stbn"]
 [ext_resource type="PackedScene" uid="uid://c2nckyocxegus" path="res://assets/themes/src/ExampleScene/ThemeyButton.tscn" id="2_ct3ju"]
 [ext_resource type="Script" uid="uid://c3ib6etspdjiu" path="res://scenes/UI/TimePanel/time_panel.gd" id="2_g434x"]
 [ext_resource type="FontVariation" uid="uid://bcl5fkds8iqeg" path="res://scenes/UI/fonts/zx_palm_variation.tres" id="2_i5120"]
+[ext_resource type="FontFile" uid="uid://0kmq0e4n2j53" path="res://scenes/UI/fonts/pixelFont-7-8x14-sproutLands.ttf" id="5_g434x"]
 
 [node name="TimePanelContainer" type="MarginContainer"]
-offset_right = 200.0
-offset_bottom = 122.0
+offset_right = 220.0
+offset_bottom = 108.0
 mouse_filter = 2
 theme = ExtResource("1_4stbn")
 script = ExtResource("2_g434x")
@@ -52,10 +53,36 @@ horizontal_alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="ThemeyButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_ct3ju")]
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+
+[node name="ThemeyButton" parent="VBoxContainer/HBoxContainer/Panel" instance=ExtResource("2_ct3ju")]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.5
+offset_right = 47.5
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_g434x")
 text = "Next Turn"
 
-[node name="ThemeyButton3" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_ct3ju")]
+[node name="Panel2" type="Panel" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+
+[node name="ThemeyButton3" parent="VBoxContainer/HBoxContainer/Panel2" instance=ExtResource("2_ct3ju")]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.0
+offset_right = 43.0
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_g434x")
 text = "Next Day"
