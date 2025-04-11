@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bcl5fkds8iqeg"]
+
+[ext_resource type="FontFile" uid="uid://dtixmsmbymgfk" path="res://scenes/UI/fonts/ZX Palm.ttf" id="1_qlflh"]
+
+[resource]
+base_font = ExtResource("1_qlflh")
+spacing_glyph = -3
+spacing_top = 2

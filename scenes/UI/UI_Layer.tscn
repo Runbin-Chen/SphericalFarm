@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpnivc6wtu6hv"]
+[gd_scene load_steps=8 format=3 uid="uid://dpnivc6wtu6hv"]
 
 [ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://assets/themes/src/addons/Themey/themes/spacey/spacey.tres" id="1_qwudb"]
 [ext_resource type="Texture2D" uid="uid://d040604pwh8w5" path="res://assets/themes/src/addons/Themey/themes/clashy/graphics/coin.svg" id="4_8i8ur"]
 [ext_resource type="Texture2D" uid="uid://d388p8y56v4ip" path="res://assets/themes/src/addons/Themey/themes/clashy/graphics/gem.svg" id="5_xpr55"]
 [ext_resource type="PackedScene" uid="uid://c2nckyocxegus" path="res://assets/themes/src/ExampleScene/ThemeyButton.tscn" id="6_xpr55"]
+[ext_resource type="PackedScene" uid="uid://tm5ywjoj04q4" path="res://scenes/UI/TimePanel/time_panel.tscn" id="7_1kl5n"]
 [ext_resource type="Texture2D" uid="uid://so6mj5jkyyxe" path="res://assets/themes/src/ExampleScene/MaterialIcons/24px/replay-24.svg" id="7_f63d3"]
 [ext_resource type="Texture2D" uid="uid://cnb67ko05ii3c" path="res://assets/themes/src/ExampleScene/MaterialIcons/24px/home-24.svg" id="8_7y1c4"]
 
@@ -53,6 +54,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="TopLeftResource" type="PanelContainer" parent="Control/MarginContainer/Control/CenteredContent"]
+layout_mode = 0
 offset_right = 267.0
 offset_bottom = 135.0
 
@@ -135,3 +137,17 @@ text = "Next Level"
 layout_mode = 2
 text = ""
 icon = ExtResource("8_7y1c4")
+
+[node name="TopRightResource" type="PanelContainer" parent="Control/MarginContainer/Control/CenteredContent"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 16.0
+grow_horizontal = 0
+theme = ExtResource("1_qwudb")
+
+[node name="TimePanelContainer" parent="Control/MarginContainer/Control/CenteredContent/TopRightResource" instance=ExtResource("7_1kl5n")]
+layout_mode = 2

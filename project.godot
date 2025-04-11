@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 TileResManage="*res://global/TileResManage.gd"
 DataTypes="*res://global/DataTypes.gd"
+TimeManage="*res://global/TimeManage.gd"
 
 [file_customization]
 

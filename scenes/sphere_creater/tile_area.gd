@@ -26,6 +26,7 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		camera.emit_signal("position_camera", Vector3(center[0],center[1],center[2]))
 		#change_material(DataTypes.Ground_Type.Sea)
 		TileResManage.set_tile_ground(id,DataTypes.Ground_Type.Sea)
+		TimeManage.next_count()
 		#print(TileResManage.tile_data[id].mesh_instance)
 		#print(neighbors_id)
 

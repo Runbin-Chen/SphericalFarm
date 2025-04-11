@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://tm5ywjoj04q4"]
+
+[ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://assets/themes/src/addons/Themey/themes/spacey/spacey.tres" id="1_4stbn"]
+[ext_resource type="PackedScene" uid="uid://c2nckyocxegus" path="res://assets/themes/src/ExampleScene/ThemeyButton.tscn" id="2_ct3ju"]
+[ext_resource type="Script" uid="uid://c3ib6etspdjiu" path="res://scenes/UI/TimePanel/time_panel.gd" id="2_g434x"]
+[ext_resource type="FontVariation" uid="uid://bcl5fkds8iqeg" path="res://scenes/UI/fonts/zx_palm_variation.tres" id="2_i5120"]
+
+[node name="TimePanelContainer" type="MarginContainer"]
+offset_right = 200.0
+offset_bottom = 122.0
+mouse_filter = 2
+theme = ExtResource("1_4stbn")
+script = ExtResource("2_g434x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"PanelEmbedded"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Day Label" type="Label" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_i5120")
+theme_override_font_sizes/font_size = 24
+text = "DAY"
+horizontal_alignment = 1
+
+[node name="Panel2" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"PanelEmbedded"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel2"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Turn Label" type="Label" parent="VBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_i5120")
+theme_override_font_sizes/font_size = 24
+text = "TURN"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ThemeyButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_ct3ju")]
+layout_mode = 2
+text = "Next Turn"
+
+[node name="ThemeyButton3" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_ct3ju")]
+layout_mode = 2
+text = "Next Day"
