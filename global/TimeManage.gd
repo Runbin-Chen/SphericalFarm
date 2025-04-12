@@ -20,3 +20,8 @@ func next_count()->int:
 		current_day = current_day +1
 	time_flash.emit(current_day,current_turn)
 	return current_turn
+
+func next_day()->int:
+	current_day = current_day + 1
+	time_flash.emit(current_day,current_turn)
+	return current_day
