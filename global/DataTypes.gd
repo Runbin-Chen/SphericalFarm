@@ -26,3 +26,10 @@ const Terrain_Scenes = {
 	Terrain_Type.RockCrystal : preload("res://scenes/TerrainCreater/hex_tiles/desert_hex_tiles_crystal.tscn"),
 	Terrain_Type.Corridor: preload("res://scenes/TerrainCreater/hex_tiles/corridor_hex_tile.tscn")
 }
+
+enum Item_Type{
+	None,
+	Water,
+	Seed,
+	Steel
+}

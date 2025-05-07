@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Spherical Farm"
-run/main_scene="uid://yncl4kj12pea"
+run/main_scene="uid://hxyfm4lv20pe"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 TileResManage="*res://global/TileResManage.gd"
 DataTypes="*res://global/DataTypes.gd"
 TimeManage="*res://global/TimeManage.gd"
+PlayerResManage="*res://global/PlayerResManage.gd"
 
 [file_customization]
 
