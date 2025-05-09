@@ -1,6 +1,6 @@
 extends Node
 
-const turn_per_day = 12
+const turn_per_day = 48
 
 var current_turn = 0
 var current_day = 0

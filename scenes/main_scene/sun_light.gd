@@ -21,4 +21,4 @@ func set_orbit_angle(angle_deg: float):
 	look_at(Vector3.ZERO, Vector3.UP)
 
 func _on_time_flash(day:int,count:int)->void:
-	set_orbit_angle(360/12*count)
+	set_orbit_angle(360/TimeManage.turn_per_day*count)
