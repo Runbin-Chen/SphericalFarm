@@ -12,6 +12,10 @@ func _ready() -> void:
 			add_terrain(tile,DataTypes.Terrain_Type.RockCrystal)
 		if tile.id == 42 || tile.id == 17:
 			add_terrain(tile,DataTypes.Terrain_Type.Corridor)
+		if tile.id == 77:
+			add_terrain(tile,DataTypes.Terrain_Type.Savanna)
+		if tile.id == 75:
+			add_terrain(tile,DataTypes.Terrain_Type.Forest)
 	init_tile_res_manage(tiles)
 	TileResManage.connect("change_terrain",_on_change_terrain)
 	

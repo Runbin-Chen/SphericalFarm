@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://tgwnm2a2vrw8"]
+
+[ext_resource type="PackedScene" uid="uid://dp18e3le8bngc" path="res://assets/import_model/sketchfab/Cartoon tree/tree.glb" id="1_t1kae"]
+[ext_resource type="PackedScene" uid="uid://b6jo4lxhdwfo1" path="res://assets/import_model/kenney_space-kit/rocks_smallA.glb" id="1_wxs5o"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
+size = Vector2(1, 1)
+
+[node name="SavannaHexTilesA" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_d8c7y")
+skeleton = NodePath("")
+
+[node name="tree" parent="." instance=ExtResource("1_t1kae")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0.123753, 0.0429305, 0.132867)
+
+[node name="rocks_smallA2" parent="." instance=ExtResource("1_wxs5o")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.849451, 0, -0.788256)

@@ -35,9 +35,9 @@ func _on_time_flash(day: int, count: int) -> void:
 	last_angle = target_angle
 	
 	#test use
-	print("data:")
-	print(current_angle)
-	print(target_angle)
+	#print("data:")
+	#print(current_angle)
+	#print(target_angle)
 	
 	# 创建与摄像机同步的动画参数
 	tween = create_tween()
