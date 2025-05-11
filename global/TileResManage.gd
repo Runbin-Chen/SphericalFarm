@@ -38,7 +38,7 @@ func get_tile_terrain(id:int)->DataTypes.Terrain_Type:
 
 func set_tile_ground(id:int,Ground:DataTypes.Ground_Type)->void:
 	tile_data[id].tile_ground = Ground
-	tile_data[id].tile.change_material(DataTypes.Ground_Type.Sea)
+	tile_data[id].tile.change_material(Ground)
 
 func get_tile_ground(id:int)->DataTypes.Ground_Type:
 	return tile_data[id].tile_ground

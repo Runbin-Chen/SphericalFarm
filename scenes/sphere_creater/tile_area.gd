@@ -25,7 +25,7 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		# 触发Camera定义的信号，并传递自身坐标
 		camera.emit_signal("position_camera", Vector3(center[0],center[1],center[2]))
 		#change_material(DataTypes.Ground_Type.Sea)
-		TileResManage.set_tile_ground(id,DataTypes.Ground_Type.Sea)
+		TileResManage.set_tile_ground(id,DataTypes.Ground_Type.GrassLand)
 		TimeManage.next_count()
 		#print(TileResManage.tile_data[id].mesh_instance)
 		#print(neighbors_id)

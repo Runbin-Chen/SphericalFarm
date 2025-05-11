@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://fhihxkp7uj6l"]
+
+[ext_resource type="PackedScene" uid="uid://17j5cbr2lgal" path="res://assets/import_model/sketchfab/LowPoly Farm V2/solid.blend" id="3_gusc5"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
+size = Vector2(1, 1)
+
+[node name="FarmHexTilesB" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_d8c7y")
+skeleton = NodePath("")
+
+[node name="solid" parent="." instance=ExtResource("3_gusc5")]
+transform = Transform3D(0.18, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.00763729, 0.018, -0.254617)
+
+[node name="solid2" parent="." instance=ExtResource("3_gusc5")]
+transform = Transform3D(0.18, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.00763729, 0.018, 0.174439)
