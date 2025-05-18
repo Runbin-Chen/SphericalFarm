@@ -1,7 +1,8 @@
 extends MarginContainer
 
-@onready var water_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer/WaterLabel
-@onready var steel_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2/SteelLabel
+@onready var water_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer/WaterContainer/WaterLabel
+@onready var steel_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer/SteelContainer/SteelLabel
+
 
 func _ready() -> void:
 	#TimeManage.connect("time_flash",_on_time_flash)

@@ -1,8 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb0culmj38qpg"]
+[gd_scene load_steps=9 format=3 uid="uid://cb0culmj38qpg"]
 
 [ext_resource type="Script" uid="uid://c3okh3jkob2sd" path="res://scenes/UI/DataPanel/data_panel_container.gd" id="1_4kwcw"]
-[ext_resource type="Texture2D" uid="uid://d040604pwh8w5" path="res://assets/themes/src/addons/Themey/themes/clashy/graphics/coin.svg" id="1_8on6c"]
-[ext_resource type="Texture2D" uid="uid://d388p8y56v4ip" path="res://assets/themes/src/addons/Themey/themes/clashy/graphics/gem.svg" id="2_4kwcw"]
+[ext_resource type="Texture2D" uid="uid://bmpcxmxfd5wja" path="res://assets/import_model/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="2_pvxcl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55rmn"]
+atlas = ExtResource("2_pvxcl")
+region = Rect2(32, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvxcl"]
+atlas = ExtResource("2_pvxcl")
+region = Rect2(96, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogkvq"]
+atlas = ExtResource("2_pvxcl")
+region = Rect2(0, 544, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8on6c"]
+atlas = ExtResource("2_pvxcl")
+region = Rect2(96, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kwcw"]
+atlas = ExtResource("2_pvxcl")
+region = Rect2(0, 448, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydnd8"]
+atlas = ExtResource("2_pvxcl")
+region = Rect2(192, 448, 32, 32)
 
 [node name="DataPanelContainer" type="MarginContainer"]
 custom_minimum_size = Vector2(260, 0)
@@ -20,7 +43,7 @@ theme_type_variation = &"PanelEmbedded"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Panel"]
 layout_mode = 2
-text = "Score: 9,000"
+text = "得分：1000"
 horizontal_alignment = 1
 
 [node name="Panel4" type="PanelContainer" parent="VBoxContainer"]
@@ -34,7 +57,7 @@ mouse_filter = 2
 
 [node name="Label2" type="Label" parent="VBoxContainer/Panel4/VBoxContainer"]
 layout_mode = 2
-text = "Your Reward"
+text = "资源数量"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -42,26 +65,78 @@ autowrap_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+[node name="WaterContainer" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/WaterContainer"]
 layout_mode = 2
-texture = ExtResource("1_8on6c")
+texture = SubResource("AtlasTexture_55rmn")
 stretch_mode = 5
 
-[node name="WaterLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="WaterLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/WaterContainer"]
 layout_mode = 2
 text = "500"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+[node name="SteelContainer" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/SteelContainer"]
 layout_mode = 2
-texture = ExtResource("2_4kwcw")
+texture = SubResource("AtlasTexture_pvxcl")
 stretch_mode = 5
 
-[node name="SteelLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/HBoxContainer2"]
+[node name="SteelLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/SteelContainer"]
+layout_mode = 2
+text = "500"
+
+[node name="WoodContainer" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/WoodContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ogkvq")
+stretch_mode = 5
+
+[node name="SteelLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/WoodContainer"]
+layout_mode = 2
+text = "500"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SeedContainer" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2/SeedContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_8on6c")
+stretch_mode = 5
+
+[node name="SeedLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2/SeedContainer"]
+layout_mode = 2
+text = "500"
+
+[node name="SteelContainer2" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2/SteelContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_4kwcw")
+stretch_mode = 5
+
+[node name="SteelLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2/SteelContainer2"]
+layout_mode = 2
+text = "500"
+
+[node name="SteelContainer3" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2/SteelContainer3"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ydnd8")
+stretch_mode = 5
+
+[node name="SteelLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer2/SteelContainer3"]
 layout_mode = 2
 text = "500"

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://3757aqwhnnyu"]
+
+[ext_resource type="PackedScene" uid="uid://bpshf7plyvrso" path="res://assets/import_model/mercury_planet/scene.gltf" id="1_bq8pm"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_bq8pm")]

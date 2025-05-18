@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://hxyfm4lv20pe"]
+[gd_scene load_steps=8 format=3 uid="uid://hxyfm4lv20pe"]
 
 [ext_resource type="Script" uid="uid://pxosuh4rglrv" path="res://scenes/main_scene/player_camera.gd" id="1_m0nk5"]
 [ext_resource type="Script" uid="uid://22m8l238b0gx" path="res://scenes/main_scene/sun_light.gd" id="2_5r2vs"]
 [ext_resource type="PackedScene" uid="uid://yncl4kj12pea" path="res://scenes/TerrainCreater/Terrain_Creater.tscn" id="2_jdsnt"]
+[ext_resource type="PackedScene" uid="uid://chqinreowrf6s" path="res://scenes/main_scene/sun.tscn" id="3_06j5y"]
 [ext_resource type="PackedScene" uid="uid://dpnivc6wtu6hv" path="res://scenes/UI/UI_Layer.tscn" id="3_u3b6q"]
+[ext_resource type="PackedScene" uid="uid://bpshf7plyvrso" path="res://assets/import_model/mercury_planet/scene.gltf" id="5_tdrfo"]
+
+[sub_resource type="Environment" id="Environment_tdrfo"]
+background_mode = 1
+ambient_light_energy = 0.0
 
 [node name="MainSurface" type="Node3D"]
 
@@ -18,6 +24,8 @@ omni_range = 422.241
 omni_attenuation = 0.0
 script = ExtResource("2_5r2vs")
 
+[node name="Sun" parent="SunLight" instance=ExtResource("3_06j5y")]
+
 [node name="Player_Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
 script = ExtResource("1_m0nk5")
@@ -27,3 +35,14 @@ light_energy = 1.5
 omni_range = 200.0
 
 [node name="TerrainCreater" parent="." instance=ExtResource("2_jdsnt")]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("5_tdrfo")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 252.074, 97.1174, -435.087)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_Scene"]
+transform = Transform3D(-0.0883463, 0, 0.04685, 0, 0.1, 0, -0.04685, 0, -0.0883463, 14.4262, 0, 11.7411)
+omni_range = 208.882
+omni_attenuation = -0.281
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tdrfo")
