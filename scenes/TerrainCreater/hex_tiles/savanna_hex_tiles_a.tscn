@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://tgwnm2a2vrw8"]
+[gd_scene load_steps=5 format=3 uid="uid://tgwnm2a2vrw8"]
 
+[ext_resource type="Script" uid="uid://fhjhhh2brkur" path="res://scenes/TerrainCreater/hex_tiles/scripts/savanna_hex_tiles_a.gd" id="1_3dytm"]
 [ext_resource type="PackedScene" uid="uid://dp18e3le8bngc" path="res://assets/import_model/sketchfab/Cartoon tree/tree.glb" id="1_t1kae"]
 [ext_resource type="PackedScene" uid="uid://b6jo4lxhdwfo1" path="res://assets/import_model/kenney_space-kit/rocks_smallA.glb" id="1_wxs5o"]
 
@@ -7,6 +8,7 @@
 size = Vector2(1, 1)
 
 [node name="SavannaHexTilesA" type="Node3D"]
+script = ExtResource("1_3dytm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false

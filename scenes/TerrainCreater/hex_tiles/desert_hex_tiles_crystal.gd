@@ -6,9 +6,9 @@ func selected():
 	DialogueMange.word_pressed.connect(_on_button_pressed)
 
 func disp_dialogue():
-	DialogueMange.create_dialogue("伐木（-10行动点 +50木头）",1)
+	DialogueMange.create_dialogue("采矿（-10行动点 +20矿砂）",1)
 
 func _on_button_pressed(num:int):
 	if (num == 1):
-		PlayerResManage.add_item(DataTypes.Item_Type.Wood,50)
+		PlayerResManage.add_item(DataTypes.Item_Type.SteelDust,10)
 		TimeManage.plus_count(10)

@@ -40,5 +40,6 @@ enum Item_Type{
 	Water,
 	Seed,
 	Steel,
-	Wood
+	Wood,
+	SteelDust
 }

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://1c1xg8t5m335"]
+[gd_scene load_steps=9 format=3 uid="uid://1c1xg8t5m335"]
 
 [ext_resource type="PackedScene" uid="uid://ddtpksoi6w5a5" path="res://assets/import_model/kenney_space-kit/corridor.glb" id="1_cl6ln"]
+[ext_resource type="Script" uid="uid://bspdtdolj0rfm" path="res://scenes/TerrainCreater/hex_tiles/scripts/corridor_hex_tile.gd" id="1_sadt5"]
 [ext_resource type="PackedScene" uid="uid://nutrbw4sbdso" path="res://assets/import_model/kenney_space-kit/corridor_end.glb" id="2_sadt5"]
 [ext_resource type="PackedScene" uid="uid://3da70aa3u25k" path="res://assets/import_model/kenney_space-kit/corridor_windowClosed.glb" id="3_sw1g2"]
 [ext_resource type="PackedScene" uid="uid://c16un8s76pgd0" path="res://assets/import_model/kenney_space-kit/rock.glb" id="4_hucnl"]
@@ -11,6 +12,7 @@
 size = Vector2(1, 1)
 
 [node name="CorridorHexTile" type="Node3D"]
+script = ExtResource("1_sadt5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false

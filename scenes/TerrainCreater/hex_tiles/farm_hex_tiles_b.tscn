@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://fhihxkp7uj6l"]
+[gd_scene load_steps=4 format=3 uid="uid://fhihxkp7uj6l"]
 
+[ext_resource type="PackedScene" uid="uid://bmg0lnwll61ae" path="res://assets/import_model/sketchfab/corn-corn-corn/corn.tscn" id="2_dk7y0"]
 [ext_resource type="PackedScene" uid="uid://17j5cbr2lgal" path="res://assets/import_model/sketchfab/LowPoly Farm V2/solid.blend" id="3_gusc5"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
@@ -12,8 +13,39 @@ visible = false
 mesh = SubResource("PlaneMesh_d8c7y")
 skeleton = NodePath("")
 
-[node name="solid" parent="." instance=ExtResource("3_gusc5")]
+[node name="solid" type="Node3D" parent="."]
+
+[node name="solid" parent="solid" instance=ExtResource("3_gusc5")]
 transform = Transform3D(0.18, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.00763729, 0.018, -0.254617)
 
-[node name="solid2" parent="." instance=ExtResource("3_gusc5")]
+[node name="solid2" parent="solid" instance=ExtResource("3_gusc5")]
 transform = Transform3D(0.18, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.00763729, 0.018, 0.174439)
+
+[node name="MatureCorn" type="Node3D" parent="."]
+
+[node name="Corn" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -0.0504541)
+
+[node name="Corn2" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, -0.0504541)
+
+[node name="Corn5" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -0.351561)
+
+[node name="Corn6" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, -0.351561)
+
+[node name="Corn3" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0.208191)
+
+[node name="Corn7" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, -0.0504541)
+
+[node name="Corn8" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, -0.351561)
+
+[node name="Corn9" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, 0.208191)
+
+[node name="Corn4" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, 0.208191)

@@ -25,3 +25,11 @@ func next_day()->int:
 	current_day = current_day + 1
 	time_flash.emit(current_day,current_turn)
 	return current_day
+
+func plus_count(count:int)->void:
+	for i in count:
+		current_turn = current_turn + 1
+		if current_turn == turn_per_day :
+			current_turn = 0
+			current_day = current_day +1
+	time_flash.emit(current_day,current_turn)
