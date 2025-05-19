@@ -24,6 +24,7 @@ func add_item(type: int, amount: int) -> void:
 		inventory[type] += amount
 	else:
 		push_error("无效的物品类型: %s" % type)
+	inventory_flash.emit()
 
 # 移除物品
 func remove_item(type: int, amount: int) -> bool:

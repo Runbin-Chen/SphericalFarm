@@ -39,5 +39,6 @@ enum Item_Type{
 	None,
 	Water,
 	Seed,
-	Steel
+	Steel,
+	Wood
 }

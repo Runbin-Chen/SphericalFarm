@@ -10,5 +10,4 @@ func disp_dialogue():
 
 func _on_button_pressed(num:int):
 	if (num == 1):
-		print("伐木ok")
-	pass
+		PlayerResManage.add_item(DataTypes.Item_Type.Wood,50)

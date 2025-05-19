@@ -100,7 +100,7 @@ layout_mode = 2
 texture = SubResource("AtlasTexture_ogkvq")
 stretch_mode = 5
 
-[node name="SteelLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/WoodContainer"]
+[node name="WoodLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer/WoodContainer"]
 layout_mode = 2
 text = "500"
 
