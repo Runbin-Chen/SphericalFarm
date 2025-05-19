@@ -1,51 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfatxl6smg15"]
 
 [ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://assets/themes/src/addons/Themey/themes/spacey/spacey.tres" id="1_3bcdy"]
-[ext_resource type="Script" uid="uid://chgnwqnsq1hqe" path="res://scenes/UI/InteractPanel/words_label.gd" id="3_3bcdy"]
-[ext_resource type="FontVariation" uid="uid://bcl5fkds8iqeg" path="res://scenes/UI/fonts/zx_palm_variation.tres" id="3_nt1m7"]
+[ext_resource type="Script" uid="uid://c0q7h04rtiwm" path="res://scenes/UI/InteractPanel/interact_panel.gd" id="2_3bcdy"]
+[ext_resource type="PackedScene" uid="uid://co4583662dbr" path="res://scenes/UI/InteractPanel/interact_label.tscn" id="2_tbwne"]
 
 [node name="InteractPanelContainer" type="MarginContainer"]
+custom_minimum_size = Vector2(0, 51)
 offset_right = 220.0
-offset_bottom = 108.0
+offset_bottom = 51.0
 mouse_filter = 2
 theme = ExtResource("1_3bcdy")
+script = ExtResource("2_3bcdy")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Panel" type="PanelContainer" parent="VBoxContainer"]
+[node name="InteractLabelPanel" parent="VBoxContainer" instance=ExtResource("2_tbwne")]
 layout_mode = 2
-mouse_filter = 2
-theme_type_variation = &"PanelEmbedded"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="Words Label" type="Label" parent="VBoxContainer/Panel/VBoxContainer"]
-layout_mode = 2
-mouse_filter = 1
-theme_override_fonts/font = ExtResource("3_nt1m7")
-theme_override_font_sizes/font_size = 24
-text = "DAY"
-horizontal_alignment = 1
-script = ExtResource("3_3bcdy")
-
-[node name="Panel2" type="PanelContainer" parent="VBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-theme_type_variation = &"PanelEmbedded"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel2"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="Turn Label" type="Label" parent="VBoxContainer/Panel2/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_nt1m7")
-theme_override_font_sizes/font_size = 24
-text = "TURN"
-horizontal_alignment = 1
-
-[connection signal="gui_input" from="VBoxContainer/Panel/VBoxContainer/Words Label" to="VBoxContainer/Panel/VBoxContainer/Words Label" method="_on_gui_input"]

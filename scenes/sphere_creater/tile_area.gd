@@ -27,8 +27,21 @@ func _on_click(cam, event, pos, normal, shape_idx):
 		#change_material(DataTypes.Ground_Type.Sea)
 		#TileResManage.set_tile_ground(id,DataTypes.Ground_Type.GrassLand)
 		TimeManage.next_count()
+		set_dialogue()
+		#DialogueMange.set_tile(self)
 		#print(TileResManage.tile_data[id].mesh_instance)
 		#print(neighbors_id)
+
+func set_dialogue():
+	var terrain = get_node("Terrain") if has_node("Terrain") else null
+	
+	if terrain and terrain.has_method("selected"):
+		# 带参数的安全调用方式（可选参数示例）
+		terrain.selected.call_deferred()
+		# 立即调用版本
+		# terrain.selected() 
+	else:
+		DialogueMange.init_dialogue()
 
 func init(chunk_id:int)->void:
 	id = chunk_id

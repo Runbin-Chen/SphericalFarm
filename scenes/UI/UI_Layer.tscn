@@ -87,5 +87,5 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_qwudb")
 
-[node name="TimePanelContainer" parent="Control/MarginContainer/Control/CenteredContent/MidRightResource" instance=ExtResource("4_wu4y7")]
+[node name="InteractPanelContainer" parent="Control/MarginContainer/Control/CenteredContent/MidRightResource" instance=ExtResource("4_wu4y7")]
 layout_mode = 2

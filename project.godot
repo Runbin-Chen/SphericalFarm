@@ -21,6 +21,7 @@ TileResManage="*res://global/TileResManage.gd"
 DataTypes="*res://global/DataTypes.gd"
 TimeManage="*res://global/TimeManage.gd"
 PlayerResManage="*res://global/PlayerResManage.gd"
+DialogueMange="*res://global/DialogueMange.gd"
 
 [file_customization]
 
@@ -28,6 +29,10 @@ folder_colors={
 "res://assets/": "green",
 "res://scenes/": "orange"
 }
+
+[filesystem]
+
+import/blender/enabled=false
 
 [rendering]
 

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://co4583662dbr"]
+
+[ext_resource type="FontFile" uid="uid://dvyti3w7u7um6" path="res://assets/font/SourceHanSansCN-Normal.otf" id="1_42pim"]
+[ext_resource type="Script" uid="uid://chgnwqnsq1hqe" path="res://scenes/UI/InteractPanel/interact_label.gd" id="1_tbwer"]
+
+[node name="InteractLabelPanel" type="PanelContainer"]
+mouse_filter = 2
+theme_type_variation = &"PanelEmbedded"
+script = ExtResource("1_tbwer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Words Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_42pim")
+theme_override_font_sizes/font_size = 24
+text = "未定义"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="VBoxContainer/Words Label" to="." method="_on_words_label_gui_input"]

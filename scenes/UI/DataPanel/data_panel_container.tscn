@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cb0culmj38qpg"]
+[gd_scene load_steps=10 format=3 uid="uid://cb0culmj38qpg"]
 
 [ext_resource type="Script" uid="uid://c3okh3jkob2sd" path="res://scenes/UI/DataPanel/data_panel_container.gd" id="1_4kwcw"]
+[ext_resource type="FontFile" uid="uid://dvyti3w7u7um6" path="res://assets/font/SourceHanSansCN-Normal.otf" id="2_55rmn"]
 [ext_resource type="Texture2D" uid="uid://bmpcxmxfd5wja" path="res://assets/import_model/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="2_pvxcl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_55rmn"]
@@ -43,6 +44,7 @@ theme_type_variation = &"PanelEmbedded"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Panel"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_55rmn")
 text = "得分：1000"
 horizontal_alignment = 1
 
@@ -57,6 +59,7 @@ mouse_filter = 2
 
 [node name="Label2" type="Label" parent="VBoxContainer/Panel4/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_55rmn")
 text = "资源数量"
 horizontal_alignment = 1
 autowrap_mode = 2

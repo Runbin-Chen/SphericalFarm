@@ -1,5 +1,6 @@
-[gd_scene load_steps=185 format=4 uid="uid://bok2evoyuwqkd"]
+[gd_scene load_steps=186 format=4 uid="uid://bok2evoyuwqkd"]
 
+[ext_resource type="Script" uid="uid://c710hsbho2ddn" path="res://scenes/TerrainCreater/hex_tiles/scripts/forest_hex_tiles_a.gd" id="1_brtha"]
 [ext_resource type="Texture2D" uid="uid://b2rsc6lq6edge" path="res://assets/import_model/sketchfab/stylized_forest_-_scene_may_holiday/textures/soil_baseColor.png" id="1_diawh"]
 [ext_resource type="Texture2D" uid="uid://n12hgcp0vsua" path="res://assets/import_model/sketchfab/stylized_forest_-_scene_may_holiday/textures/Birch_tree_baseColor.png" id="2_brtha"]
 [ext_resource type="Texture2D" uid="uid://cdg1mtx17kkeb" path="res://assets/import_model/sketchfab/stylized_forest_-_scene_may_holiday/textures/foliage_base_color_baseColor.png" id="3_5y6nl"]
@@ -2748,6 +2749,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0t6m3")
 
 [node name="ForestHexTilesA" type="Node3D"]
+script = ExtResource("1_brtha")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false
