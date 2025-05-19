@@ -12,6 +12,10 @@ func init_dialogue():
 	interact_panel.clear_panel()
 	disconnect_all_connections("word_pressed")
 
+func hide_panel():
+	interact_panel.hide_panel()
+
+
 func create_dialogue(words:String,num:int):
 	interact_panel.add_label(words,num)
 	pass

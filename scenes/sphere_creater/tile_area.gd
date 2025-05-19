@@ -41,7 +41,7 @@ func set_dialogue():
 		# 立即调用版本
 		# terrain.selected() 
 	else:
-		DialogueMange.init_dialogue()
+		DialogueMange.hide_panel()
 
 func init(chunk_id:int)->void:
 	id = chunk_id
