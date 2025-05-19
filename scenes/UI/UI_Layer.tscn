@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpnivc6wtu6hv"]
+[gd_scene load_steps=5 format=3 uid="uid://dpnivc6wtu6hv"]
 
 [ext_resource type="Theme" uid="uid://bsyjmm3kj6qyr" path="res://assets/themes/src/addons/Themey/themes/spacey/spacey.tres" id="1_qwudb"]
 [ext_resource type="PackedScene" uid="uid://cb0culmj38qpg" path="res://scenes/UI/DataPanel/data_panel_container.tscn" id="2_m4ppt"]
+[ext_resource type="PackedScene" uid="uid://bfatxl6smg15" path="res://scenes/UI/InteractPanel/Interact_panel.tscn" id="4_wu4y7"]
 [ext_resource type="PackedScene" uid="uid://tm5ywjoj04q4" path="res://scenes/UI/TimePanel/time_panel.tscn" id="7_1kl5n"]
 
 [node name="UiLayer" type="CanvasLayer"]
@@ -69,4 +70,22 @@ grow_horizontal = 0
 theme = ExtResource("1_qwudb")
 
 [node name="TimePanelContainer" parent="Control/MarginContainer/Control/CenteredContent/TopRightResource" instance=ExtResource("7_1kl5n")]
+layout_mode = 2
+
+[node name="MidRightResource" type="PanelContainer" parent="Control/MarginContainer/Control/CenteredContent"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -58.0
+offset_right = -139.0
+offset_bottom = 58.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_qwudb")
+
+[node name="TimePanelContainer" parent="Control/MarginContainer/Control/CenteredContent/MidRightResource" instance=ExtResource("4_wu4y7")]
 layout_mode = 2
