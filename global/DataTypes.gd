@@ -41,5 +41,9 @@ enum Item_Type{
 	Seed,
 	Steel,
 	Wood,
-	SteelDust
+	SteelDust,
+	Stone,
+	Apple,
+	Corn,
+	Carrot
 }

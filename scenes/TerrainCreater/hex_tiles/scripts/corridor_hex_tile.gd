@@ -14,5 +14,9 @@ func _on_button_pressed(num:int):
 		#PlayerResManage.add_item(DataTypes.Item_Type.Wood,50)
 		TimeManage.plus_count(10)
 	if (num == 2):
-		PlayerResManage.add_item(DataTypes.Item_Type.Steel,10)
-		TimeManage.plus_count(10)
+		if (PlayerResManage.get_item_count(DataTypes.Item_Type.SteelDust)>=100):
+			PlayerResManage.remove_item(DataTypes.Item_Type.SteelDust,100)
+			PlayerResManage.add_item(DataTypes.Item_Type.Steel,10)
+			TimeManage.plus_count(10)
+		else:
+			print("没有足够矿砂")

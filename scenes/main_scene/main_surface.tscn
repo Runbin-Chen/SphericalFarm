@@ -25,6 +25,7 @@ omni_attenuation = 0.0
 script = ExtResource("2_5r2vs")
 
 [node name="Sun" parent="SunLight" instance=ExtResource("3_06j5y")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 188.125, 0, 251.815)
 
 [node name="Player_Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
