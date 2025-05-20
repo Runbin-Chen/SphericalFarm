@@ -18,5 +18,8 @@ func _on_button_pressed(num:int):
 			PlayerResManage.remove_item(DataTypes.Item_Type.SteelDust,100)
 			PlayerResManage.add_item(DataTypes.Item_Type.Steel,10)
 			TimeManage.plus_count(10)
+			DialogueMange.show_hint("矿砂-100")
+			await get_tree().create_timer(0.25).timeout
+			DialogueMange.show_hint("铁锭+10")
 		else:
-			print("没有足够矿砂")
+			DialogueMange.show_hint("没有足够矿砂")

@@ -3,8 +3,11 @@ extends Node
 signal inventory_flash
 
 var inventory: Dictionary = {}
+var rng = RandomNumberGenerator.new()#随机数
 
 func _ready():
+	#初始化随机数
+	rng.seed = Time.get_unix_time_from_system()
 	# 初始化库存（排除None）
 	var valid_types = DataTypes.Item_Type.values()
 	valid_types.erase(DataTypes.Item_Type.None)
@@ -59,3 +62,13 @@ func set_item_count(type: int, amount: int) -> void:
 func reset_inventory():
 	for type in inventory:
 		inventory[type] = 0
+
+#爆率
+func get_probability_item(percent:int,num:int=1)->int:
+	var item_num = 0
+	for i in num:
+		var randint=rng.randi_range(1, 100)
+		if (randint<=percent):
+			item_num=item_num+1
+	return item_num
+	

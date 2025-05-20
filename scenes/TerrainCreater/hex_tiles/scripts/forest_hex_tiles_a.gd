@@ -12,3 +12,4 @@ func _on_button_pressed(num:int):
 	if (num == 1):
 		PlayerResManage.add_item(DataTypes.Item_Type.Wood,50)
 		TimeManage.plus_count(10)
+		DialogueMange.show_hint("+50木头")
