@@ -20,6 +20,8 @@ func _ready() -> void:
 			add_terrain(tile,DataTypes.Terrain_Type.Farm_A)
 		if tile.id == 13:
 			add_terrain(tile,DataTypes.Terrain_Type.Farm_B)
+		if tile.id == 66:
+			add_terrain(tile,DataTypes.Terrain_Type.Rock_A)
 	init_tile_res_manage(tiles)
 	TileResManage.connect("change_terrain",_on_change_terrain)
 	TileResManage.set_tile_ground(50,DataTypes.Ground_Type.GrassLand)

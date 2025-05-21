@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://fhihxkp7uj6l"]
+[gd_scene load_steps=5 format=3 uid="uid://fhihxkp7uj6l"]
 
 [ext_resource type="Script" uid="uid://dbb31uhhbk6ip" path="res://scenes/TerrainCreater/hex_tiles/scripts/farm_hex_tiles_b.gd" id="1_u0ob0"]
-[ext_resource type="PackedScene" uid="uid://bmg0lnwll61ae" path="res://assets/import_model/sketchfab/corn-corn-corn/corn.tscn" id="2_dk7y0"]
 [ext_resource type="PackedScene" uid="uid://17j5cbr2lgal" path="res://assets/import_model/sketchfab/LowPoly Farm V2/solid.blend" id="3_gusc5"]
-[ext_resource type="PackedScene" uid="uid://domvf0i0mwb53" path="res://assets/import_model/sketchfab/maize_corn_plant/corn_growth.tscn" id="4_xbwem"]
+[ext_resource type="PackedScene" uid="uid://c0oqj7f8tymt8" path="res://scenes/TerrainCreater/hex_tiles/farm_system/corn_plant.tscn" id="3_u0ob0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
 size = Vector2(1, 1)
@@ -24,61 +23,4 @@ transform = Transform3D(0.18, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.00763729, 0.018, -0.
 [node name="solid2" parent="solid" instance=ExtResource("3_gusc5")]
 transform = Transform3D(0.18, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.00763729, 0.018, 0.174439)
 
-[node name="MatureCorn" type="Node3D" parent="."]
-visible = false
-
-[node name="Corn" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -0.0504541)
-
-[node name="Corn2" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, -0.0504541)
-
-[node name="Corn5" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -0.351561)
-
-[node name="Corn6" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, -0.351561)
-
-[node name="Corn3" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0.208191)
-
-[node name="Corn7" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, -0.0504541)
-
-[node name="Corn8" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, -0.351561)
-
-[node name="Corn9" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, 0.208191)
-
-[node name="Corn4" parent="MatureCorn" instance=ExtResource("2_dk7y0")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, 0.208191)
-
-[node name="GrowthCorn" type="Node3D" parent="."]
-
-[node name="corn_growth" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, -0.0455692)
-
-[node name="corn_growth2" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0.296529, 0, -0.0455692)
-
-[node name="corn_growth3" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.305692, 0, -0.0455692)
-
-[node name="corn_growth4" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, 0.215612)
-
-[node name="corn_growth5" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0.296529, 0, 0.215612)
-
-[node name="corn_growth6" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.305692, 0, 0.215612)
-
-[node name="corn_growth7" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, -0.342805)
-
-[node name="corn_growth8" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0.296529, 0, -0.342805)
-
-[node name="corn_growth9" parent="GrowthCorn" instance=ExtResource("4_xbwem")]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.305692, 0, -0.342805)
+[node name="CornPlant" parent="." instance=ExtResource("3_u0ob0")]

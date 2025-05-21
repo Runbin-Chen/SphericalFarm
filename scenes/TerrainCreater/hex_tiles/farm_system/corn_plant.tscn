@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0oqj7f8tymt8"]
+
+[ext_resource type="Script" uid="uid://cdgikne80h36n" path="res://scenes/TerrainCreater/hex_tiles/farm_system/corn_plant.gd" id="1_jp8x8"]
+[ext_resource type="PackedScene" uid="uid://bmg0lnwll61ae" path="res://assets/import_model/sketchfab/corn-corn-corn/corn.tscn" id="2_7rbj4"]
+[ext_resource type="PackedScene" uid="uid://domvf0i0mwb53" path="res://assets/import_model/sketchfab/maize_corn_plant/corn_growth.tscn" id="3_bg8oc"]
+[ext_resource type="PackedScene" uid="uid://tiqhr6ybhvae" path="res://assets/import_model/sketchfab/maize_corn_plant/corn_germination.tscn" id="4_7s3tb"]
+
+[node name="CornPlant" type="Node3D"]
+script = ExtResource("1_jp8x8")
+
+[node name="MatureCorn" type="Node3D" parent="."]
+visible = false
+
+[node name="Corn" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -0.0504541)
+
+[node name="Corn2" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, -0.0504541)
+
+[node name="Corn5" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -0.351561)
+
+[node name="Corn6" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, -0.351561)
+
+[node name="Corn3" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0.208191)
+
+[node name="Corn7" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, -0.0504541)
+
+[node name="Corn8" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, -0.351561)
+
+[node name="Corn9" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.28651, 0, 0.208191)
+
+[node name="Corn4" parent="MatureCorn" instance=ExtResource("2_7rbj4")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.300852, 0, 0.208191)
+
+[node name="GrowthCorn" type="Node3D" parent="."]
+visible = false
+
+[node name="corn_growth" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, -0.0455692)
+
+[node name="corn_growth2" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0.296529, 0, -0.0455692)
+
+[node name="corn_growth3" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.305692, 0, -0.0455692)
+
+[node name="corn_growth4" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, 0.215612)
+
+[node name="corn_growth5" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0.296529, 0, 0.215612)
+
+[node name="corn_growth6" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.305692, 0, 0.215612)
+
+[node name="corn_growth7" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, -0.342805)
+
+[node name="corn_growth8" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0.296529, 0, -0.342805)
+
+[node name="corn_growth9" parent="GrowthCorn" instance=ExtResource("3_bg8oc")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.305692, 0, -0.342805)
+
+[node name="GerminationCron" type="Node3D" parent="."]
+visible = false
+
+[node name="CornGermination" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.000180364, 0.0287939, -0.0458602)
+
+[node name="CornGermination2" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.298196, 0.0287939, -0.0458602)
+
+[node name="CornGermination3" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.304439, 0.0287939, -0.0458602)
+
+[node name="CornGermination4" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.000180364, 0.0287939, 0.215881)
+
+[node name="CornGermination5" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.298196, 0.0287939, 0.215881)
+
+[node name="CornGermination6" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.304439, 0.0287939, 0.215881)
+
+[node name="CornGermination7" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.000180364, 0.0287939, -0.342483)
+
+[node name="CornGermination8" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.298196, 0.0287939, -0.342483)
+
+[node name="CornGermination9" parent="GerminationCron" instance=ExtResource("4_7s3tb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.304439, 0.0287939, -0.342483)
