@@ -30,6 +30,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 188.125, 0, 251.815)
 [node name="Player_Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
 script = ExtResource("1_m0nk5")
+local_offset = Vector3(0, -20, -50)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player_Camera"]
 light_energy = 1.5
