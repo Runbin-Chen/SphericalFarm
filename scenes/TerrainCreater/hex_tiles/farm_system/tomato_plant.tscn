@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5o8jmycnoif3"]
+
+[ext_resource type="PackedScene" uid="uid://bvdal7cud76qv" path="res://assets/import_model/sketchfab/two_tomato_plants/Germination_tomato.tscn" id="1_8m54m"]
+[ext_resource type="Script" uid="uid://c54ndhijqmvjf" path="res://scenes/TerrainCreater/hex_tiles/farm_system/tomato_plant.gd" id="1_yy5rk"]
+[ext_resource type="PackedScene" uid="uid://dwtoi66y5mhy4" path="res://assets/import_model/sketchfab/two_tomato_plants/Growth_tomato.tscn" id="2_yy5rk"]
+[ext_resource type="PackedScene" uid="uid://gvabmdmhi26m" path="res://assets/import_model/sketchfab/two_tomato_plants/mature_tomato.tscn" id="3_panch"]
+
+[node name="TomatoPlant" type="Node3D"]
+script = ExtResource("1_yy5rk")
+
+[node name="GerminationTomato" type="Node3D" parent="."]
+visible = false
+
+[node name="GerminationTomato" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0194226, 0, -0.0157405, 0, 0.025, 0, 0.0157405, 0, 0.0194226, 0, 0, -0.0245144)
+
+[node name="GerminationTomato2" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0146572, 0, -0.0202526, 0, 0.025, 0, 0.0202526, 0, 0.0146572, 0, 0, -0.353848)
+
+[node name="GerminationTomato3" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0.287883)
+
+[node name="GerminationTomato4" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0194226, 0, -0.0157405, 0, 0.025, 0, 0.0157405, 0, 0.0194226, -0.267299, 0, -0.0245144)
+
+[node name="GerminationTomato5" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0161811, 0, 0.0190571, 0, 0.025, 0, -0.0190571, 0, 0.0161811, -0.267299, 0, -0.353848)
+
+[node name="GerminationTomato6" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0161744, 0, 0.0190628, 0, 0.025, 0, -0.0190628, 0, 0.0161744, -0.267299, 0, 0.287883)
+
+[node name="GerminationTomato7" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0194226, 0, -0.0157405, 0, 0.025, 0, 0.0157405, 0, 0.0194226, 0.296011, 0, -0.0245144)
+
+[node name="GerminationTomato8" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0161811, 0, 0.0190571, 0, 0.025, 0, -0.0190571, 0, 0.0161811, 0.296011, 0, -0.353848)
+
+[node name="GerminationTomato9" parent="GerminationTomato" instance=ExtResource("1_8m54m")]
+transform = Transform3D(0.0161744, 0, 0.0190628, 0, 0.025, 0, -0.0190628, 0, 0.0161744, 0.296011, 0, 0.287883)
+
+[node name="GrowthTomato" type="Node3D" parent="."]
+visible = false
+
+[node name="GrowthTomato" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.0086928, 0, -0.0288906)
+
+[node name="GrowthTomato2" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(0.0133082, 0, -0.0211634, 0, 0.025, 0, 0.0211634, 0, 0.0133082, 0.0086928, 0, 0.282853)
+
+[node name="GrowthTomato3" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(-0.00796488, 0, -0.0236973, 0, 0.025, 0, 0.0236973, 0, -0.00796488, 0.024983, 0, -0.359125)
+
+[node name="GrowthTomato4" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.293287, 0, -0.0288906)
+
+[node name="GrowthTomato5" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(0.0133082, 0, -0.0211634, 0, 0.025, 0, 0.0211634, 0, 0.0133082, 0.293287, 0, 0.282853)
+
+[node name="GrowthTomato6" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(-0.00796488, 0, -0.0236973, 0, 0.025, 0, 0.0236973, 0, -0.00796488, 0.309577, 0, -0.359125)
+
+[node name="GrowthTomato7" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(0.0182764, 0, 0.0170579, 0, 0.025, 0, -0.0170579, 0, 0.0182764, -0.279825, 0, -0.0288906)
+
+[node name="GrowthTomato8" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(-0.0229159, 0, -0.00999313, 0, 0.025, 0, 0.00999313, 0, -0.0229159, -0.279825, 0, 0.282853)
+
+[node name="GrowthTomato9" parent="GrowthTomato" instance=ExtResource("2_yy5rk")]
+transform = Transform3D(-0.00796488, 0, -0.0236973, 0, 0.025, 0, 0.0236973, 0, -0.00796488, -0.263534, 0, -0.359125)
+
+[node name="MatureTomato" type="Node3D" parent="."]
+visible = false
+
+[node name="MatureTomato" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.008791, 0, -0.0236052)
+
+[node name="MatureTomato2" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.008791, 0, 0.278844)
+
+[node name="MatureTomato3" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.0143276, 0, -0.0204871, 0, 0.025, 0, 0.0204871, 0, 0.0143276, 0.0161323, 0, -0.355711)
+
+[node name="MatureTomato4" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.0116527, 0, 0.0221182, 0, 0.025, 0, -0.0221182, 0, 0.0116527, 0.297494, 0, -0.0236052)
+
+[node name="MatureTomato5" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(-0.00120773, 0, 0.0249708, 0, 0.025, 0, -0.0249708, 0, -0.00120773, 0.297494, 0, 0.278844)
+
+[node name="MatureTomato6" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.00207412, 0, -0.0249138, 0, 0.025, 0, 0.0249138, 0, 0.00207412, 0.304835, 0, -0.355711)
+
+[node name="MatureTomato7" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.0224897, 0, -0.0109185, 0, 0.025, 0, 0.0109185, 0, 0.0224897, -0.258574, 0, -0.0236052)
+
+[node name="MatureTomato8" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, -0.258574, 0, 0.278844)
+
+[node name="MatureTomato9" parent="MatureTomato" instance=ExtResource("3_panch")]
+transform = Transform3D(0.0217471, 0, 0.0123315, 0, 0.025, 0, -0.0123315, 0, 0.0217471, -0.251232, 0, -0.355711)

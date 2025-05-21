@@ -24,7 +24,7 @@ func _ready() -> void:
 			add_terrain(tile,DataTypes.Terrain_Type.Rock_A)
 	init_tile_res_manage(tiles)
 	TileResManage.connect("change_terrain",_on_change_terrain)
-	TileResManage.set_tile_ground(50,DataTypes.Ground_Type.GrassLand)
+	TileResManage.set_tile_ground(50,DataTypes.Ground_Type.FarmLand)
 	#print(tiles.size())
 
 func add_terrain(tile_area:MeshArea,Terrain_type:DataTypes.Terrain_Type)->void:

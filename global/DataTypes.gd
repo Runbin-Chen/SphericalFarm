@@ -6,6 +6,7 @@ enum Ground_Type{
 	None,
 	Desert,
 	GrassLand,
+	FarmLand,
 	Sea
 }
 
@@ -13,7 +14,8 @@ const GROUND_COLORS = {
 	Ground_Type.None: Color(0, 0, 0, 0),
 	Ground_Type.Desert: Color("ffd5be"),
 	Ground_Type.GrassLand: Color("0e8905"),
-	Ground_Type.Sea: Color("7CFC00")
+	Ground_Type.Sea: Color("7CFC00"),
+	Ground_Type.FarmLand: Color("ffe436")
 }
 
 enum Terrain_Type{
