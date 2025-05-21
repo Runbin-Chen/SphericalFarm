@@ -8,12 +8,13 @@ enum Growth_Type{
 	None,
 	Seed,
 	Growth,
-	Mature
+	Mature,
+	Harvest
 }
 const Growth_Turns = {
 	Growth_Type.Seed: TimeManage.turn_per_day * 2,
 	Growth_Type.Growth: TimeManage.turn_per_day * 2,
-	Growth_Type.Mature: TimeManage.turn_per_day * 2
+	Growth_Type.Mature: TimeManage.turn_per_day * 2,
 }
 
 var state:Growth_Type 
@@ -30,6 +31,10 @@ func _ready() -> void:
 
 #func get_u_time()->int:
 	#return TimeManage.get_current_day()*TimeManage.turn_per_day+TimeManage.get_current_turn()
+func harvest()-> int:
+	clear_visible()
+	state = Growth_Type.None
+	return PlayerResManage.get_probability_item(50,50)
 
 func init_plant()->void:
 	state = Growth_Type.Seed
@@ -37,7 +42,7 @@ func init_plant()->void:
 	#get_node("MatureCorn").visible = true
 	
 func _in_time_flash(day:int,turn:int)->void:
-	if state == Growth_Type.None:
+	if state == Growth_Type.None or  state == Growth_Type.Harvest:
 		return
 	var expect_time= last_state_time+ Growth_Turns[state]
 	if (day*TimeManage.turn_per_day+turn>=expect_time):
@@ -53,7 +58,7 @@ func _in_time_flash(day:int,turn:int)->void:
 			growth_corn.visible = true
 			return
 		if state == Growth_Type.Mature:
-			state = Growth_Type.Mature
+			state = Growth_Type.Harvest
 			clear_visible()
 			mature_corn.visible = true
 			return
