@@ -13,6 +13,9 @@ func init_dialogue():
 	interact_panel.clear_panel()
 	disconnect_all_connections("word_pressed")
 
+func clear_panel():
+	interact_panel.clear_panel()
+
 func hide_panel():
 	interact_panel.hide_panel()
 

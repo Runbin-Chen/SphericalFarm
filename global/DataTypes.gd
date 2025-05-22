@@ -49,5 +49,6 @@ enum Item_Type{
 	Stone,
 	Apple,
 	Corn,
-	Carrot
+	Carrot,
+	Tomato
 }
