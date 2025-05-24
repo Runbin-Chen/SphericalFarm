@@ -24,8 +24,24 @@ func _ready() -> void:
 			add_terrain(tile,DataTypes.Terrain_Type.Rock_A)
 	init_tile_res_manage(tiles)
 	TileResManage.connect("change_terrain",_on_change_terrain)
-	TileResManage.set_tile_ground(50,DataTypes.Ground_Type.FarmLand)
+	
+	add_terrain_batch(tiles,[38,54,144],DataTypes.Terrain_Type.Forest,DataTypes.Ground_Type.FarmLand) #森林
+	add_terrain_batch(tiles,[51],DataTypes.Terrain_Type.None,DataTypes.Ground_Type.Sea) #海
+	add_terrain_batch(tiles,[52,14,58,0],DataTypes.Terrain_Type.None,DataTypes.Ground_Type.FarmLand) #纯绿地
+	add_terrain_batch(tiles,[50],DataTypes.Terrain_Type.Farm_A,DataTypes.Ground_Type.FarmLand) #农场
+	add_terrain_batch(tiles,[13],DataTypes.Terrain_Type.Farm_B,DataTypes.Ground_Type.FarmLand) #耕地
 	#print(tiles.size())
+
+func  set_tile_ground_batch(ids:Array,ground_type:DataTypes.Ground_Type)->void:
+	for id in ids:
+		TileResManage.set_tile_ground(id,ground_type)
+	
+
+func add_terrain_batch(tiles,nums:Array,terrain_type:DataTypes.Terrain_Type,ground_type:DataTypes.Ground_Type)->void:
+	for tile:MeshArea in tiles:
+		if nums.has(tile.id):
+			add_terrain(tile,terrain_type)
+	set_tile_ground_batch(nums,ground_type)
 
 func add_terrain(tile_area:MeshArea,Terrain_type:DataTypes.Terrain_Type)->void:
 	#var mesh = tile_area.get_node("GeneratedMesh").mesh

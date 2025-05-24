@@ -16,18 +16,6 @@ ambient_light_energy = 0.0
 
 [node name="UiLayer" parent="." instance=ExtResource("3_u3b6q")]
 
-[node name="SunLight" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.452, 116.485, 219.434)
-light_energy = 1.831
-shadow_enabled = true
-shadow_bias = 10.0
-omni_range = 422.241
-omni_attenuation = 0.0
-script = ExtResource("2_5r2vs")
-
-[node name="Sun" parent="SunLight" instance=ExtResource("3_06j5y")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 188.125, 0, 251.815)
-
 [node name="Player_Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
 script = ExtResource("1_m0nk5")
@@ -39,15 +27,29 @@ omni_range = 200.0
 
 [node name="TerrainCreater" parent="." instance=ExtResource("2_jdsnt")]
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("5_tdrfo")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tdrfo")
+
+[node name="Space_Environment" type="Node3D" parent="."]
+
+[node name="Stars" parent="Space_Environment" instance=ExtResource("7_3b18d")]
+
+[node name="Moon" parent="Space_Environment" instance=ExtResource("5_tdrfo")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 252.074, 97.1174, -435.087)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_Scene"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Space_Environment/Moon"]
 transform = Transform3D(-0.0883463, 0, 0.04685, 0, 0.1, 0, -0.04685, 0, -0.0883463, 14.4262, 0, 11.7411)
 omni_range = 208.882
 omni_attenuation = -0.281
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_tdrfo")
+[node name="SunLight" type="OmniLight3D" parent="Space_Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.452, 116.485, 219.434)
+light_energy = 1.831
+shadow_enabled = true
+shadow_bias = 10.0
+omni_range = 422.241
+omni_attenuation = 0.0
+script = ExtResource("2_5r2vs")
 
-[node name="stars" parent="." instance=ExtResource("7_3b18d")]
+[node name="Sun" parent="Space_Environment/SunLight" instance=ExtResource("3_06j5y")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 188.125, 0, 251.815)

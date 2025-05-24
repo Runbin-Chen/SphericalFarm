@@ -1,9 +1,10 @@
 extends Node3D
 
+@export var instance_count = 200  # 调整生成数量
+
 func _ready():
 	# 加载预制场景
 	var mesh_scene = preload("res://scenes/main_scene/star_instance.tscn")
-	var instance_count = 300  # 调整生成数量
 	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -14,7 +15,7 @@ func _ready():
 		add_child(instance)
 		
 		# 生成随机半径（400-1000）
-		var radius = rng.randf_range(400.0, 1000.0)
+		var radius = rng.randf_range(400.0, 2000.0)
 		
 		# 生成均匀分布的球面坐标
 		var u = rng.randf()
