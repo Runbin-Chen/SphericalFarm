@@ -12,6 +12,3 @@ script = ExtResource("1_cjev3")
 visible = false
 mesh = SubResource("PlaneMesh_d8c7y")
 skeleton = NodePath("")
-
-[node name="Grass" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0353566, 0)

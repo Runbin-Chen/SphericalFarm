@@ -8,7 +8,8 @@ extends MarginContainer
 @onready var steel_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer2/SteelContainer/SteelLabel
 @onready var corn_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/CornContainer/CornLabel
 @onready var apple_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/AppleContainer/AppleLabel
-@onready var carrot_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/CarrotContainer/CarrotLabel
+@onready var tomato_label: Label = $VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/TomatoContainer/TomatoLabel
+
 
 
 
@@ -26,4 +27,4 @@ func _on_inventory_flash()->void:
 	stone_label.text = str(PlayerResManage.get_item_count(DataTypes.Item_Type.Stone))
 	corn_label.text = str(PlayerResManage.get_item_count(DataTypes.Item_Type.Corn))
 	apple_label.text = str(PlayerResManage.get_item_count(DataTypes.Item_Type.Apple))
-	carrot_label.text = str(PlayerResManage.get_item_count(DataTypes.Item_Type.Carrot))
+	tomato_label.text = str(PlayerResManage.get_item_count(DataTypes.Item_Type.Tomato))

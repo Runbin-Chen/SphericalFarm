@@ -22,7 +22,7 @@ script = ExtResource("1_m0nk5")
 local_offset = Vector3(0, -20, -50)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player_Camera"]
-light_energy = 1.5
+light_energy = 2.0
 omni_range = 200.0
 
 [node name="TerrainCreater" parent="." instance=ExtResource("2_jdsnt")]

@@ -23,7 +23,7 @@ func _ready() -> void:
 	TileResManage.connect("change_terrain",_on_change_terrain)
 	
 	add_terrain_batch(tiles,[38,54,144,75,76,19],DataTypes.Terrain_Type.Forest,DataTypes.Ground_Type.GrassLand) #森林
-	add_terrain_batch(tiles,[51,78,1,79,83,81,20,70,56,57,82,87,21],DataTypes.Terrain_Type.None,DataTypes.Ground_Type.Sea) #海
+	add_terrain_batch(tiles,[51,78,1,79,83,81,20,70,56,57,82,87,21],DataTypes.Terrain_Type.Sea,DataTypes.Ground_Type.Sea) #海
 	add_terrain_batch(tiles,[52,14,58,0,7,145,88,85,84,80,2,86,45,46,47,53,74,73,18,71],DataTypes.Terrain_Type.GrassLand_A,DataTypes.Ground_Type.GrassLand) #纯绿地
 	add_terrain_batch(tiles,[50],DataTypes.Terrain_Type.Farm_A,DataTypes.Ground_Type.FarmLand) #农场
 	add_terrain_batch(tiles,[13],DataTypes.Terrain_Type.Farm_B,DataTypes.Ground_Type.FarmLand) #耕地

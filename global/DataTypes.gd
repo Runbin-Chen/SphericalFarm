@@ -30,7 +30,8 @@ enum Terrain_Type{
 	Farm_B,
 	Rock_A,
 	GrassLand_A,
-	Desert_Plant_A
+	Desert_Plant_A,
+	Sea
 }
 
 const Terrain_Scenes = {
@@ -43,6 +44,7 @@ const Terrain_Scenes = {
 	Terrain_Type.Rock_A: preload("res://scenes/TerrainCreater/hex_tiles/rock_hex_tiles_a.tscn"),
 	Terrain_Type.GrassLand_A: preload("res://scenes/TerrainCreater/hex_tiles/grassland_hex_tiles_a.tscn"),
 	Terrain_Type.Desert_Plant_A: preload("res://scenes/TerrainCreater/hex_tiles/desert_plant_tiles_a.tscn"),
+	Terrain_Type.Sea: preload("res://scenes/TerrainCreater/hex_tiles/sea_hex_tiles.tscn"),
 }
 
 enum Item_Type{

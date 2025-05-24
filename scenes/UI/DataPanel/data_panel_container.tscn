@@ -26,7 +26,7 @@ region = Rect2(32, 640, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pvxcl"]
 atlas = ExtResource("2_pvxcl")
-region = Rect2(96, 544, 32, 32)
+region = Rect2(352, 544, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_55pvx"]
 atlas = ExtResource("2_pvxcl")
@@ -38,7 +38,7 @@ region = Rect2(0, 448, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8oook"]
 atlas = ExtResource("2_pvxcl")
-region = Rect2(192, 448, 32, 32)
+region = Rect2(288, 448, 32, 32)
 
 [node name="DataPanelContainer" type="MarginContainer"]
 custom_minimum_size = Vector2(260, 0)
@@ -192,15 +192,15 @@ custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 text = "500"
 
-[node name="CarrotContainer" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer3"]
+[node name="TomatoContainer" type="HBoxContainer" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/CarrotContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/TomatoContainer"]
 layout_mode = 2
 texture = SubResource("AtlasTexture_8oook")
 stretch_mode = 5
 
-[node name="CarrotLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/CarrotContainer"]
+[node name="TomatoLabel" type="Label" parent="VBoxContainer/Panel4/VBoxContainer/HBoxContainer3/TomatoContainer"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 text = "500"
