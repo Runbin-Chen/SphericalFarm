@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://hxyfm4lv20pe"]
+[gd_scene load_steps=9 format=3 uid="uid://hxyfm4lv20pe"]
 
 [ext_resource type="Script" uid="uid://pxosuh4rglrv" path="res://scenes/main_scene/player_camera.gd" id="1_m0nk5"]
 [ext_resource type="Script" uid="uid://22m8l238b0gx" path="res://scenes/main_scene/sun_light.gd" id="2_5r2vs"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chqinreowrf6s" path="res://scenes/main_scene/sun.tscn" id="3_06j5y"]
 [ext_resource type="PackedScene" uid="uid://dpnivc6wtu6hv" path="res://scenes/UI/UI_Layer.tscn" id="3_u3b6q"]
 [ext_resource type="PackedScene" uid="uid://bpshf7plyvrso" path="res://assets/import_model/mercury_planet/scene.gltf" id="5_tdrfo"]
+[ext_resource type="PackedScene" uid="uid://4fl3yqdwdrie" path="res://scenes/main_scene/stars.tscn" id="7_3b18d"]
 
 [sub_resource type="Environment" id="Environment_tdrfo"]
 background_mode = 1
@@ -48,3 +49,5 @@ omni_attenuation = -0.281
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tdrfo")
+
+[node name="stars" parent="." instance=ExtResource("7_3b18d")]

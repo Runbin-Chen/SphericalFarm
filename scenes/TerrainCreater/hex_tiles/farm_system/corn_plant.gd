@@ -14,7 +14,7 @@ func _ready() -> void:
 	growth_turns = {
 		Growth_Type.Seed: TimeManage.turn_per_day * 3,
 		Growth_Type.Growth: TimeManage.turn_per_day * 2,
-		Growth_Type.Mature: TimeManage.turn_per_day * 1
+		Growth_Type.Mature: TimeManage.turn_per_day * 2
 	}
 	
 	super._ready()

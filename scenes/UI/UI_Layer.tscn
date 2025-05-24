@@ -73,6 +73,7 @@ theme = ExtResource("1_qwudb")
 layout_mode = 2
 
 [node name="MidRightResource" type="PanelContainer" parent="Control/MarginContainer/Control/CenteredContent"]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
 anchors_preset = -1

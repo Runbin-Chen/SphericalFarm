@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://s511eluo2183"]
+
+[ext_resource type="PackedScene" uid="uid://fhihxkp7uj6l" path="res://scenes/TerrainCreater/hex_tiles/farm_hex_tiles_b.tscn" id="1_8nc3b"]
+[ext_resource type="Script" uid="uid://cpupho16gj8ob" path="res://scenes/demo/demo_farm.gd" id="1_lqv6p"]
+[ext_resource type="PackedScene" uid="uid://c0oqj7f8tymt8" path="res://scenes/TerrainCreater/hex_tiles/farm_system/corn_plant.tscn" id="2_lqv6p"]
+[ext_resource type="PackedScene" uid="uid://c5o8jmycnoif3" path="res://scenes/TerrainCreater/hex_tiles/farm_system/tomato_plant.tscn" id="4_afcb1"]
+
+[sub_resource type="Environment" id="Environment_8nc3b"]
+
+[node name="DemoFarm" type="Node3D"]
+script = ExtResource("1_lqv6p")
+
+[node name="FarmHexTilesB" parent="." instance=ExtResource("1_8nc3b")]
+
+[node name="CornPlant" parent="." instance=ExtResource("2_lqv6p")]
+
+[node name="TomatoPlant" parent="." instance=ExtResource("4_afcb1")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.0341377, -0.476269, 0.878637, -0.0184906, 0.8793, 0.47591, -0.999246, 8.89567e-10, -0.0388238, 0.812883, 0.489362, -0.0377463)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8nc3b")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.971295, 0.984625, 0.65998)
+shadow_enabled = true

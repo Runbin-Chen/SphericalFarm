@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0bghgxwy1mac"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_gu85h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4ivy"]
+emission_enabled = true
+emission = Color(0.809367, 0.567086, 0.221354, 1)
+emission_energy_multiplier = 2.54
+
+[node name="StarNode3D" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="star_instance" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_gu85h")
+surface_material_override/0 = SubResource("StandardMaterial3D_y4ivy")
