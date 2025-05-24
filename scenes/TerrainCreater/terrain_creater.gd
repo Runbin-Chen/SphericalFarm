@@ -7,9 +7,6 @@ func _ready() -> void:
 	var tiles = tile_area_collection.get_children()
 	#add_terrain(tiles[27])
 	for tile:MeshArea in tiles:
-		if tile.id == 28 ||tile.id == 60:
-			#pass
-			add_terrain(tile,DataTypes.Terrain_Type.RockCrystal)
 		if tile.id == 42 || tile.id == 17:
 			add_terrain(tile,DataTypes.Terrain_Type.Corridor)
 		if tile.id == 77:
@@ -25,11 +22,15 @@ func _ready() -> void:
 	init_tile_res_manage(tiles)
 	TileResManage.connect("change_terrain",_on_change_terrain)
 	
-	add_terrain_batch(tiles,[38,54,144],DataTypes.Terrain_Type.Forest,DataTypes.Ground_Type.FarmLand) #森林
-	add_terrain_batch(tiles,[51],DataTypes.Terrain_Type.None,DataTypes.Ground_Type.Sea) #海
-	add_terrain_batch(tiles,[52,14,58,0],DataTypes.Terrain_Type.None,DataTypes.Ground_Type.FarmLand) #纯绿地
+	add_terrain_batch(tiles,[38,54,144,75,76,19],DataTypes.Terrain_Type.Forest,DataTypes.Ground_Type.GrassLand) #森林
+	add_terrain_batch(tiles,[51,78,1,79,83,81,20,70,56,57,82,87,21],DataTypes.Terrain_Type.None,DataTypes.Ground_Type.Sea) #海
+	add_terrain_batch(tiles,[52,14,58,0,7,145,88,85,84,80,2,86,45,46,47,53,74,73,18,71],DataTypes.Terrain_Type.GrassLand_A,DataTypes.Ground_Type.GrassLand) #纯绿地
 	add_terrain_batch(tiles,[50],DataTypes.Terrain_Type.Farm_A,DataTypes.Ground_Type.FarmLand) #农场
 	add_terrain_batch(tiles,[13],DataTypes.Terrain_Type.Farm_B,DataTypes.Ground_Type.FarmLand) #耕地
+	add_terrain_batch(tiles,[55,64,67,118,44,134,138,141],DataTypes.Terrain_Type.Desert_Plant_A,DataTypes.Ground_Type.Desert) #沙漠
+	add_terrain_batch(tiles,[113,140,28,60],DataTypes.Terrain_Type.RockCrystal,DataTypes.Ground_Type.Desert) #矿物
+	#add_terrain_batch(tiles,[59,64,65,45,46],DataTypes.Terrain_Type.None,DataTypes.Ground_Type.SavannaLand) #稀树草原
+	#add_terrain_batch(tiles,[77],DataTypes.Terrain_Type.Savanna,DataTypes.Ground_Type.SavannaLand) #稀树草原
 	#print(tiles.size())
 
 func  set_tile_ground_batch(ids:Array,ground_type:DataTypes.Ground_Type)->void:

@@ -7,15 +7,17 @@ enum Ground_Type{
 	Desert,
 	GrassLand,
 	FarmLand,
-	Sea
+	Sea,
+	SavannaLand
 }
 
 const GROUND_COLORS = {
 	Ground_Type.None: Color(0, 0, 0, 0),
 	Ground_Type.Desert: Color("ffd5be"),
-	Ground_Type.GrassLand: Color("0e8905"),
+	Ground_Type.GrassLand: Color("aad33c"),#b5c933
 	Ground_Type.Sea: Color("1E90FF"),
-	Ground_Type.FarmLand: Color("ffe436")
+	Ground_Type.FarmLand: Color("ffe436"),
+	Ground_Type.SavannaLand: Color("c1bb53")
 }
 
 enum Terrain_Type{
@@ -26,7 +28,9 @@ enum Terrain_Type{
 	Forest,
 	Farm_A,
 	Farm_B,
-	Rock_A
+	Rock_A,
+	GrassLand_A,
+	Desert_Plant_A
 }
 
 const Terrain_Scenes = {
@@ -37,6 +41,8 @@ const Terrain_Scenes = {
 	Terrain_Type.Farm_A: preload("res://scenes/TerrainCreater/hex_tiles/farm_hex_tiles_a.tscn"),
 	Terrain_Type.Farm_B: preload("res://scenes/TerrainCreater/hex_tiles/farm_hex_tiles_b.tscn"),
 	Terrain_Type.Rock_A: preload("res://scenes/TerrainCreater/hex_tiles/rock_hex_tiles_a.tscn"),
+	Terrain_Type.GrassLand_A: preload("res://scenes/TerrainCreater/hex_tiles/grassland_hex_tiles_a.tscn"),
+	Terrain_Type.Desert_Plant_A: preload("res://scenes/TerrainCreater/hex_tiles/desert_plant_tiles_a.tscn"),
 }
 
 enum Item_Type{

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmo4ahx0xtere"]
+
+[ext_resource type="Script" uid="uid://c2rqlaq7mglwa" path="res://scenes/TerrainCreater/hex_tiles/scripts/grassland_hex_tiles_a.gd" id="1_cjev3"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8c7y"]
+size = Vector2(1, 1)
+
+[node name="GrassLandHexTilesA" type="Node3D"]
+script = ExtResource("1_cjev3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_d8c7y")
+skeleton = NodePath("")
+
+[node name="Grass" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0353566, 0)
